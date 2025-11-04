@@ -33,8 +33,7 @@ namespace Cosmic {
     void Log::log(LogLevel level, const std::string &message) {
         if (level >= logLevel || level == LogLevel::Message) {
             applyColor(level);
-            std::cout << "[" << getCurrentTime() << "/" << getLogLevelString(level) << "]: "
-                      << message << std::endl;
+            std::cout << "[" << getCurrentTime() << "/" << getLogLevelString(level) << "]: " << message << std::endl;
             resetColor();
 
             if (level == LogLevel::Fatal) {
@@ -57,7 +56,6 @@ namespace Cosmic {
         return oss.str();
     }
 
-    // Get log level as C-string
     constexpr const char* Log::getLogLevelString(LogLevel level) noexcept {
         switch (level) {
             case LogLevel::Message: return "Message";

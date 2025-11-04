@@ -1,0 +1,7 @@
+# CODEOWNERS: assign ownership for the whole repository to @RaduC1234
+# Location: .github/CODEOWNERS
+# Pattern format: <pattern> <owner>
+
+# All files
+* @RaduC1234
+
