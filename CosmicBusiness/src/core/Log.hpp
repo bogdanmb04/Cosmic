@@ -27,10 +27,10 @@ namespace Cosmic {
             log(level, std::format(formatString, std::forward<Args>(args)...));
         }
     private:
-        std::string getCurrentTime();
-        constexpr std::string getLogLevelString(LogLevel level);
-        void applyColor(LogLevel level);
-        void resetColor();
+        static std::string getCurrentTime();
+        static constexpr const char* getLogLevelString(LogLevel level) noexcept; // unchanged
+        static void applyColor(LogLevel level);
+        static void resetColor();
 
         static std::shared_ptr<Log> coreLogger;
         LogLevel logLevel = LogLevel::Trace;
