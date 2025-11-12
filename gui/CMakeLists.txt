@@ -9,6 +9,18 @@ add_executable(CosmicGUI ${CB_SOURCES})
 
 target_include_directories(CosmicGUI PRIVATE ${CMAKE_SOURCE_DIR}/core/src)
 
-target_link_libraries(CosmicGUI PRIVATE Cosmic::Core)
+include(FetchContent)
+
+set(BUILD_SHARED_LIBS OFF)
+
+FetchContent_Declare(
+        SFML
+        GIT_REPOSITORY https://github.com/SFML/SFML.git
+        GIT_TAG 3.0.2
+)
+FetchContent_MakeAvailable(SFML)
+
+target_link_libraries(CosmicGUI PRIVATE CosmicCore SFML::Graphics SFML::Audio SFML::Network)
 
 target_compile_features(CosmicGUI PUBLIC cxx_std_20)
+

@@ -1,26 +1,18 @@
-#include <iostream>
-#include "Cosmic.hpp"
+#include "App.hpp"
 
-struct PrintObserver : public logic::IObserver {
-    void on_state_changed(logic::GameState s) override {
-        std::cout << "Observer: state changed to " << static_cast<int>(s) << std::endl;
+int main(int argc, char** argv) {
+    unsigned int width = 800;
+    unsigned int height = 600;
+
+    if (argc >= 3) {
+        try {
+            width = static_cast<unsigned int>(std::stoul(argv[1]));
+            height = static_cast<unsigned int>(std::stoul(argv[2]));
+        } catch (...) {
+        }
     }
-};
 
-int main() {
-    auto game = logic::create_game();
-    PrintObserver obs;
-    game->add_observer(&obs);
-
-    std::cout << "Starting game..." << std::endl;
-    game->start();
-
-    std::cout << "Pausing game..." << std::endl;
-    game->pause();
-
-    std::cout << "Finishing game..." << std::endl;
-    game->finish();
-
+    Cosmic::App app(width, height);
+    app.run();
     return 0;
 }
-
