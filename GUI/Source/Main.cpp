@@ -5,31 +5,10 @@
 #include "InputController.hpp"
 #include "MenuScreen.hpp"
 #include "IMenuListener.hpp"
+#include "Application.hpp"
 #include <memory>
 #include <iostream>
 
-namespace Pacman {
-
-    /// @brief Application class handling menu and game flow
-    class Application : public IMenuListener {
-    public:
-        void OnPlaySelected() override { 
-            startGameRequested_ = true; 
-        }
-        
-        void OnQuitSelected() override { 
-            quitRequested_ = true; 
-        }
-        
-        bool ShouldStartGame() const { return startGameRequested_; }
-        bool ShouldQuit() const { return quitRequested_; }
-
-    private:
-        bool startGameRequested_ = false;
-        bool quitRequested_ = false;
-    };
-
-}
 
 int main() {
     using namespace Pacman;

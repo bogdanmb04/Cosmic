@@ -16,6 +16,7 @@ set(GUI_SOURCES
         Source/GameScreen.cpp
         Source/InputController.cpp
         Source/MenuScreen.cpp
+        Source/Application.cpp
 )
 
 # Header files
@@ -24,6 +25,7 @@ set(GUI_HEADERS
         Include/InputController.hpp
         Include/MenuScreen.hpp
         Include/IMenuListener.hpp
+        Include/Application.hpp
 )
 
 # Create executable

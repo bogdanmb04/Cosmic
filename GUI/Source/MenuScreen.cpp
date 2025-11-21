@@ -13,9 +13,9 @@ namespace Pacman {
                 "C:/Windows/Fonts/segoeui.ttf",
                 "C:/Windows/Fonts/tahoma.ttf",
                 "C:/Windows/Fonts/verdana.ttf",
-                "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",  // Linux
-                "/System/Library/Fonts/Helvetica.ttc",             // macOS
-                "Assets/arial.ttf"                                 // Local
+                "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+                "/System/Library/Fonts/Helvetica.ttc",
+                "Assets/arial.ttf"
             };
             
             for(const char* path : candidates) {
@@ -184,4 +184,4 @@ namespace Pacman {
         window.display();
     }
 
-} // namespace Pacman
+}

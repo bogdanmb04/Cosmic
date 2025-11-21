@@ -86,4 +86,4 @@ private:
     sf::FloatRect quitRect_{};
 };
 
-} // namespace Cosmic
+}

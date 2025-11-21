@@ -54,4 +54,4 @@ namespace Pacman {
         }
     }
 
-} // namespace Pacman
+}

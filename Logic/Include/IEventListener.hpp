@@ -27,4 +27,4 @@ namespace Pacman {
         virtual void OnGhostsUpdated(const std::vector<GhostState>& ghosts) = 0;
     };
 
-} // namespace Pacman
+}

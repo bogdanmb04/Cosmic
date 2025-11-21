@@ -7,4 +7,4 @@ namespace Pacman {
         virtual void OnPlaySelected() = 0;
         virtual void OnQuitSelected() = 0;
     };
-} // namespace Pacman
+}

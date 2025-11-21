@@ -21,7 +21,6 @@ namespace Pacman {
         Pellet,
         PowerPellet,
         Empty,
-        Fruit,
         GhostDoor
     };
 
@@ -70,4 +69,4 @@ namespace Pacman {
         std::string Name;
     };
 
-} // namespace Pacman
+}
