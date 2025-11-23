@@ -25,6 +25,8 @@ namespace Pacman {
         /// @brief Called when ghost positions/states update
         /// @param ghosts The current ghost states
         virtual void OnGhostsUpdated(const std::vector<GhostState>& ghosts) = 0;
+
+        virtual void OnGhostModeChanged(GhostMode mode) {}
     };
 
 }

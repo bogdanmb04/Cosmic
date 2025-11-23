@@ -12,6 +12,10 @@ set(LOGIC_HEADERS
         Include/IEventListener.hpp
         Include/IGameEngine.hpp
         Include/GameConfig.hpp
+        Include/IGhost.hpp
+        Source/Ghost.cpp
+        Include/GhostModeController.hpp
+        Include/Map.hpp
 )
 
 # Create static library
