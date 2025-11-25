@@ -89,4 +89,11 @@ ctest -C Release
 - `GUI/`, `Logic/` — project source code
 - `assets/` — images and other runtime assets (ensure these are copied to the runtime working directory)
 - `Tests/` — unit tests and test configuration
+- `diagrams/` — UML diagrams realized in Visual Paradigm
+
+## Diagrams Legend
+- **Orange** represent structures
+- **Blue** represent behaviors/classes
+- **Green** represent interfaces
+- **Magenta** represent enumerations
 
