@@ -38,11 +38,15 @@ jobs:
             g++
 
       - name: Configure CMake
-        run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+        run: cmake -S . -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
 
       - name: Build
-        run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}}
+        run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}} --parallel 2
+
+      - name: Show discovered tests
+        run: |
+          echo "Listing tests discovered by CTest (json):"
+          ctest --show-only=json-v1 -C ${{env.BUILD_TYPE}} --test-dir ${{github.workspace}}/build || true
 
       - name: Test
-        working-directory: ${{github.workspace}}/build
-        run: ctest -C ${{env.BUILD_TYPE}}
+        run: ctest -C ${{env.BUILD_TYPE}} --test-dir ${{github.workspace}}/build --output-on-failure -V

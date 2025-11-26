@@ -81,7 +81,7 @@ cd build/tests
 ctest -C Release
 ```
 
-5. Run the built executable (for example `PacmanGame.exe`) from `build/` or the Visual Studio output directory.
+5. Run the built executable (for example `PacmanGame.exe`) from `build/` (usually in build/Bin) or the Visual Studio output directory.
 
 ## Project layout (important files)
 
