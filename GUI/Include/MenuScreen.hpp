@@ -92,17 +92,13 @@ private:
     std::shared_ptr<IMenuListener> listener_;
     sf::Font font_;
 
-    // Text elements
     sf::Text titleText_;
     sf::Text playText_;
     sf::Text quitText_;
-
-    // State
     int selectedIndex_ = 0;
     bool requestClose_ = false;
     float animationTimer_;
 
-    // Interactive areas
     sf::FloatRect playRect_{};
     sf::FloatRect quitRect_{};
 };

@@ -36,7 +36,6 @@ namespace Pacman {
             return false;
         }
 
-        // Title text with arcade style
         titleText_.setFont(font_);
         titleText_.setString("PAC-MAN");
         titleText_.setCharacterSize(72);
@@ -44,13 +43,11 @@ namespace Pacman {
         titleText_.setOutlineColor(sf::Color(200, 150, 0));
         titleText_.setOutlineThickness(3.0f);
 
-        // Play button
         playText_.setFont(font_);
         playText_.setString("PLAY");
         playText_.setCharacterSize(48);
         playText_.setFillColor(sf::Color::White);
 
-        // Quit button
         quitText_.setFont(font_);
         quitText_.setString("QUIT");
         quitText_.setCharacterSize(48);
@@ -71,7 +68,7 @@ namespace Pacman {
         const float width = static_cast<float>(window.getSize().x);
         const float height = static_cast<float>(window.getSize().y);
 
-        // Title with pulsing effect
+        // title
         float pulseScale = 1.0f + 0.05f * std::sin(animationTimer_ * 3.0f);
         sf::FloatRect titleBounds = titleText_.getLocalBounds();
         titleText_.setOrigin(
@@ -81,7 +78,7 @@ namespace Pacman {
         titleText_.setPosition(width * 0.5f, height * 0.18f);
         titleText_.setScale(pulseScale, pulseScale);
 
-        // Play button - clear gap after subtitle
+        // play
         sf::FloatRect playBounds = playText_.getLocalBounds();
         playText_.setOrigin(
             playBounds.left + playBounds.width / 2.0f,
@@ -89,7 +86,7 @@ namespace Pacman {
         );
         playText_.setPosition(width * 0.5f, height * 0.45f);
 
-        // Quit button - clear gap after play button
+        // quit
         sf::FloatRect quitBounds = quitText_.getLocalBounds();
         quitText_.setOrigin(
             quitBounds.left + quitBounds.width / 2.0f,
@@ -97,7 +94,6 @@ namespace Pacman {
         );
         quitText_.setPosition(width * 0.5f, height * 0.65f);
 
-        // Update clickable rectangles with smaller padding
         const float padding = 25.0f;
         playRect_ = sf::FloatRect(
             playText_.getPosition().x - playBounds.width / 2.0f - padding,
@@ -173,7 +169,6 @@ namespace Pacman {
     }
 
     void MenuScreen::Render(sf::RenderWindow& window) {
-        // Gradient background (dark blue to black)
         sf::RectangleShape bgTop(sf::Vector2f(window.getSize().x, window.getSize().y / 2.0f));
         bgTop.setFillColor(sf::Color(10, 10, 50));
         bgTop.setPosition(0, 0);
@@ -184,12 +179,10 @@ namespace Pacman {
         bgBottom.setPosition(0, window.getSize().y / 2.0f);
         window.draw(bgBottom);
 
-        // Draw animated dots in background (like pellets)
         DrawBackgroundPellets(window);
 
         UpdateLayout(window);
 
-        // Update selection colors with glow effect
         bool playSelected = (selectedIndex_ == 0);
         bool quitSelected = (selectedIndex_ == 1);
 
@@ -210,14 +203,11 @@ namespace Pacman {
             quitText_.setOutlineThickness(0.0f);
         }
 
-        // Draw stylized button backgrounds
         DrawButton(window, playRect_, playSelected);
         DrawButton(window, quitRect_, quitSelected);
 
-        // Draw decorative border
         DrawDecorativeBorder(window);
 
-        // Draw text elements
         window.draw(titleText_);
         window.draw(playText_);
         window.draw(quitText_);
@@ -226,7 +216,6 @@ namespace Pacman {
     }
 
     void MenuScreen::DrawButton(sf::RenderWindow& window, const sf::FloatRect& rect, bool isSelected) {
-        // Outer glow
         if(isSelected) {
             sf::RectangleShape glow;
             float glowSize = 8.0f;
@@ -236,7 +225,6 @@ namespace Pacman {
             window.draw(glow);
         }
 
-        // Main button background
         sf::RectangleShape background;
         background.setPosition(rect.left, rect.top);
         background.setSize(sf::Vector2f(rect.width, rect.height));
@@ -245,7 +233,6 @@ namespace Pacman {
         background.setOutlineColor(isSelected ? sf::Color::Cyan : sf::Color(60, 60, 120));
         window.draw(background);
 
-        // Inner highlight
         sf::RectangleShape highlight;
         highlight.setPosition(rect.left + 3, rect.top + 3);
         highlight.setSize(sf::Vector2f(rect.width - 6, 2));
@@ -282,25 +269,25 @@ namespace Pacman {
         const float width = window.getSize().x - margin * 2;
         const float height = window.getSize().y - margin * 2;
 
-        // Top border
+        // Top
         sf::RectangleShape topBorder(sf::Vector2f(width, thickness));
         topBorder.setPosition(margin, margin);
         topBorder.setFillColor(sf::Color(33, 33, 222, 150));
         window.draw(topBorder);
 
-        // Bottom border
+        // Bottom
         sf::RectangleShape bottomBorder(sf::Vector2f(width, thickness));
         bottomBorder.setPosition(margin, window.getSize().y - margin - thickness);
         bottomBorder.setFillColor(sf::Color(33, 33, 222, 150));
         window.draw(bottomBorder);
 
-        // Left border
+        // Left
         sf::RectangleShape leftBorder(sf::Vector2f(thickness, height));
         leftBorder.setPosition(margin, margin);
         leftBorder.setFillColor(sf::Color(33, 33, 222, 150));
         window.draw(leftBorder);
 
-        // Right border
+        // Right
         sf::RectangleShape rightBorder(sf::Vector2f(thickness, height));
         rightBorder.setPosition(window.getSize().x - margin - thickness, margin);
         rightBorder.setFillColor(sf::Color(33, 33, 222, 150));

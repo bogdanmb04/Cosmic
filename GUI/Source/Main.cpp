@@ -12,11 +12,9 @@
 int main() {
     using namespace Pacman;
 
-    const int TILE_SIZE = GameConfig::TileSize;
-    const int MENU_WIDTH = 28 * TILE_SIZE;
-    const int MENU_HEIGHT = 24 * TILE_SIZE;  // Increased from 20 to 24 for more space
-
-    // ========== Menu Phase ==========
+    constexpr int TILE_SIZE = GameConfig::TileSize;
+    constexpr int MENU_WIDTH = 56 * TILE_SIZE;
+    constexpr int MENU_HEIGHT = 48 * TILE_SIZE;
 
     sf::RenderWindow menuWindow(
         sf::VideoMode(MENU_WIDTH, MENU_HEIGHT),
