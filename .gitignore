@@ -60,3 +60,9 @@ googletest-populate-*/
 # Keep this repo clean
 .gitignore
 .idea
+
+/out
+/out/*
+
+.vs
+.vs/*
