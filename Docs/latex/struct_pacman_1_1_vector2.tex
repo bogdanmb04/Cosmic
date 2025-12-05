@@ -1,0 +1,165 @@
+\doxysection{Pacman\+::Vector2 Struct Reference}
+\hypertarget{struct_pacman_1_1_vector2}{}\label{struct_pacman_1_1_vector2}\index{Pacman::Vector2@{Pacman::Vector2}}
+
+
+Utility for 2D grid coordinates.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Types.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{struct_pacman_1_1_vector2_a3c1fe06baab9a69180276d5fc5e1a838}{operator==}} (const \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \&other) const
+\begin{DoxyCompactList}\small\item\em Checks if two vectors are identical. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_pacman_1_1_vector2_a40a148d2e8aa57d453adb6aba5599b81}{operator!=}} (const \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \&other) const
+\begin{DoxyCompactList}\small\item\em Checks if two vectors are different. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \mbox{\hyperlink{struct_pacman_1_1_vector2_aa2ca5010fd37db8f2d8650276e7aeb54}{operator+}} (const \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \&other) const
+\begin{DoxyCompactList}\small\item\em Adds two vectors (e.\+g., Position + \doxylink{namespace_pacman_a1246fdcb0212561a19f291d22fb33969}{Direction}). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \mbox{\hyperlink{struct_pacman_1_1_vector2_a8be5bf9728e2e87089571f781d8da65a}{operator-\/}} (const \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \&other) const
+\begin{DoxyCompactList}\small\item\em Subtracts two vectors (e.\+g., Destination -\/ Source). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \mbox{\hyperlink{struct_pacman_1_1_vector2_aec1f28f01ec2fa2262a26a84c910bb1d}{operator\texorpdfstring{$\ast$}{*}}} (int scalar) const
+\begin{DoxyCompactList}\small\item\em Multiplies vector by a scalar (for scaling). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_pacman_1_1_vector2_aabd64182fbd914ff6ede7444f750bbc6}{Distance\+Squared}} (const \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \&other) const
+\begin{DoxyCompactList}\small\item\em Calculates squared distance to another point. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{struct_pacman_1_1_vector2_a6a29b1e2624f8d42412dd14291fcbe9a}{Distance}} (const \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \&other) const
+\begin{DoxyCompactList}\small\item\em Calculates actual Euclidean distance (uses square root). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{struct_pacman_1_1_vector2_a547eb3a086cc56c59691e014aeb60976}{operator$<$}} (const \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \&other) const
+\begin{DoxyCompactList}\small\item\em Ordering operator (needed for std\+::map or std\+::set). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_pacman_1_1_vector2_a7c21f4e9a5f67982c80d11ea42b35f11}{X}} = 0
+\begin{DoxyCompactList}\small\item\em Position on the horizontal axis (Column). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{struct_pacman_1_1_vector2_a686a4c05bc5d50f9b23289bea0d62ea1}{Y}} = 0
+\begin{DoxyCompactList}\small\item\em Position on the vertical axis (Row). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Utility for 2D grid coordinates. 
+
+Includes math operators to simplify distance and movement calculations. 
+
+\label{doc-func-members}
+\Hypertarget{struct_pacman_1_1_vector2_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{struct_pacman_1_1_vector2_a6a29b1e2624f8d42412dd14291fcbe9a}\index{Pacman::Vector2@{Pacman::Vector2}!Distance@{Distance}}
+\index{Distance@{Distance}!Pacman::Vector2@{Pacman::Vector2}}
+\doxysubsubsection{\texorpdfstring{Distance()}{Distance()}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_vector2_a6a29b1e2624f8d42412dd14291fcbe9a} 
+float Pacman\+::\+Vector2\+::\+Distance (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculates actual Euclidean distance (uses square root). 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{struct_pacman_1_1_vector2_a6a29b1e2624f8d42412dd14291fcbe9a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{struct_pacman_1_1_vector2_aabd64182fbd914ff6ede7444f750bbc6}\index{Pacman::Vector2@{Pacman::Vector2}!DistanceSquared@{DistanceSquared}}
+\index{DistanceSquared@{DistanceSquared}!Pacman::Vector2@{Pacman::Vector2}}
+\doxysubsubsection{\texorpdfstring{DistanceSquared()}{DistanceSquared()}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_vector2_aabd64182fbd914ff6ede7444f750bbc6} 
+int Pacman\+::\+Vector2\+::\+Distance\+Squared (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Calculates squared distance to another point. 
+
+Faster than \doxylink{struct_pacman_1_1_vector2_a6a29b1e2624f8d42412dd14291fcbe9a}{Distance()} because it avoids the square root (std\+::sqrt). Useful for comparing distances (e.\+g., which path is shorter?). \Hypertarget{struct_pacman_1_1_vector2_a40a148d2e8aa57d453adb6aba5599b81}\index{Pacman::Vector2@{Pacman::Vector2}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Pacman::Vector2@{Pacman::Vector2}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_vector2_a40a148d2e8aa57d453adb6aba5599b81} 
+bool Pacman\+::\+Vector2\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if two vectors are different. 
+
+\Hypertarget{struct_pacman_1_1_vector2_aec1f28f01ec2fa2262a26a84c910bb1d}\index{Pacman::Vector2@{Pacman::Vector2}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!Pacman::Vector2@{Pacman::Vector2}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_vector2_aec1f28f01ec2fa2262a26a84c910bb1d} 
+\mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} Pacman\+::\+Vector2\+::operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{int}]{scalar}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Multiplies vector by a scalar (for scaling). 
+
+\Hypertarget{struct_pacman_1_1_vector2_aa2ca5010fd37db8f2d8650276e7aeb54}\index{Pacman::Vector2@{Pacman::Vector2}!operator+@{operator+}}
+\index{operator+@{operator+}!Pacman::Vector2@{Pacman::Vector2}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_vector2_aa2ca5010fd37db8f2d8650276e7aeb54} 
+\mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} Pacman\+::\+Vector2\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds two vectors (e.\+g., Position + \doxylink{namespace_pacman_a1246fdcb0212561a19f291d22fb33969}{Direction}). 
+
+\Hypertarget{struct_pacman_1_1_vector2_a8be5bf9728e2e87089571f781d8da65a}\index{Pacman::Vector2@{Pacman::Vector2}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Pacman::Vector2@{Pacman::Vector2}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_vector2_a8be5bf9728e2e87089571f781d8da65a} 
+\mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} Pacman\+::\+Vector2\+::operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Subtracts two vectors (e.\+g., Destination -\/ Source). 
+
+\Hypertarget{struct_pacman_1_1_vector2_a547eb3a086cc56c59691e014aeb60976}\index{Pacman::Vector2@{Pacman::Vector2}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Pacman::Vector2@{Pacman::Vector2}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_vector2_a547eb3a086cc56c59691e014aeb60976} 
+bool Pacman\+::\+Vector2\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Ordering operator (needed for std\+::map or std\+::set). 
+
+Orders first by X, then by Y. \Hypertarget{struct_pacman_1_1_vector2_a3c1fe06baab9a69180276d5fc5e1a838}\index{Pacman::Vector2@{Pacman::Vector2}!operator==@{operator==}}
+\index{operator==@{operator==}!Pacman::Vector2@{Pacman::Vector2}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_vector2_a3c1fe06baab9a69180276d5fc5e1a838} 
+bool Pacman\+::\+Vector2\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \&}]{other}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Checks if two vectors are identical. 
+
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_pacman_1_1_vector2_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_pacman_1_1_vector2_a7c21f4e9a5f67982c80d11ea42b35f11}\index{Pacman::Vector2@{Pacman::Vector2}!X@{X}}
+\index{X@{X}!Pacman::Vector2@{Pacman::Vector2}}
+\doxysubsubsection{\texorpdfstring{X}{X}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_vector2_a7c21f4e9a5f67982c80d11ea42b35f11} 
+int Pacman\+::\+Vector2\+::X = 0}
+
+
+
+Position on the horizontal axis (Column). 
+
+\Hypertarget{struct_pacman_1_1_vector2_a686a4c05bc5d50f9b23289bea0d62ea1}\index{Pacman::Vector2@{Pacman::Vector2}!Y@{Y}}
+\index{Y@{Y}!Pacman::Vector2@{Pacman::Vector2}}
+\doxysubsubsection{\texorpdfstring{Y}{Y}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_vector2_a686a4c05bc5d50f9b23289bea0d62ea1} 
+int Pacman\+::\+Vector2\+::Y = 0}
+
+
+
+Position on the vertical axis (Row). 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Logic/\+Include/\mbox{\hyperlink{_game_types_8hpp}{Game\+Types.\+hpp}}\end{DoxyCompactItemize}

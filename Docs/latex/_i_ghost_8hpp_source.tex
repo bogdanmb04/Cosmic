@@ -1,0 +1,42 @@
+\doxysection{IGhost.\+hpp}
+\hypertarget{_i_ghost_8hpp_source}{}\label{_i_ghost_8hpp_source}\index{Logic/Include/IGhost.hpp@{Logic/Include/IGhost.hpp}}
+\mbox{\hyperlink{_i_ghost_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_game_types_8hpp}{GameTypes.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_pacman}{Pacman}}\ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_pacman_1_1_i_ghost}{IGhost}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_pacman_1_1_i_ghost_a9c0f372d3691294de5332effea174e66}{\string~IGhost}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}}\ \mbox{\hyperlink{class_pacman_1_1_i_ghost_aafa0179bac9a4fca4e90593fdd8b1974}{CalculateChaseTarget}}(}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_pacman_1_1_ghost_state}{GhostState}}\&\ ghost,}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_pacman_1_1_player_state}{PlayerState}}\&\ player,}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}}\&\ blinkyPosition)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}}\ \mbox{\hyperlink{class_pacman_1_1_i_ghost_afb89afbab403339dc6a574c02c8dc2e0}{GetScatterTarget}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{namespace_pacman_a815768ada4c309add8db3fdd794d8164}{GhostType}}\ \mbox{\hyperlink{class_pacman_1_1_i_ghost_a4eb7b36c5e8b5d8fce2a48880a757531}{GetGhostType}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00054\ \ \ \ \ \};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Factory\ Functions\ -\/-\/-\/}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00059\ \ \ \ \ std::unique\_ptr<IGhost>\ \mbox{\hyperlink{namespace_pacman_a710ff3a5abf41a55c8bae15de15c465d}{CreateRedAI}}();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00062\ \ \ \ \ std::unique\_ptr<IGhost>\ \mbox{\hyperlink{namespace_pacman_a0215dec6c8243a5a45d81b72f104a01f}{CreatePinkAI}}();}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00065\ \ \ \ \ std::unique\_ptr<IGhost>\ \mbox{\hyperlink{namespace_pacman_a18d0d0c3640e963eb60290afdb8c18e8}{CreateBlueAI}}();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00068\ \ \ \ \ std::unique\_ptr<IGhost>\ \mbox{\hyperlink{namespace_pacman_ae48e21e76863982b22fc3c131dcdad10}{CreateOrangeAI}}();}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00075\ \ \ \ \ std::unique\_ptr<IGhost>\ \mbox{\hyperlink{namespace_pacman_a46f7834ea9204ed07e0a9f55956916f5}{CreateGhostAI}}(\mbox{\hyperlink{namespace_pacman_a815768ada4c309add8db3fdd794d8164}{GhostType}}\ type);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \}}
+
+\end{DoxyCode}

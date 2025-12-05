@@ -1,0 +1,339 @@
+\doxysection{Pacman\+::Game\+Config Struct Reference}
+\hypertarget{struct_pacman_1_1_game_config}{}\label{struct_pacman_1_1_game_config}\index{Pacman::GameConfig@{Pacman::GameConfig}}
+
+
+{\ttfamily \#include $<$Game\+Config.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_a50b81a73310641330f42c7771fbc37bc}{Map\+Width}} = 28
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_a39590f25d0637e00b8654bb762ca3dbd}{Map\+Height}} = 31
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_a3eccb2fb5278c99b68e45fed0438a63f}{Pellet\+Score}} = 10
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_ae85b7a3b6358bc2989d47d911d7bd166}{Power\+Pellet\+Score}} = 50
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_a099282eb6d6711df090763361e11e240}{Ghost\+Score}} = 50
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_a0108da2062019011497ec73396cf7ae3}{Ghost\+Score\+Multiplier}} = 2
+\item 
+static constexpr float \mbox{\hyperlink{struct_pacman_1_1_game_config_afef7465b39e14ce00bcfa5803bfcae21}{Player\+Step\+Interval}} = 0.\+12f
+\item 
+static constexpr float \mbox{\hyperlink{struct_pacman_1_1_game_config_ae72ad97b91d28c628901c5cf25c31c15}{Ghost\+Step\+Interval}} = 0.\+16f
+\item 
+static constexpr float \mbox{\hyperlink{struct_pacman_1_1_game_config_a8bf55e99c1d292e1c16dc43577327724}{Ghost\+Frightened\+Step\+Interval}} = 0.\+24f
+\item 
+static constexpr float \mbox{\hyperlink{struct_pacman_1_1_game_config_a1f5de40540892e8072a47eb94af7e13f}{Ghost\+Eaten\+Step\+Interval}} = 0.\+06f
+\item 
+static constexpr float \mbox{\hyperlink{struct_pacman_1_1_game_config_ac2b491e952002815bf3dac6ee72f4b25}{Power\+Up\+Duration}} = 6.\+0f
+\item 
+static constexpr float \mbox{\hyperlink{struct_pacman_1_1_game_config_a7506c1c5d5d259bf3bf9e30cf0134f1a}{Power\+Up\+Warning\+Time}} = 2.\+0f
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_aa001a0dc1b118e9969a85b5a430b5845}{Scatter\+Chase\+Waves}} = 4
+\item 
+static constexpr float \mbox{\hyperlink{struct_pacman_1_1_game_config_abd2365b88639e19b333e6f533ace7a4c}{Scatter\+Durations}} \mbox{[}$\,$\mbox{]} = \{7.\+0f, 7.\+0f, 5.\+0f, 5.\+0f\}
+\item 
+static constexpr float \mbox{\hyperlink{struct_pacman_1_1_game_config_a455c0eb52aad90e893b474f681ac729e}{Chase\+Durations}} \mbox{[}$\,$\mbox{]} = \{20.\+0f, 20.\+0f, 20.\+0f, 99999.\+0f\}
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_aab7de6d309bcf2c969875a8c8ca0d990}{Pink\+Target\+Ahead}} = 4
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_a52043012e060bab0662aefcd7b249689}{Blue\+Target\+Ahead}} = 2
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_a565a9230bf4caef6fef4439c1851a895}{Orange\+Shy\+Distance}} = 8
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_a42d2a88b926b5dd64a94edad55d0761d}{Elroy\+Dots\+Threshold1}} = 20
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_a091a239fa7740303d1c8cac80eaa2277}{Elroy\+Dots\+Threshold2}} = 10
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_a59505a8c6bbcaa52ae8febbcc3e205e0}{Red\+ScatterX}} = 25
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_a58d7e241ac55aaa24c4987cb7955b387}{Red\+ScatterY}} = -\/3
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_ae624128f1ac9d13a11b603158831b30c}{Pink\+ScatterX}} = 2
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_ab6f9a51e878db1ceaa144af12fbdcca2}{Pink\+ScatterY}} = -\/3
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_a28cae0d13c74424798b13ee0610c8eb1}{Blue\+ScatterX}} = 27
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_a2de0805cfffd446fdf0c8fe5e028954b}{Blue\+ScatterY}} = 34
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_af3b1f97d421b149e6f0151bfd1a37e3c}{Orange\+ScatterX}} = 0
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_a20c699f104f31bdb79fbabc866015a86}{Orange\+ScatterY}} = 34
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_af4e20c82c555fc9e37d86979bc3c0891}{Ghost\+HouseX}} = 13
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_aaa03d064169c562ed761f83905f7ddce}{Ghost\+HouseY}} = 14
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_a8aa0b27f481abcd99b2f2d8a320f41ed}{Ghost\+House\+DoorY}} = 12
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_a2ddcd305a3c3943724f91467b3070063}{Player\+StartX}} = 13
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_a3de844df0d9c6f47e5bffb2111bdc847}{Player\+StartY}} = 26
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_a1b00ca6632764d7b110ff5a7ecce6dee}{Starting\+Lives}} = 3
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_a54fa55946c44769416d14113f52996c0}{Max\+Lives}} = 5
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_ad338a7170b2dfc301291f4cdf50297a3}{Extra\+Life\+Score}} = 10000
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_a1e633485d3017d5754b8bd6a29ddc465}{Tile\+Size}} = 16
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_ab84cfa2d95d3c9359d71ae84ac07fe1c}{Pacman\+Frame\+Count}} = 6
+\item 
+static constexpr int \mbox{\hyperlink{struct_pacman_1_1_game_config_a000eefbd03ae280d35859cf9f47148c3}{Ghost\+Frame\+Count}} = 2
+\item 
+static constexpr float \mbox{\hyperlink{struct_pacman_1_1_game_config_a8d024a0ae1b00afaa3568bd729c422a1}{Pacman\+Animation\+Speed}} = 0.\+08f
+\end{DoxyCompactItemize}
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_pacman_1_1_game_config_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_pacman_1_1_game_config_a28cae0d13c74424798b13ee0610c8eb1}\index{Pacman::GameConfig@{Pacman::GameConfig}!BlueScatterX@{BlueScatterX}}
+\index{BlueScatterX@{BlueScatterX}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{BlueScatterX}{BlueScatterX}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_a28cae0d13c74424798b13ee0610c8eb1} 
+int Pacman\+::\+Game\+Config\+::\+Blue\+ScatterX = 27\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_a2de0805cfffd446fdf0c8fe5e028954b}\index{Pacman::GameConfig@{Pacman::GameConfig}!BlueScatterY@{BlueScatterY}}
+\index{BlueScatterY@{BlueScatterY}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{BlueScatterY}{BlueScatterY}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_a2de0805cfffd446fdf0c8fe5e028954b} 
+int Pacman\+::\+Game\+Config\+::\+Blue\+ScatterY = 34\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_a52043012e060bab0662aefcd7b249689}\index{Pacman::GameConfig@{Pacman::GameConfig}!BlueTargetAhead@{BlueTargetAhead}}
+\index{BlueTargetAhead@{BlueTargetAhead}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{BlueTargetAhead}{BlueTargetAhead}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_a52043012e060bab0662aefcd7b249689} 
+int Pacman\+::\+Game\+Config\+::\+Blue\+Target\+Ahead = 2\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_a455c0eb52aad90e893b474f681ac729e}\index{Pacman::GameConfig@{Pacman::GameConfig}!ChaseDurations@{ChaseDurations}}
+\index{ChaseDurations@{ChaseDurations}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{ChaseDurations}{ChaseDurations}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_a455c0eb52aad90e893b474f681ac729e} 
+float Pacman\+::\+Game\+Config\+::\+Chase\+Durations\mbox{[}$\,$\mbox{]} = \{20.\+0f, 20.\+0f, 20.\+0f, 99999.\+0f\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_a42d2a88b926b5dd64a94edad55d0761d}\index{Pacman::GameConfig@{Pacman::GameConfig}!ElroyDotsThreshold1@{ElroyDotsThreshold1}}
+\index{ElroyDotsThreshold1@{ElroyDotsThreshold1}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{ElroyDotsThreshold1}{ElroyDotsThreshold1}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_a42d2a88b926b5dd64a94edad55d0761d} 
+int Pacman\+::\+Game\+Config\+::\+Elroy\+Dots\+Threshold1 = 20\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_a091a239fa7740303d1c8cac80eaa2277}\index{Pacman::GameConfig@{Pacman::GameConfig}!ElroyDotsThreshold2@{ElroyDotsThreshold2}}
+\index{ElroyDotsThreshold2@{ElroyDotsThreshold2}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{ElroyDotsThreshold2}{ElroyDotsThreshold2}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_a091a239fa7740303d1c8cac80eaa2277} 
+int Pacman\+::\+Game\+Config\+::\+Elroy\+Dots\+Threshold2 = 10\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_ad338a7170b2dfc301291f4cdf50297a3}\index{Pacman::GameConfig@{Pacman::GameConfig}!ExtraLifeScore@{ExtraLifeScore}}
+\index{ExtraLifeScore@{ExtraLifeScore}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{ExtraLifeScore}{ExtraLifeScore}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_ad338a7170b2dfc301291f4cdf50297a3} 
+int Pacman\+::\+Game\+Config\+::\+Extra\+Life\+Score = 10000\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_a1f5de40540892e8072a47eb94af7e13f}\index{Pacman::GameConfig@{Pacman::GameConfig}!GhostEatenStepInterval@{GhostEatenStepInterval}}
+\index{GhostEatenStepInterval@{GhostEatenStepInterval}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{GhostEatenStepInterval}{GhostEatenStepInterval}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_a1f5de40540892e8072a47eb94af7e13f} 
+float Pacman\+::\+Game\+Config\+::\+Ghost\+Eaten\+Step\+Interval = 0.\+06f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_a000eefbd03ae280d35859cf9f47148c3}\index{Pacman::GameConfig@{Pacman::GameConfig}!GhostFrameCount@{GhostFrameCount}}
+\index{GhostFrameCount@{GhostFrameCount}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{GhostFrameCount}{GhostFrameCount}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_a000eefbd03ae280d35859cf9f47148c3} 
+int Pacman\+::\+Game\+Config\+::\+Ghost\+Frame\+Count = 2\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_a8bf55e99c1d292e1c16dc43577327724}\index{Pacman::GameConfig@{Pacman::GameConfig}!GhostFrightenedStepInterval@{GhostFrightenedStepInterval}}
+\index{GhostFrightenedStepInterval@{GhostFrightenedStepInterval}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{GhostFrightenedStepInterval}{GhostFrightenedStepInterval}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_a8bf55e99c1d292e1c16dc43577327724} 
+float Pacman\+::\+Game\+Config\+::\+Ghost\+Frightened\+Step\+Interval = 0.\+24f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_a8aa0b27f481abcd99b2f2d8a320f41ed}\index{Pacman::GameConfig@{Pacman::GameConfig}!GhostHouseDoorY@{GhostHouseDoorY}}
+\index{GhostHouseDoorY@{GhostHouseDoorY}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{GhostHouseDoorY}{GhostHouseDoorY}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_a8aa0b27f481abcd99b2f2d8a320f41ed} 
+int Pacman\+::\+Game\+Config\+::\+Ghost\+House\+DoorY = 12\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_af4e20c82c555fc9e37d86979bc3c0891}\index{Pacman::GameConfig@{Pacman::GameConfig}!GhostHouseX@{GhostHouseX}}
+\index{GhostHouseX@{GhostHouseX}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{GhostHouseX}{GhostHouseX}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_af4e20c82c555fc9e37d86979bc3c0891} 
+int Pacman\+::\+Game\+Config\+::\+Ghost\+HouseX = 13\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_aaa03d064169c562ed761f83905f7ddce}\index{Pacman::GameConfig@{Pacman::GameConfig}!GhostHouseY@{GhostHouseY}}
+\index{GhostHouseY@{GhostHouseY}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{GhostHouseY}{GhostHouseY}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_aaa03d064169c562ed761f83905f7ddce} 
+int Pacman\+::\+Game\+Config\+::\+Ghost\+HouseY = 14\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_a099282eb6d6711df090763361e11e240}\index{Pacman::GameConfig@{Pacman::GameConfig}!GhostScore@{GhostScore}}
+\index{GhostScore@{GhostScore}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{GhostScore}{GhostScore}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_a099282eb6d6711df090763361e11e240} 
+int Pacman\+::\+Game\+Config\+::\+Ghost\+Score = 50\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_a0108da2062019011497ec73396cf7ae3}\index{Pacman::GameConfig@{Pacman::GameConfig}!GhostScoreMultiplier@{GhostScoreMultiplier}}
+\index{GhostScoreMultiplier@{GhostScoreMultiplier}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{GhostScoreMultiplier}{GhostScoreMultiplier}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_a0108da2062019011497ec73396cf7ae3} 
+int Pacman\+::\+Game\+Config\+::\+Ghost\+Score\+Multiplier = 2\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_ae72ad97b91d28c628901c5cf25c31c15}\index{Pacman::GameConfig@{Pacman::GameConfig}!GhostStepInterval@{GhostStepInterval}}
+\index{GhostStepInterval@{GhostStepInterval}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{GhostStepInterval}{GhostStepInterval}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_ae72ad97b91d28c628901c5cf25c31c15} 
+float Pacman\+::\+Game\+Config\+::\+Ghost\+Step\+Interval = 0.\+16f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_a39590f25d0637e00b8654bb762ca3dbd}\index{Pacman::GameConfig@{Pacman::GameConfig}!MapHeight@{MapHeight}}
+\index{MapHeight@{MapHeight}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{MapHeight}{MapHeight}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_a39590f25d0637e00b8654bb762ca3dbd} 
+int Pacman\+::\+Game\+Config\+::\+Map\+Height = 31\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_a50b81a73310641330f42c7771fbc37bc}\index{Pacman::GameConfig@{Pacman::GameConfig}!MapWidth@{MapWidth}}
+\index{MapWidth@{MapWidth}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{MapWidth}{MapWidth}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_a50b81a73310641330f42c7771fbc37bc} 
+int Pacman\+::\+Game\+Config\+::\+Map\+Width = 28\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_a54fa55946c44769416d14113f52996c0}\index{Pacman::GameConfig@{Pacman::GameConfig}!MaxLives@{MaxLives}}
+\index{MaxLives@{MaxLives}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{MaxLives}{MaxLives}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_a54fa55946c44769416d14113f52996c0} 
+int Pacman\+::\+Game\+Config\+::\+Max\+Lives = 5\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_af3b1f97d421b149e6f0151bfd1a37e3c}\index{Pacman::GameConfig@{Pacman::GameConfig}!OrangeScatterX@{OrangeScatterX}}
+\index{OrangeScatterX@{OrangeScatterX}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{OrangeScatterX}{OrangeScatterX}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_af3b1f97d421b149e6f0151bfd1a37e3c} 
+int Pacman\+::\+Game\+Config\+::\+Orange\+ScatterX = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_a20c699f104f31bdb79fbabc866015a86}\index{Pacman::GameConfig@{Pacman::GameConfig}!OrangeScatterY@{OrangeScatterY}}
+\index{OrangeScatterY@{OrangeScatterY}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{OrangeScatterY}{OrangeScatterY}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_a20c699f104f31bdb79fbabc866015a86} 
+int Pacman\+::\+Game\+Config\+::\+Orange\+ScatterY = 34\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_a565a9230bf4caef6fef4439c1851a895}\index{Pacman::GameConfig@{Pacman::GameConfig}!OrangeShyDistance@{OrangeShyDistance}}
+\index{OrangeShyDistance@{OrangeShyDistance}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{OrangeShyDistance}{OrangeShyDistance}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_a565a9230bf4caef6fef4439c1851a895} 
+int Pacman\+::\+Game\+Config\+::\+Orange\+Shy\+Distance = 8\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_a8d024a0ae1b00afaa3568bd729c422a1}\index{Pacman::GameConfig@{Pacman::GameConfig}!PacmanAnimationSpeed@{PacmanAnimationSpeed}}
+\index{PacmanAnimationSpeed@{PacmanAnimationSpeed}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{PacmanAnimationSpeed}{PacmanAnimationSpeed}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_a8d024a0ae1b00afaa3568bd729c422a1} 
+float Pacman\+::\+Game\+Config\+::\+Pacman\+Animation\+Speed = 0.\+08f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_ab84cfa2d95d3c9359d71ae84ac07fe1c}\index{Pacman::GameConfig@{Pacman::GameConfig}!PacmanFrameCount@{PacmanFrameCount}}
+\index{PacmanFrameCount@{PacmanFrameCount}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{PacmanFrameCount}{PacmanFrameCount}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_ab84cfa2d95d3c9359d71ae84ac07fe1c} 
+int Pacman\+::\+Game\+Config\+::\+Pacman\+Frame\+Count = 6\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_a3eccb2fb5278c99b68e45fed0438a63f}\index{Pacman::GameConfig@{Pacman::GameConfig}!PelletScore@{PelletScore}}
+\index{PelletScore@{PelletScore}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{PelletScore}{PelletScore}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_a3eccb2fb5278c99b68e45fed0438a63f} 
+int Pacman\+::\+Game\+Config\+::\+Pellet\+Score = 10\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_ae624128f1ac9d13a11b603158831b30c}\index{Pacman::GameConfig@{Pacman::GameConfig}!PinkScatterX@{PinkScatterX}}
+\index{PinkScatterX@{PinkScatterX}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{PinkScatterX}{PinkScatterX}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_ae624128f1ac9d13a11b603158831b30c} 
+int Pacman\+::\+Game\+Config\+::\+Pink\+ScatterX = 2\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_ab6f9a51e878db1ceaa144af12fbdcca2}\index{Pacman::GameConfig@{Pacman::GameConfig}!PinkScatterY@{PinkScatterY}}
+\index{PinkScatterY@{PinkScatterY}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{PinkScatterY}{PinkScatterY}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_ab6f9a51e878db1ceaa144af12fbdcca2} 
+int Pacman\+::\+Game\+Config\+::\+Pink\+ScatterY = -\/3\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_aab7de6d309bcf2c969875a8c8ca0d990}\index{Pacman::GameConfig@{Pacman::GameConfig}!PinkTargetAhead@{PinkTargetAhead}}
+\index{PinkTargetAhead@{PinkTargetAhead}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{PinkTargetAhead}{PinkTargetAhead}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_aab7de6d309bcf2c969875a8c8ca0d990} 
+int Pacman\+::\+Game\+Config\+::\+Pink\+Target\+Ahead = 4\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_a2ddcd305a3c3943724f91467b3070063}\index{Pacman::GameConfig@{Pacman::GameConfig}!PlayerStartX@{PlayerStartX}}
+\index{PlayerStartX@{PlayerStartX}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{PlayerStartX}{PlayerStartX}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_a2ddcd305a3c3943724f91467b3070063} 
+int Pacman\+::\+Game\+Config\+::\+Player\+StartX = 13\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_a3de844df0d9c6f47e5bffb2111bdc847}\index{Pacman::GameConfig@{Pacman::GameConfig}!PlayerStartY@{PlayerStartY}}
+\index{PlayerStartY@{PlayerStartY}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{PlayerStartY}{PlayerStartY}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_a3de844df0d9c6f47e5bffb2111bdc847} 
+int Pacman\+::\+Game\+Config\+::\+Player\+StartY = 26\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_afef7465b39e14ce00bcfa5803bfcae21}\index{Pacman::GameConfig@{Pacman::GameConfig}!PlayerStepInterval@{PlayerStepInterval}}
+\index{PlayerStepInterval@{PlayerStepInterval}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{PlayerStepInterval}{PlayerStepInterval}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_afef7465b39e14ce00bcfa5803bfcae21} 
+float Pacman\+::\+Game\+Config\+::\+Player\+Step\+Interval = 0.\+12f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_ae85b7a3b6358bc2989d47d911d7bd166}\index{Pacman::GameConfig@{Pacman::GameConfig}!PowerPelletScore@{PowerPelletScore}}
+\index{PowerPelletScore@{PowerPelletScore}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{PowerPelletScore}{PowerPelletScore}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_ae85b7a3b6358bc2989d47d911d7bd166} 
+int Pacman\+::\+Game\+Config\+::\+Power\+Pellet\+Score = 50\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_ac2b491e952002815bf3dac6ee72f4b25}\index{Pacman::GameConfig@{Pacman::GameConfig}!PowerUpDuration@{PowerUpDuration}}
+\index{PowerUpDuration@{PowerUpDuration}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{PowerUpDuration}{PowerUpDuration}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_ac2b491e952002815bf3dac6ee72f4b25} 
+float Pacman\+::\+Game\+Config\+::\+Power\+Up\+Duration = 6.\+0f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_a7506c1c5d5d259bf3bf9e30cf0134f1a}\index{Pacman::GameConfig@{Pacman::GameConfig}!PowerUpWarningTime@{PowerUpWarningTime}}
+\index{PowerUpWarningTime@{PowerUpWarningTime}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{PowerUpWarningTime}{PowerUpWarningTime}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_a7506c1c5d5d259bf3bf9e30cf0134f1a} 
+float Pacman\+::\+Game\+Config\+::\+Power\+Up\+Warning\+Time = 2.\+0f\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_a59505a8c6bbcaa52ae8febbcc3e205e0}\index{Pacman::GameConfig@{Pacman::GameConfig}!RedScatterX@{RedScatterX}}
+\index{RedScatterX@{RedScatterX}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{RedScatterX}{RedScatterX}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_a59505a8c6bbcaa52ae8febbcc3e205e0} 
+int Pacman\+::\+Game\+Config\+::\+Red\+ScatterX = 25\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_a58d7e241ac55aaa24c4987cb7955b387}\index{Pacman::GameConfig@{Pacman::GameConfig}!RedScatterY@{RedScatterY}}
+\index{RedScatterY@{RedScatterY}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{RedScatterY}{RedScatterY}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_a58d7e241ac55aaa24c4987cb7955b387} 
+int Pacman\+::\+Game\+Config\+::\+Red\+ScatterY = -\/3\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_aa001a0dc1b118e9969a85b5a430b5845}\index{Pacman::GameConfig@{Pacman::GameConfig}!ScatterChaseWaves@{ScatterChaseWaves}}
+\index{ScatterChaseWaves@{ScatterChaseWaves}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{ScatterChaseWaves}{ScatterChaseWaves}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_aa001a0dc1b118e9969a85b5a430b5845} 
+int Pacman\+::\+Game\+Config\+::\+Scatter\+Chase\+Waves = 4\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_abd2365b88639e19b333e6f533ace7a4c}\index{Pacman::GameConfig@{Pacman::GameConfig}!ScatterDurations@{ScatterDurations}}
+\index{ScatterDurations@{ScatterDurations}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{ScatterDurations}{ScatterDurations}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_abd2365b88639e19b333e6f533ace7a4c} 
+float Pacman\+::\+Game\+Config\+::\+Scatter\+Durations\mbox{[}$\,$\mbox{]} = \{7.\+0f, 7.\+0f, 5.\+0f, 5.\+0f\}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_a1b00ca6632764d7b110ff5a7ecce6dee}\index{Pacman::GameConfig@{Pacman::GameConfig}!StartingLives@{StartingLives}}
+\index{StartingLives@{StartingLives}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{StartingLives}{StartingLives}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_a1b00ca6632764d7b110ff5a7ecce6dee} 
+int Pacman\+::\+Game\+Config\+::\+Starting\+Lives = 3\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{struct_pacman_1_1_game_config_a1e633485d3017d5754b8bd6a29ddc465}\index{Pacman::GameConfig@{Pacman::GameConfig}!TileSize@{TileSize}}
+\index{TileSize@{TileSize}!Pacman::GameConfig@{Pacman::GameConfig}}
+\doxysubsubsection{\texorpdfstring{TileSize}{TileSize}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_game_config_a1e633485d3017d5754b8bd6a29ddc465} 
+int Pacman\+::\+Game\+Config\+::\+Tile\+Size = 16\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Logic/\+Include/\mbox{\hyperlink{_game_config_8hpp}{Game\+Config.\+hpp}}\end{DoxyCompactItemize}

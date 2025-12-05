@@ -1,0 +1,31 @@
+\doxysection{IEvent\+Listener.\+hpp}
+\hypertarget{_i_event_listener_8hpp_source}{}\label{_i_event_listener_8hpp_source}\index{Logic/Include/IEventListener.hpp@{Logic/Include/IEventListener.hpp}}
+\mbox{\hyperlink{_i_event_listener_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_game_types_8hpp}{GameTypes.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_pacman}{Pacman}}\ \{}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_pacman_1_1_i_event_listener}{IEventListener}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{class_pacman_1_1_i_event_listener_a8fe310742d60f6d1e8a409a66a6de4da}{\string~IEventListener}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_i_event_listener_a7a088c3071e1d0fb94bccfadb28d9c67}{OnTileUpdated}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_pacman_1_1_tile_update}{TileUpdate}}\&\ update)\ =\ 0;}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_i_event_listener_a3dceceda32912b6411629a4328075d82}{OnPlayerStateChanged}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_pacman_1_1_player_state}{PlayerState}}\&\ state)\ =\ 0;}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_i_event_listener_a02cf959f9c92dfbfba517342dfe0636b}{OnGameStateChanged}}(\mbox{\hyperlink{namespace_pacman_a6582b6adce921cedd1d92e6da64fe267}{GameState}}\ state)\ =\ 0;}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_i_event_listener_aba32e3ba0d0df10268a8ee93665d1658}{OnGhostsUpdated}}(\textcolor{keyword}{const}\ std::vector<GhostState>\&\ ghosts)\ =\ 0;}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_i_event_listener_a628444c976f5a6156ae71339f06d93b8}{OnGhostModeChanged}}(\mbox{\hyperlink{namespace_pacman_a9ee69265841744598c088ce6731379a5}{GhostMode}}\ mode)\ \{\}}
+\DoxyCodeLine{00056\ \ \ \ \ \};}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \}}
+
+\end{DoxyCode}

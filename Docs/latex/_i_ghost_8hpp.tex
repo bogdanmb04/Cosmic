@@ -1,0 +1,46 @@
+\doxysection{Logic/\+Include/\+IGhost.hpp File Reference}
+\hypertarget{_i_ghost_8hpp}{}\label{_i_ghost_8hpp}\index{Logic/Include/IGhost.hpp@{Logic/Include/IGhost.hpp}}
+
+
+Defines the Strategy interface for Ghost AI.  
+
+
+{\ttfamily \#include "{}Game\+Types.\+hpp"{}}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+Include dependency graph for IGhost.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{_i_ghost_8hpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+interface \mbox{\hyperlink{class_pacman_1_1_i_ghost}{Pacman\+::\+IGhost}}
+\begin{DoxyCompactList}\small\item\em Interface for ghost targeting strategies. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespace_pacman}{Pacman}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_pacman_1_1_i_ghost}{IGhost}} $>$ \mbox{\hyperlink{namespace_pacman_a710ff3a5abf41a55c8bae15de15c465d}{Pacman\+::\+Create\+Red\+AI}} ()
+\begin{DoxyCompactList}\small\item\em Creates the Red ghost (Blinky) AI strategy. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_pacman_1_1_i_ghost}{IGhost}} $>$ \mbox{\hyperlink{namespace_pacman_a0215dec6c8243a5a45d81b72f104a01f}{Pacman\+::\+Create\+Pink\+AI}} ()
+\begin{DoxyCompactList}\small\item\em Creates the Pink ghost (Pinky) AI strategy. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_pacman_1_1_i_ghost}{IGhost}} $>$ \mbox{\hyperlink{namespace_pacman_a18d0d0c3640e963eb60290afdb8c18e8}{Pacman\+::\+Create\+Blue\+AI}} ()
+\begin{DoxyCompactList}\small\item\em Creates the Blue ghost (Inky) AI strategy. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_pacman_1_1_i_ghost}{IGhost}} $>$ \mbox{\hyperlink{namespace_pacman_ae48e21e76863982b22fc3c131dcdad10}{Pacman\+::\+Create\+Orange\+AI}} ()
+\begin{DoxyCompactList}\small\item\em Creates the Orange ghost (Clyde) AI strategy. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_pacman_1_1_i_ghost}{IGhost}} $>$ \mbox{\hyperlink{namespace_pacman_a46f7834ea9204ed07e0a9f55956916f5}{Pacman\+::\+Create\+Ghost\+AI}} (\mbox{\hyperlink{namespace_pacman_a815768ada4c309add8db3fdd794d8164}{Ghost\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Generic factory method to create an AI based on the enum type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the Strategy interface for Ghost AI. 
+
+Each ghost (Blinky, Pinky, Inky, Clyde) has a unique personality defined by how it calculates its target tile during the "{}\+Chase"{} phase. 

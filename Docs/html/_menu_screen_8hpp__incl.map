@@ -1,0 +1,11 @@
+<map id="GUI/Include/MenuScreen.hpp" name="GUI/Include/MenuScreen.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="196,5,389,32"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,80,143,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="256,35,128,77,126,72,253,30"/>
+<area shape="rect" id="Node000003" href="$_i_menu_listener_8hpp.html" title="Interface for handling main menu interactions." alt="" coords="167,80,296,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="284,31,253,70,250,66,280,34"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="320,80,388,107"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="304,30,336,69,331,68,302,35"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="413,80,466,107"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="319,30,403,73,397,73,318,35"/>
+</map>
