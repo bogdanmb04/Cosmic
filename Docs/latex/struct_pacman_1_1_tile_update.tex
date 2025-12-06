@@ -1,0 +1,63 @@
+\doxysection{Pacman\+::Tile\+Update Struct Reference}
+\hypertarget{struct_pacman_1_1_tile_update}{}\label{struct_pacman_1_1_tile_update}\index{Pacman::TileUpdate@{Pacman::TileUpdate}}
+
+
+Structure used to notify a single cell change.  
+
+
+
+
+{\ttfamily \#include $<$Game\+Types.\+hpp$>$}
+
+
+
+Collaboration diagram for Pacman\+::Tile\+Update\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=185pt]{struct_pacman_1_1_tile_update__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \mbox{\hyperlink{struct_pacman_1_1_tile_update_afbee4d385c6d65270acc8b173fdfbf05}{Position}}
+\begin{DoxyCompactList}\small\item\em Coordinate of the modified cell. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespace_pacman_aaa2a46f529b4685c754787c2243c8fbe}{Tile\+Type}} \mbox{\hyperlink{struct_pacman_1_1_tile_update_a5a9f54f2ea92c82c89e1e3ced0754a76}{Type}}
+\begin{DoxyCompactList}\small\item\em New cell type (e.\+g., Path after a Pellet is eaten). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure used to notify a single cell change. 
+
+Optimization\+: avoids redrawing the entire map. 
+
+\label{doc-variable-members}
+\Hypertarget{struct_pacman_1_1_tile_update_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_pacman_1_1_tile_update_afbee4d385c6d65270acc8b173fdfbf05}\index{Pacman::TileUpdate@{Pacman::TileUpdate}!Position@{Position}}
+\index{Position@{Position}!Pacman::TileUpdate@{Pacman::TileUpdate}}
+\doxysubsubsection{\texorpdfstring{Position}{Position}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_tile_update_afbee4d385c6d65270acc8b173fdfbf05} 
+\mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} Pacman\+::\+Tile\+Update\+::\+Position}
+
+
+
+Coordinate of the modified cell. 
+
+\Hypertarget{struct_pacman_1_1_tile_update_a5a9f54f2ea92c82c89e1e3ced0754a76}\index{Pacman::TileUpdate@{Pacman::TileUpdate}!Type@{Type}}
+\index{Type@{Type}!Pacman::TileUpdate@{Pacman::TileUpdate}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily \label{struct_pacman_1_1_tile_update_a5a9f54f2ea92c82c89e1e3ced0754a76} 
+\mbox{\hyperlink{namespace_pacman_aaa2a46f529b4685c754787c2243c8fbe}{Tile\+Type}} Pacman\+::\+Tile\+Update\+::\+Type}
+
+
+
+New cell type (e.\+g., Path after a Pellet is eaten). 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Logic/\+Include/\mbox{\hyperlink{_game_types_8hpp}{Game\+Types.\+hpp}}\end{DoxyCompactItemize}

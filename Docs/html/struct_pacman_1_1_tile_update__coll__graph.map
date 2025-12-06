@@ -1,0 +1,5 @@
+<map id="Pacman::TileUpdate" name="Pacman::TileUpdate">
+<area shape="rect" id="Node000001" title="Structure used to notify a single cell change." alt="" coords="5,104,146,131"/>
+<area shape="rect" id="Node000002" href="$struct_pacman_1_1_vector2.html" title="Utility for 2D grid coordinates." alt="" coords="15,5,136,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,46,78,104,73,103,73,49"/>
+</map>

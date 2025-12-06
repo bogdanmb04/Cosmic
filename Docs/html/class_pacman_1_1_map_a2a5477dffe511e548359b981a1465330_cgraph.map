@@ -1,0 +1,5 @@
+<map id="Pacman::Map::Map" name="Pacman::Map::Map">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,141,32"/>
+<area shape="rect" id="Node000002" href="$class_pacman_1_1_map.html#ad5e2dbf9be2a236ab5270441f51e7e43" title=" " alt="" coords="189,5,347,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="141,16,176,18,170,19,141,21"/>
+</map>
