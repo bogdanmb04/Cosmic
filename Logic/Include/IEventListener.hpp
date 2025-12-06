@@ -1,6 +1,8 @@
 #pragma once
-
-#include "GameTypes.hpp"
+#include "TileUpdate.hpp"
+#include "PlayerState.hpp"
+#include "GameState.hpp"
+#include "GhostState.hpp"
 #include <vector>
 
 namespace Pacman {

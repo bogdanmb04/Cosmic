@@ -1,6 +1,5 @@
 #pragma once
 
-#include "GameTypes.hpp"
 #include "IEventListener.hpp"
 #include <memory>
 #include <vector>

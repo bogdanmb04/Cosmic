@@ -1,16 +1,18 @@
 #pragma once
 
-#include "GameTypes.hpp"
 #include "GameConfig.hpp"
+#include "GhostMode.hpp"
 
-namespace Pacman {
+namespace Pacman 
+{
 
     /// @brief Controls ghost mode timing (Chase/Scatter waves)
     /// 
     /// Original Pac-Man pattern (Level 1):
     /// Scatter(7s) -> Chase(20s) -> Scatter(7s) -> Chase(20s) ->
     /// Scatter(5s) -> Chase(20s) -> Scatter(5s) -> Chase(forever)
-    class GhostModeController {
+    class GhostModeController 
+    {
     public:
         GhostModeController() { Reset(); }
 

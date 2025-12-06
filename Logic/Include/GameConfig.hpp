@@ -1,8 +1,10 @@
 #pragma once
 
-namespace Pacman {
+namespace Pacman 
+{
 
-    struct GameConfig {
+    struct GameConfig 
+    {
         // Map
         static constexpr int MapWidth = 28;
         static constexpr int MapHeight = 31;

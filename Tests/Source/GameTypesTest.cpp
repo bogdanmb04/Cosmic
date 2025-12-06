@@ -1,6 +1,10 @@
 #include <gtest/gtest.h>
-#include "GameTypes.hpp"
-
+#include <Vector2.hpp>
+#include <PlayerState.hpp>
+#include <GhostState.hpp>
+#include <GameState.hpp>
+#include <TileType.hpp>
+#include <TileUpdate.hpp>
 using namespace Pacman;
 
 TEST(DirectionTest, GetDirectionDelta_Up) {

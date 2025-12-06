@@ -1,7 +1,9 @@
 #pragma once
 
-#include "GameTypes.hpp"
 #include <memory>
+#include "Vector2.hpp"
+#include "GhostState.hpp"
+#include "PlayerState.hpp"
 
 namespace Pacman {
 

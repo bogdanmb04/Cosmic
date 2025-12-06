@@ -1,9 +1,10 @@
 #pragma once
 
-#include "GameTypes.hpp"
 #include <vector>
 #include <string>
 #include <array>
+#include "TileType.hpp"
+#include "Vector2.hpp"
 
 namespace Pacman {
 

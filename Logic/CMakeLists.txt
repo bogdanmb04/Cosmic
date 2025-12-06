@@ -4,22 +4,30 @@ project(PacmanLogic CXX)
 # Source files
 set(LOGIC_SOURCES
         Source/GameEngine.cpp
+        Source/Ghost.cpp
+        Source/Vector2.cpp
 )
 
 # Header files
 set(LOGIC_HEADERS
-        Include/GameTypes.hpp
         Include/IEventListener.hpp
         Include/IGameEngine.hpp
         Include/GameConfig.hpp
         Include/IGhost.hpp
-        Source/Ghost.cpp
         Include/GhostModeController.hpp
         Include/Map.hpp
+        Include/Direction.hpp
+        Include/TileType.hpp
+        Include/GameState.hpp
+        Include/GhostType.hpp
+        Include/GhostMode.hpp
+        Include/Vector2.hpp
+        Include/PlayerState.hpp
+        Include/GhostState.hpp
 )
 
 # Create static library
-add_library(PacmanLogic STATIC ${LOGIC_SOURCES} ${LOGIC_HEADERS})
+add_library(PacmanLogic STATIC ${LOGIC_SOURCES} ${LOGIC_HEADERS} "Source/Vector2.cpp")
 
 # Public include directories
 target_include_directories(PacmanLogic PUBLIC
