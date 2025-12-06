@@ -6,6 +6,7 @@
 #include "MenuScreen.hpp"
 #include "IMenuListener.hpp"
 #include "Application.hpp"
+#include "GameEngine.hpp"
 #include <memory>
 #include <iostream>
 
@@ -63,7 +64,7 @@ int main() {
     // ========== Game Phase ==========
 
     // Create game engine
-    auto gameEngine = CreateGameEngine();
+    auto gameEngine = GameEngine::CreateGameEngine();
     Vector2 mapSize = gameEngine->GetMapSize();
 
     // Create game window

@@ -2,7 +2,8 @@
 
 #include "IMenuListener.hpp"
 
-namespace Pacman {
+namespace Pacman 
+{
     class Application : public IMenuListener {
     public:
         void OnPlaySelected() override;

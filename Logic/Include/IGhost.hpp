@@ -8,9 +8,9 @@
 #pragma once
 
 #include <memory>
-#include "Vector2.hpp"
-#include "GhostState.hpp"
-#include "PlayerState.hpp"
+#include "GameTypes/Vector2.hpp"
+#include "GameTypes/GhostState.hpp"
+#include "GameTypes/PlayerState.hpp"
 
 namespace Pacman {
 
@@ -54,26 +54,4 @@ namespace Pacman {
          */
         virtual GhostType GetGhostType() const = 0;
     };
-
-    // --- Factory Functions ---
-
-    /// @brief Creates the Red ghost (Blinky) AI strategy.
-    std::unique_ptr<IGhost> CreateRedAI();
-
-    /// @brief Creates the Pink ghost (Pinky) AI strategy.
-    std::unique_ptr<IGhost> CreatePinkAI();
-
-    /// @brief Creates the Blue ghost (Inky) AI strategy.
-    std::unique_ptr<IGhost> CreateBlueAI();
-
-    /// @brief Creates the Orange ghost (Clyde) AI strategy.
-    std::unique_ptr<IGhost> CreateOrangeAI();
-
-    /**
-     * @brief Generic factory method to create an AI based on the enum type.
-     * @param type The type of ghost AI to create.
-     * @return A unique_ptr to the specific IGhost implementation.
-     */
-    std::unique_ptr<IGhost> CreateGhostAI(GhostType type);
-
 }

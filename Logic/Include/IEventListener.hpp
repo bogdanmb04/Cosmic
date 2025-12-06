@@ -6,10 +6,10 @@
  */
 
 #pragma once
-#include "TileUpdate.hpp"
-#include "PlayerState.hpp"
-#include "GameState.hpp"
-#include "GhostState.hpp"
+#include "GameTypes/TileUpdate.hpp"
+#include "GameTypes/PlayerState.hpp"
+#include "GameTypes/GameState.hpp"
+#include "GameTypes/GhostState.hpp"
 #include <vector>
 
 namespace Pacman {

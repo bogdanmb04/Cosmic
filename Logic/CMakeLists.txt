@@ -5,33 +5,48 @@ project(PacmanLogic CXX)
 set(LOGIC_SOURCES
         Source/GameEngine.cpp
         Source/Ghost.cpp
+        Source/GhostModeController.cpp
+        Source/Map.cpp
         Source/Vector2.cpp
+        Source/GhostStrategies/RedStrategy.cpp
+        Source/GhostStrategies/PinkStrategy.cpp
+        Source/GhostStrategies/BlueStrategy.cpp
+        Source/GhostStrategies/OrangeStrategy.cpp
 )
 
 # Header files
 set(LOGIC_HEADERS
+        Include/GameConfig.hpp
+        Include/GameEngine.hpp
+        Include/GhostModeController.hpp
         Include/IEventListener.hpp
         Include/IGameEngine.hpp
-        Include/GameConfig.hpp
         Include/IGhost.hpp
-        Include/GhostModeController.hpp
         Include/Map.hpp
-        Include/Direction.hpp
-        Include/TileType.hpp
-        Include/GameState.hpp
-        Include/GhostType.hpp
-        Include/GhostMode.hpp
-        Include/Vector2.hpp
-        Include/PlayerState.hpp
-        Include/GhostState.hpp
+        Include/GameTypes/Direction.hpp
+        Include/GameTypes/GameState.hpp
+        Include/GameTypes/GhostMode.hpp
+        Include/GameTypes/GhostState.hpp
+        Include/GameTypes/GhostType.hpp
+        Include/GameTypes/PlayerState.hpp
+        Include/GameTypes/TileType.hpp
+        Include/GameTypes/TileUpdate.hpp
+        Include/GameTypes/Vector2.hpp
+        Include/GhostStrategies/IGhostStrategy.hpp
+        Include/GhostStrategies/RedStrategy.hpp
+        Include/GhostStrategies/PinkStrategy.hpp
+        Include/GhostStrategies/BlueStrategy.hpp
+        Include/GhostStrategies/OrangeStrategy.hpp
 )
 
 # Create static library
-add_library(PacmanLogic STATIC ${LOGIC_SOURCES} ${LOGIC_HEADERS} "Source/Vector2.cpp")
+add_library(PacmanLogic STATIC ${LOGIC_SOURCES} ${LOGIC_HEADERS})
 
 # Public include directories
 target_include_directories(PacmanLogic PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}/Include
+        ${CMAKE_CURRENT_SOURCE_DIR}/Include/GhostStrategies
+        ${CMAKE_CURRENT_SOURCE_DIR}/Include/GameTypes
 )
 
 # Compile features
