@@ -1,0 +1,101 @@
+\doxysection{Cursor.\+hpp}
+\hypertarget{build_2__deps_2sfml-src_2include_2_s_f_m_l_2_window_2_cursor_8hpp_source}{}\label{build_2__deps_2sfml-src_2include_2_s_f_m_l_2_window_2_cursor_8hpp_source}\index{build/\_deps/sfml-\/src/include/SFML/Window/Cursor.hpp@{build/\_deps/sfml-\/src/include/SFML/Window/Cursor.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ SFML\ -\/\ Simple\ and\ Fast\ Multimedia\ Library}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Copyright\ (C)\ 2007-\/2023\ Laurent\ Gomila\ (laurent@sfml-\/dev.org)}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ This\ software\ is\ provided\ 'as-\/is',\ without\ any\ express\ or\ implied\ warranty.}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ In\ no\ event\ will\ the\ authors\ be\ held\ liable\ for\ any\ damages\ arising\ from\ the\ use\ of\ this\ software.}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ Permission\ is\ granted\ to\ anyone\ to\ use\ this\ software\ for\ any\ purpose,}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ including\ commercial\ applications,\ and\ to\ alter\ it\ and\ redistribute\ it\ freely,}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ subject\ to\ the\ following\ restrictions:}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ 1.\ The\ origin\ of\ this\ software\ must\ not\ be\ misrepresented;}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ \ \ you\ must\ not\ claim\ that\ you\ wrote\ the\ original\ software.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ \ \ If\ you\ use\ this\ software\ in\ a\ product,\ an\ acknowledgment}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ \ \ in\ the\ product\ documentation\ would\ be\ appreciated\ but\ is\ not\ required.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ 2.\ Altered\ source\ versions\ must\ be\ plainly\ marked\ as\ such,}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ \ \ and\ must\ not\ be\ misrepresented\ as\ being\ the\ original\ software.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ 3.\ This\ notice\ may\ not\ be\ removed\ or\ altered\ from\ any\ source\ distribution.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#ifndef\ SFML\_CURSOR\_HPP}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ SFML\_CURSOR\_HPP}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ Headers}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <SFML/Window/Export.hpp>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <SFML/System/NonCopyable.hpp>}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <SFML/System/Vector2.hpp>}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacesf}{sf}}}
+\DoxyCodeLine{00036\ \{}
+\DoxyCodeLine{00037\ \textcolor{keyword}{namespace\ }priv}
+\DoxyCodeLine{00038\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsf_1_1priv_1_1_cursor_impl}{CursorImpl}};}
+\DoxyCodeLine{00040\ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{class\ }SFML\_WINDOW\_API\ \mbox{\hyperlink{classsf_1_1_cursor_a6a36a0a5943b22b77b00cac839dd715c}{Cursor}}\ :\ \mbox{\hyperlink{classsf_1_1_non_copyable_a2110add170580fdb946f887719da6860}{NonCopyable}}}
+\DoxyCodeLine{00047\ \{}
+\DoxyCodeLine{00048\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keyword}{enum}\ \mbox{\hyperlink{classsf_1_1_cursor_ab9ab152aec1f8a4955e34ccae08f930a}{Type}}}
+\DoxyCodeLine{00087\ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_cursor_ab9ab152aec1f8a4955e34ccae08f930aa71b812ccf28c183fb9b83ebda1776cf2}{Arrow}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_cursor_ab9ab152aec1f8a4955e34ccae08f930aa899587abcc784cb1a209cea5ac6b02cb}{ArrowWait}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_cursor_ab9ab152aec1f8a4955e34ccae08f930aa254688acfc9c698320ba01c9d65523b1}{Wait}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_cursor_ab9ab152aec1f8a4955e34ccae08f930aaa40bf09f0eb21a2aaccf44d6ce687390}{Text}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_cursor_ab9ab152aec1f8a4955e34ccae08f930aa73f5104843ec7293032356bc55b96105}{Hand}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_cursor_ab9ab152aec1f8a4955e34ccae08f930aa58f97756fb6a753b4be100c71efc3025}{SizeHorizontal}},\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_cursor_ab9ab152aec1f8a4955e34ccae08f930aa51fefb12091aa9ddd083fa0e56871cfe}{SizeVertical}},\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_cursor_ab9ab152aec1f8a4955e34ccae08f930aaabf3cbd8f13cf130353c8a1250e55e55}{SizeTopLeftBottomRight}},\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_cursor_ab9ab152aec1f8a4955e34ccae08f930aac4ba3c0a876bd1c49564b2c3a87dee6c}{SizeBottomLeftTopRight}},\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_cursor_ab9ab152aec1f8a4955e34ccae08f930aa042ea1ded25bc19a1d56a503f6b3a47c}{SizeLeft}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_cursor_ab9ab152aec1f8a4955e34ccae08f930aa802ff627ffeb01bbffa3b78fba3611ea}{SizeRight}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_cursor_ab9ab152aec1f8a4955e34ccae08f930aadc93523346b07162d1f5b74c0adb2093}{SizeTop}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_cursor_ab9ab152aec1f8a4955e34ccae08f930aa797b105c856a1e5f2d196f395b230b5a}{SizeBottom}},\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_cursor_ab9ab152aec1f8a4955e34ccae08f930aa9acda48d57c9aaf9ef2889a89ba961f4}{SizeTopLeft}},\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_cursor_ab9ab152aec1f8a4955e34ccae08f930aa356e54d782367912be0bd8749edc0ab5}{SizeBottomRight}},\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_cursor_ab9ab152aec1f8a4955e34ccae08f930aa1c9e52ed7ac086bc394534ab9212222c}{SizeBottomLeft}},\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_cursor_ab9ab152aec1f8a4955e34ccae08f930aa7e4818f98ed9d2fef1f80fb2b1f9ce93}{SizeTopRight}},\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_cursor_ab9ab152aec1f8a4955e34ccae08f930aa7cd3d843b3d719ca30becf87c3bd0877}{SizeAll}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_cursor_ab9ab152aec1f8a4955e34ccae08f930aab20690d9fff69c0fbfe6b903776c773e}{Cross}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_cursor_ab9ab152aec1f8a4955e34ccae08f930aa82cb754133f6daab31762663da1f8ee0}{Help}},\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_cursor_ab9ab152aec1f8a4955e34ccae08f930aa46ec9044050cb0016bb3383d65ce81ce}{NotAllowed}}\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00109\ \ \ \ \ \};}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00111\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00122\ \ \ \ \ \mbox{\hyperlink{classsf_1_1_cursor}{Cursor}}();}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00131\ \ \ \ \ \mbox{\hyperlink{classsf_1_1_cursor}{\string~Cursor}}();}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00163\ \ \ \ \ \textcolor{keywordtype}{bool}\ loadFromPixels(\textcolor{keyword}{const}\ Uint8*\ pixels,\ Vector2u\ size,\ Vector2u\ hotspot);}
+\DoxyCodeLine{00164\ }
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{bool}\ loadFromSystem(Type\ type);}
+\DoxyCodeLine{00180\ }
+\DoxyCodeLine{00181\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00183\ \ \ \ \ \textcolor{keyword}{friend}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsf_1_1_window_base}{WindowBase}};}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classsf_1_1priv_1_1_cursor_impl}{priv::CursorImpl}}\&\ getImpl()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00195\ }
+\DoxyCodeLine{00196\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00197\ }
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{comment}{//\ Member\ data}}
+\DoxyCodeLine{00201\ \ \ \ \ \mbox{\hyperlink{classsf_1_1priv_1_1_cursor_impl}{priv::CursorImpl}}*\ m\_impl;\ }
+\DoxyCodeLine{00202\ \};}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ \}\ \textcolor{comment}{//\ namespace\ sf}}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SFML\_CURSOR\_HPP}}
+\DoxyCodeLine{00208\ }
+\DoxyCodeLine{00209\ }
+
+\end{DoxyCode}

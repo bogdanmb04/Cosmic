@@ -1,0 +1,200 @@
+\doxysection{sf\+::priv\+::Vulkan\+Impl\+Win32 Class Reference}
+\hypertarget{classsf_1_1priv_1_1_vulkan_impl_win32}{}\label{classsf_1_1priv_1_1_vulkan_impl_win32}\index{sf::priv::VulkanImplWin32@{sf::priv::VulkanImplWin32}}
+
+
+Windows implementation of \doxylink{classsf_1_1_vulkan}{Vulkan}.  
+
+
+
+
+{\ttfamily \#include $<$Vulkan\+Impl\+Win32.\+hpp$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_vulkan_impl_win32_a5b06b7fe742721adfebc1579dde3cb99}{is\+Available}} (bool require\+Graphics=true)
+\begin{DoxyCompactList}\small\item\em Tell whether or not the system supports \doxylink{classsf_1_1_vulkan}{Vulkan}. \end{DoxyCompactList}\item 
+static Vulkan\+Function\+Pointer \mbox{\hyperlink{classsf_1_1priv_1_1_vulkan_impl_win32_a7821a6b4cf481de068b8b5d57251ebd3}{get\+Function}} (const char \texorpdfstring{$\ast$}{*}name)
+\begin{DoxyCompactList}\small\item\em Get the address of a \doxylink{classsf_1_1_vulkan}{Vulkan} function. \end{DoxyCompactList}\item 
+static const std\+::vector$<$ const char \texorpdfstring{$\ast$}{*} $>$ \& \mbox{\hyperlink{classsf_1_1priv_1_1_vulkan_impl_win32_a5f5a97ac834a546216eebfeb84baa96e}{get\+Graphics\+Required\+Instance\+Extensions}} ()
+\begin{DoxyCompactList}\small\item\em Get \doxylink{classsf_1_1_vulkan}{Vulkan} instance extensions required for graphics. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_vulkan_impl_win32_a88ea8a759adeecd5b107bdb83cefec43}{create\+Vulkan\+Surface}} (const Vk\+Instance \&instance, Window\+Handle window\+Handle, Vk\+Surface\+KHR \&surface, const \mbox{\hyperlink{struct_vk_allocation_callbacks}{Vk\+Allocation\+Callbacks}} \texorpdfstring{$\ast$}{*}allocator)
+\begin{DoxyCompactList}\small\item\em Create a \doxylink{classsf_1_1_vulkan}{Vulkan} rendering surface. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_vulkan_impl_win32_a5ba2e3f4386e694eeccc5e776dc9f4a2}{is\+Available}} (bool require\+Graphics=true)
+\begin{DoxyCompactList}\small\item\em Tell whether or not the system supports \doxylink{classsf_1_1_vulkan}{Vulkan}. \end{DoxyCompactList}\item 
+static Vulkan\+Function\+Pointer \mbox{\hyperlink{classsf_1_1priv_1_1_vulkan_impl_win32_a6677aaf9e440af953f661660c6731fa0}{get\+Function}} (const char \texorpdfstring{$\ast$}{*}name)
+\begin{DoxyCompactList}\small\item\em Get the address of a \doxylink{classsf_1_1_vulkan}{Vulkan} function. \end{DoxyCompactList}\item 
+static const std\+::vector$<$ const char \texorpdfstring{$\ast$}{*} $>$ \& \mbox{\hyperlink{classsf_1_1priv_1_1_vulkan_impl_win32_ae31f5183fb675aeb5e8ce9928d74a761}{get\+Graphics\+Required\+Instance\+Extensions}} ()
+\begin{DoxyCompactList}\small\item\em Get \doxylink{classsf_1_1_vulkan}{Vulkan} instance extensions required for graphics. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{classsf_1_1priv_1_1_vulkan_impl_win32_a7f0f63dd3a950e6729bc111c33e38b15}{create\+Vulkan\+Surface}} (const Vk\+Instance \&instance, Window\+Handle window\+Handle, Vk\+Surface\+KHR \&surface, const \mbox{\hyperlink{struct_vk_allocation_callbacks}{Vk\+Allocation\+Callbacks}} \texorpdfstring{$\ast$}{*}allocator)
+\begin{DoxyCompactList}\small\item\em Create a \doxylink{classsf_1_1_vulkan}{Vulkan} rendering surface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Windows implementation of \doxylink{classsf_1_1_vulkan}{Vulkan}. 
+
+\label{doc-func-members}
+\Hypertarget{classsf_1_1priv_1_1_vulkan_impl_win32_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsf_1_1priv_1_1_vulkan_impl_win32_a88ea8a759adeecd5b107bdb83cefec43}\index{sf::priv::VulkanImplWin32@{sf::priv::VulkanImplWin32}!createVulkanSurface@{createVulkanSurface}}
+\index{createVulkanSurface@{createVulkanSurface}!sf::priv::VulkanImplWin32@{sf::priv::VulkanImplWin32}}
+\doxysubsubsection{\texorpdfstring{createVulkanSurface()}{createVulkanSurface()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_vulkan_impl_win32_a88ea8a759adeecd5b107bdb83cefec43} 
+bool sf\+::priv\+::\+Vulkan\+Impl\+Win32\+::create\+Vulkan\+Surface (\begin{DoxyParamCaption}\item[{const Vk\+Instance \&}]{instance}{, }\item[{Window\+Handle}]{window\+Handle}{, }\item[{Vk\+Surface\+KHR \&}]{surface}{, }\item[{const \mbox{\hyperlink{struct_vk_allocation_callbacks}{Vk\+Allocation\+Callbacks}} \texorpdfstring{$\ast$}{*}}]{allocator}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a \doxylink{classsf_1_1_vulkan}{Vulkan} rendering surface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & \doxylink{classsf_1_1_vulkan}{Vulkan} instance \\
+\hline
+{\em window\+Handle} & Handle to the window to create the surface for \\
+\hline
+{\em surface} & Created surface \\
+\hline
+{\em allocator} & Allocator to use\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if surface creation was successful, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_vulkan_impl_win32_a7f0f63dd3a950e6729bc111c33e38b15}\index{sf::priv::VulkanImplWin32@{sf::priv::VulkanImplWin32}!createVulkanSurface@{createVulkanSurface}}
+\index{createVulkanSurface@{createVulkanSurface}!sf::priv::VulkanImplWin32@{sf::priv::VulkanImplWin32}}
+\doxysubsubsection{\texorpdfstring{createVulkanSurface()}{createVulkanSurface()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_vulkan_impl_win32_a7f0f63dd3a950e6729bc111c33e38b15} 
+bool sf\+::priv\+::\+Vulkan\+Impl\+Win32\+::create\+Vulkan\+Surface (\begin{DoxyParamCaption}\item[{const Vk\+Instance \&}]{instance}{, }\item[{Window\+Handle}]{window\+Handle}{, }\item[{Vk\+Surface\+KHR \&}]{surface}{, }\item[{const \mbox{\hyperlink{struct_vk_allocation_callbacks}{Vk\+Allocation\+Callbacks}} \texorpdfstring{$\ast$}{*}}]{allocator}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Create a \doxylink{classsf_1_1_vulkan}{Vulkan} rendering surface. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & \doxylink{classsf_1_1_vulkan}{Vulkan} instance \\
+\hline
+{\em window\+Handle} & Handle to the window to create the surface for \\
+\hline
+{\em surface} & Created surface \\
+\hline
+{\em allocator} & Allocator to use\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if surface creation was successful, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_vulkan_impl_win32_a7821a6b4cf481de068b8b5d57251ebd3}\index{sf::priv::VulkanImplWin32@{sf::priv::VulkanImplWin32}!getFunction@{getFunction}}
+\index{getFunction@{getFunction}!sf::priv::VulkanImplWin32@{sf::priv::VulkanImplWin32}}
+\doxysubsubsection{\texorpdfstring{getFunction()}{getFunction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_vulkan_impl_win32_a7821a6b4cf481de068b8b5d57251ebd3} 
+Vulkan\+Function\+Pointer sf\+::priv\+::\+Vulkan\+Impl\+Win32\+::get\+Function (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the address of a \doxylink{classsf_1_1_vulkan}{Vulkan} function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the function to get the address of\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Address of the \doxylink{classsf_1_1_vulkan}{Vulkan} function, 0 on failure 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_vulkan_impl_win32_a6677aaf9e440af953f661660c6731fa0}\index{sf::priv::VulkanImplWin32@{sf::priv::VulkanImplWin32}!getFunction@{getFunction}}
+\index{getFunction@{getFunction}!sf::priv::VulkanImplWin32@{sf::priv::VulkanImplWin32}}
+\doxysubsubsection{\texorpdfstring{getFunction()}{getFunction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_vulkan_impl_win32_a6677aaf9e440af953f661660c6731fa0} 
+Vulkan\+Function\+Pointer sf\+::priv\+::\+Vulkan\+Impl\+Win32\+::get\+Function (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the address of a \doxylink{classsf_1_1_vulkan}{Vulkan} function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the function to get the address of\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Address of the \doxylink{classsf_1_1_vulkan}{Vulkan} function, 0 on failure 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_vulkan_impl_win32_a5f5a97ac834a546216eebfeb84baa96e}\index{sf::priv::VulkanImplWin32@{sf::priv::VulkanImplWin32}!getGraphicsRequiredInstanceExtensions@{getGraphicsRequiredInstanceExtensions}}
+\index{getGraphicsRequiredInstanceExtensions@{getGraphicsRequiredInstanceExtensions}!sf::priv::VulkanImplWin32@{sf::priv::VulkanImplWin32}}
+\doxysubsubsection{\texorpdfstring{getGraphicsRequiredInstanceExtensions()}{getGraphicsRequiredInstanceExtensions()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_vulkan_impl_win32_a5f5a97ac834a546216eebfeb84baa96e} 
+const std\+::vector$<$ const char \texorpdfstring{$\ast$}{*} $>$ \& sf\+::priv\+::\+Vulkan\+Impl\+Win32\+::get\+Graphics\+Required\+Instance\+Extensions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get \doxylink{classsf_1_1_vulkan}{Vulkan} instance extensions required for graphics. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classsf_1_1_vulkan}{Vulkan} instance extensions required for graphics 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_vulkan_impl_win32_ae31f5183fb675aeb5e8ce9928d74a761}\index{sf::priv::VulkanImplWin32@{sf::priv::VulkanImplWin32}!getGraphicsRequiredInstanceExtensions@{getGraphicsRequiredInstanceExtensions}}
+\index{getGraphicsRequiredInstanceExtensions@{getGraphicsRequiredInstanceExtensions}!sf::priv::VulkanImplWin32@{sf::priv::VulkanImplWin32}}
+\doxysubsubsection{\texorpdfstring{getGraphicsRequiredInstanceExtensions()}{getGraphicsRequiredInstanceExtensions()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_vulkan_impl_win32_ae31f5183fb675aeb5e8ce9928d74a761} 
+const std\+::vector$<$ const char \texorpdfstring{$\ast$}{*} $>$ \& sf\+::priv\+::\+Vulkan\+Impl\+Win32\+::get\+Graphics\+Required\+Instance\+Extensions (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get \doxylink{classsf_1_1_vulkan}{Vulkan} instance extensions required for graphics. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classsf_1_1_vulkan}{Vulkan} instance extensions required for graphics 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_vulkan_impl_win32_a5b06b7fe742721adfebc1579dde3cb99}\index{sf::priv::VulkanImplWin32@{sf::priv::VulkanImplWin32}!isAvailable@{isAvailable}}
+\index{isAvailable@{isAvailable}!sf::priv::VulkanImplWin32@{sf::priv::VulkanImplWin32}}
+\doxysubsubsection{\texorpdfstring{isAvailable()}{isAvailable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_vulkan_impl_win32_a5b06b7fe742721adfebc1579dde3cb99} 
+bool sf\+::priv\+::\+Vulkan\+Impl\+Win32\+::is\+Available (\begin{DoxyParamCaption}\item[{bool}]{require\+Graphics}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Tell whether or not the system supports \doxylink{classsf_1_1_vulkan}{Vulkan}. 
+
+This function should always be called before using the \doxylink{classsf_1_1_vulkan}{Vulkan} features. If it returns false, then any attempt to use \doxylink{classsf_1_1_vulkan}{Vulkan} will fail.
+
+If only compute is required, set {\itshape require\+Graphics} to false to skip checking for the extensions necessary for graphics rendering.
+
+
+\begin{DoxyParams}{Parameters}
+{\em require\+Graphics} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if \doxylink{classsf_1_1_vulkan}{Vulkan} is supported, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_vulkan_impl_win32_a5ba2e3f4386e694eeccc5e776dc9f4a2}\index{sf::priv::VulkanImplWin32@{sf::priv::VulkanImplWin32}!isAvailable@{isAvailable}}
+\index{isAvailable@{isAvailable}!sf::priv::VulkanImplWin32@{sf::priv::VulkanImplWin32}}
+\doxysubsubsection{\texorpdfstring{isAvailable()}{isAvailable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_vulkan_impl_win32_a5ba2e3f4386e694eeccc5e776dc9f4a2} 
+bool sf\+::priv\+::\+Vulkan\+Impl\+Win32\+::is\+Available (\begin{DoxyParamCaption}\item[{bool}]{require\+Graphics}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Tell whether or not the system supports \doxylink{classsf_1_1_vulkan}{Vulkan}. 
+
+This function should always be called before using the \doxylink{classsf_1_1_vulkan}{Vulkan} features. If it returns false, then any attempt to use \doxylink{classsf_1_1_vulkan}{Vulkan} will fail.
+
+If only compute is required, set {\itshape require\+Graphics} to false to skip checking for the extensions necessary for graphics rendering.
+
+
+\begin{DoxyParams}{Parameters}
+{\em require\+Graphics} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if \doxylink{classsf_1_1_vulkan}{Vulkan} is supported, false otherwise 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+build/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Win32/Vulkan\+Impl\+Win32.\+hpp\item 
+out/build/x64-\/\+Debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Win32/Vulkan\+Impl\+Win32.\+hpp\item 
+build/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Win32/Vulkan\+Impl\+Win32.\+cpp\item 
+out/build/x64-\/\+Debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/\+Win32/Vulkan\+Impl\+Win32.\+cpp\end{DoxyCompactItemize}

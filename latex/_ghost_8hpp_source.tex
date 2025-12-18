@@ -1,0 +1,32 @@
+\doxysection{Ghost.\+hpp}
+\hypertarget{_ghost_8hpp_source}{}\label{_ghost_8hpp_source}\index{Logic/Include/Ghost.hpp@{Logic/Include/Ghost.hpp}}
+\mbox{\hyperlink{_ghost_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_ghost_8hpp}{IGhost.hpp}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_ghost_strategy_8hpp}{IGhostStrategy.hpp}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}GameTypes/GhostType.hpp"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{namespace\ }Pacman}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_pacman_1_1_ghost_ad43ef4e91e7443414cbb10aa209a6d6a}{Ghost}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_pacman_1_1_i_ghost}{IGhost}}}
+\DoxyCodeLine{00022\ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pacman_1_1_ghost_ad43ef4e91e7443414cbb10aa209a6d6a}{Ghost}}(std::unique\_ptr<IGhostStrategy>\ ghostStrategy,\ GhostType\ type);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}}\ \mbox{\hyperlink{class_pacman_1_1_ghost_ae81763dea481e72240f975d4913b2ee1}{CalculateChaseTarget}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_pacman_1_1_ghost_state}{GhostState}}\&\ ghost,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_pacman_1_1_player_state}{PlayerState}}\&\ player,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}}\&\ blinkyPosition)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}}\ \mbox{\hyperlink{class_pacman_1_1_ghost_a6e0893748a5931f15ffd65614734b255}{GetScatterTarget}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ GhostType\ \mbox{\hyperlink{class_pacman_1_1_ghost_a9247aad5092f7e39d489560c91bc8d44}{GetGhostType}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ std::unique\_ptr<IGhostStrategy>\ ghostStrategy\_;\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ GhostType\ type\_;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ \};}
+\DoxyCodeLine{00051\ \}}
+
+\end{DoxyCode}

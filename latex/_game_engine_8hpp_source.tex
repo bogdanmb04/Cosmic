@@ -1,0 +1,117 @@
+\doxysection{Game\+Engine.\+hpp}
+\hypertarget{_game_engine_8hpp_source}{}\label{_game_engine_8hpp_source}\index{Logic/Include/GameEngine.hpp@{Logic/Include/GameEngine.hpp}}
+\mbox{\hyperlink{_game_engine_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_game_engine_8hpp}{IGameEngine.hpp}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}Map.hpp"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_ghost_8hpp}{IGhost.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}GameConfig.hpp"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}GhostModeController.hpp"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}GameTypes/GameState.hpp"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}GameTypes/TileType.hpp"{}}\ \textcolor{comment}{//\ Removed\ extra\ semicolon}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <mutex>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{namespace\ }Pacman}
+\DoxyCodeLine{00022\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_pacman_1_1_game_engine_a4af3b9ea475c4e05c30e0e71e878c2da}{GameEngine}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_pacman_1_1_i_game_engine}{IGameEngine}}}
+\DoxyCodeLine{00030\ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pacman_1_1_game_engine_a4af3b9ea475c4e05c30e0e71e878c2da}{GameEngine}}();}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pacman_1_1_game_engine_a4af3b9ea475c4e05c30e0e71e878c2da}{\string~GameEngine}}()\ \textcolor{keyword}{override}\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ IGameEngine\ Interface\ Implementation\ -\/-\/-\/}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_game_engine_a557ec24ee9f06e229967138d88579a79}{StartNewGame}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_game_engine_af011e11282dfe58f1037adf29115383d}{Update}}(\textcolor{keywordtype}{float}\ deltaTime)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_game_engine_a68a82c23a6af606e287e15e5fe8096a2}{SetPaused}}(\textcolor{keywordtype}{bool}\ isPaused)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_game_engine_a1e52ffb3a8eb635fcbbc4be726d5ab75}{SetPlayerDirection}}(Direction\ direction)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Getters\ -\/-\/-\/}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ GameState\ \mbox{\hyperlink{class_pacman_1_1_game_engine_a330d0bf4be57cec65d98911bd6242b94}{GetState}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_pacman_1_1_player_state}{PlayerState}}\ \mbox{\hyperlink{class_pacman_1_1_game_engine_aeb9312a0edb5ddfbdc2bb1a91acd2bac}{GetPlayerState}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}}\ \mbox{\hyperlink{class_pacman_1_1_game_engine_a85f2eef2a635d982a93bcb2c2e19f466}{GetMapSize}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ TileType\ \mbox{\hyperlink{class_pacman_1_1_game_engine_af6efd77588e31e04187a2cdeb0182f67}{GetTileAt}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}}\&\ position)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ std::vector<Vector2>\ \mbox{\hyperlink{class_pacman_1_1_game_engine_a2e25530abc3656c0c100bad8276e0aca}{GetPelletPositions}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_pacman_1_1_game_engine_a1d8fef3eb7ccd8b41415b6dcdd3783d1}{GetPelletCount}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ std::vector<GhostState>\ \mbox{\hyperlink{class_pacman_1_1_game_engine_aa4b691eb9c33f5291e2671504a4199e4}{GetGhostStates}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ GhostMode\ \mbox{\hyperlink{class_pacman_1_1_game_engine_a364642dfa31ca321e63738d90865c23b}{GetGlobalGhostMode}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_game_engine_a81f97f4e093c59bf1497e02aaf6fd9d6}{AddListener}}(std::shared\_ptr<IEventListener>\ listener)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_game_engine_a920ec5ef81cd7de1c30165550f0b717c}{RemoveListener}}(std::shared\_ptr<IEventListener>\ listener)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::shared\_ptr<IGameEngine>\ \mbox{\hyperlink{class_pacman_1_1_game_engine_af58166eb337c5594d6ff6ef85997c807}{CreateGameEngine}}();}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Internal\ Logic\ Helpers\ -\/-\/-\/}}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ InitializeGame();}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ InitializePlayer();}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ ResetPlayerForNewGame();}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ InitializeGhosts();}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}}\ GetNextPosition(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}}\&\ from,\ Direction\ dir)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ CanWalk(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}}\&\ from,\ Direction\ dir)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ CanGhostWalk(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}}\&\ from,\ Direction\ dir,\ \textcolor{keywordtype}{bool}\ canUseGhostDoor\ =\ \textcolor{keyword}{false})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ GetCurrentGhostInterval()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ UpdatePlayer();}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ TryConsumeTile(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}}\&\ pos);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ UpdateGhosts();}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ CalculateGhostTarget(\mbox{\hyperlink{struct_pacman_1_1_ghost_state}{GhostState}}\&\ ghost,\ \textcolor{keywordtype}{size\_t}\ index,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}}\&\ blinkyPos);}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ Direction\ ChooseGhostDirection(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_pacman_1_1_ghost_state}{GhostState}}\&\ ghost);}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ UpdateEatenGhost(\mbox{\hyperlink{struct_pacman_1_1_ghost_state}{GhostState}}\&\ ghost);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ ReverseGhostDirections();}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ IsInOrNearGhostHouse(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}}\&\ pos)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ CheckCollisions();}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ HandlePlayerDeath();}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Notification\ Helpers\ (Observer\ Pattern)\ -\/-\/-\/}}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ NotifyAll();}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ NotifyTileUpdated(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_pacman_1_1_tile_update}{TileUpdate}}\&\ update);}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ NotifyPlayerState();}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ NotifyGameState();}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ NotifyGhostsUpdated();}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ NotifyGhostModeChanged(GhostMode\ mode);}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Member\ Variables\ -\/-\/-\/}}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \textcolor{keyword}{mutable}\ std::mt19937\ rng\_;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \textcolor{keyword}{mutable}\ std::mutex\ mutex\_;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ std::vector<std::shared\_ptr<IEventListener>>\ listeners\_;\ \ \ \ }
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pacman_1_1_map}{Map}}\ map\_;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ GameState\ gameState\_\ =\ GameState::Paused;}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_pacman_1_1_player_state}{PlayerState}}\ playerState\_\{\};}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ Direction\ desiredDirection\_\ =\ Direction::None;\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ std::array<GhostState,\ 4>\ ghostStates\_;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ std::array<std::unique\_ptr<IGhost>,\ 4>\ ghostAIs\_;\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pacman_1_1_ghost_mode_controller}{GhostModeController}}\ modeController\_;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ ghostsEatenThisPowerUp\_\ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ playerStepTimer\_\ =\ 0.0f;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ ghostStepTimer\_\ =\ 0.0f;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00168\ \ \ \ \ \};}
+\DoxyCodeLine{00169\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,38 @@
+\doxysection{out/build/x64-\/\+Debug/\+\_\+deps/sfml-\/src/include/\+SFML/\+Gpu\+Preference.hpp File Reference}
+\hypertarget{out_2build_2x64-_debug_2__deps_2sfml-src_2include_2_s_f_m_l_2_gpu_preference_8hpp}{}\label{out_2build_2x64-_debug_2__deps_2sfml-src_2include_2_s_f_m_l_2_gpu_preference_8hpp}\index{out/build/x64-\/Debug/\_deps/sfml-\/src/include/SFML/GpuPreference.hpp@{out/build/x64-\/Debug/\_deps/sfml-\/src/include/SFML/GpuPreference.hpp}}
+
+
+Headers.  
+
+
+{\ttfamily \#include $<$SFML/\+Config.\+hpp$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{out_2build_2x64-_debug_2__deps_2sfml-src_2include_2_s_f_m_l_2_gpu_preference_8hpp_ab0233c2d867cbd561036ed2440a4fec0}{SFML\+\_\+\+DEFINE\+\_\+\+DISCRETE\+\_\+\+GPU\+\_\+\+PREFERENCE}}
+\begin{DoxyCompactList}\small\item\em A macro to encourage usage of the discrete GPU. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Headers. 
+
+File containing SFML\+\_\+\+DEFINE\+\_\+\+DISCRETE\+\_\+\+GPU\+\_\+\+PREFERENCE 
+
+\label{doc-define-members}
+\Hypertarget{out_2build_2x64-_debug_2__deps_2sfml-src_2include_2_s_f_m_l_2_gpu_preference_8hpp_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{out_2build_2x64-_debug_2__deps_2sfml-src_2include_2_s_f_m_l_2_gpu_preference_8hpp_ab0233c2d867cbd561036ed2440a4fec0}\index{GpuPreference.hpp@{GpuPreference.hpp}!SFML\_DEFINE\_DISCRETE\_GPU\_PREFERENCE@{SFML\_DEFINE\_DISCRETE\_GPU\_PREFERENCE}}
+\index{SFML\_DEFINE\_DISCRETE\_GPU\_PREFERENCE@{SFML\_DEFINE\_DISCRETE\_GPU\_PREFERENCE}!GpuPreference.hpp@{GpuPreference.hpp}}
+\doxysubsubsection{\texorpdfstring{SFML\_DEFINE\_DISCRETE\_GPU\_PREFERENCE}{SFML\_DEFINE\_DISCRETE\_GPU\_PREFERENCE}}
+{\footnotesize\ttfamily \label{out_2build_2x64-_debug_2__deps_2sfml-src_2include_2_s_f_m_l_2_gpu_preference_8hpp_ab0233c2d867cbd561036ed2440a4fec0} 
+\#define SFML\+\_\+\+DEFINE\+\_\+\+DISCRETE\+\_\+\+GPU\+\_\+\+PREFERENCE}
+
+
+
+A macro to encourage usage of the discrete GPU. 
+
+In order to inform the Nvidia/\+AMD driver that an SFML application could benefit from using the more powerful discrete GPU, special symbols have to be publicly exported from the final executable.
+
+SFML defines a helper macro to easily do this.
+
+Place SFML\+\_\+\+DEFINE\+\_\+\+DISCRETE\+\_\+\+GPU\+\_\+\+PREFERENCE in the global scope of a source file that will be linked into the final executable. Typically it is best to place it where the main function is also defined. 

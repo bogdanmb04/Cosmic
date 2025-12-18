@@ -1,0 +1,22 @@
+\doxysection{Logic/\+Include/\+Ghost.hpp File Reference}
+\hypertarget{_ghost_8hpp}{}\label{_ghost_8hpp}\index{Logic/Include/Ghost.hpp@{Logic/Include/Ghost.hpp}}
+
+
+Concrete implementation of a Ghost entity.  
+
+
+{\ttfamily \#include "{}IGhost.\+hpp"{}}\newline
+{\ttfamily \#include "{}IGhost\+Strategy.\+hpp"{}}\newline
+{\ttfamily \#include "{}Game\+Types/\+Ghost\+Type.\+hpp"{}}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_pacman_1_1_ghost}{Pacman\+::\+Ghost}}
+\begin{DoxyCompactList}\small\item\em Represents a single ghost entity in the game. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Concrete implementation of a Ghost entity. 
+
+This class acts as the "{}\+Context"{} in the Strategy Pattern, delegating the movement logic to a specific IGhost\+Strategy implementation (Red, Pink, Blue, or Orange). 

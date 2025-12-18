@@ -1,0 +1,34 @@
+\doxysection{FLAC C API }
+\hypertarget{group__flac}{}\label{group__flac}\index{FLAC C API@{FLAC C API}}
+\doxysubsubsection*{Topics}
+\begin{DoxyCompactItemize}
+\item 
+\item \contentsline{section}{FLAC/callback.\+h\+: I/O callback structures }{\pageref{group__flac__callbacks}}{}
+
+\begin{DoxyCompactList}\small\item\em This module defines the structures for describing I/O callbacks to the other FLAC interfaces. \end{DoxyCompactList}\item 
+\item \contentsline{section}{FLAC/export.\+h\+: export symbols }{\pageref{group__flac__export}}{}
+
+\begin{DoxyCompactList}\small\item\em This module contains \#defines and symbols for exporting function calls, and providing version information and compiled-\/in features. \end{DoxyCompactList}\item 
+\item \contentsline{section}{FLAC/format.\+h\+: format components }{\pageref{group__flac__format}}{}
+
+\begin{DoxyCompactList}\small\item\em This module contains structure definitions for the representation of FLAC format components in memory. These are the basic structures used by the rest of the interfaces. \end{DoxyCompactList}\item 
+\item \contentsline{section}{FLAC/metadata.\+h\+: metadata interfaces }{\pageref{group__flac__metadata}}{}
+
+\begin{DoxyCompactList}\small\item\em This module provides functions for creating and manipulating FLAC metadata blocks in memory, and three progressively more powerful interfaces for traversing and editing metadata in native FLAC files. Note that currently only the Chain interface (level 2) supports Ogg FLAC files, and it is read-\/only i.\+e. no writing back changed metadata to file. \end{DoxyCompactList}\item 
+\item \contentsline{section}{FLAC/ \texorpdfstring{$\ast$}{*}\+\_\+decoder.h\+: decoder interfaces }{\pageref{group__flac__decoder}}{}
+
+\begin{DoxyCompactList}\small\item\em This module describes the decoder layers provided by lib\+FLAC. \end{DoxyCompactList}\item 
+\item \contentsline{section}{FLAC/ \texorpdfstring{$\ast$}{*}\+\_\+encoder.h\+: encoder interfaces }{\pageref{group__flac__encoder}}{}
+
+\begin{DoxyCompactList}\small\item\em This module describes the encoder layers provided by lib\+FLAC. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The FLAC C API is the interface to lib\+FLAC, a set of structures describing the components of FLAC streams, and functions for encoding and decoding streams, as well as manipulating FLAC metadata in files.
+
+You should start with the format components as all other modules are dependent on it. \input{group__flac__callbacks}
+\input{group__flac__export}
+\input{group__flac__format}
+\input{group__flac__metadata}
+\input{group__flac__decoder}
+\input{group__flac__encoder}

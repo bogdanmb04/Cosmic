@@ -1,0 +1,165 @@
+\doxysection{Pacman\+::Menu\+Screen Class Reference}
+\hypertarget{class_pacman_1_1_menu_screen}{}\label{class_pacman_1_1_menu_screen}\index{Pacman::MenuScreen@{Pacman::MenuScreen}}
+
+
+Enhanced main menu screen with improved visuals.  
+
+
+
+
+{\ttfamily \#include $<$Menu\+Screen.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pacman_1_1_menu_screen_a6944cdb97374fee867003bf9461d1a8a}{Menu\+Screen}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_pacman_1_1_i_menu_listener}{IMenu\+Listener}} $>$ listener)
+\begin{DoxyCompactList}\small\item\em Construct a new \doxylink{class_pacman_1_1_menu_screen}{Menu\+Screen}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pacman_1_1_menu_screen_ada70e1d4ddf2fd3d42ba4fd82ff23929}{Load\+Assets}} (const std\+::string \&asset\+Path)
+\begin{DoxyCompactList}\small\item\em Load menu assets (fonts). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pacman_1_1_menu_screen_a4b856a5b6f7838d5d95c60407c4ce64d}{Update}} (float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Update menu animations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pacman_1_1_menu_screen_ae98249a0ac066564ac6a0279c1473a15}{Handle\+Event}} (const \mbox{\hyperlink{classsf_1_1_event}{sf\+::\+Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Handle SFML events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pacman_1_1_menu_screen_ac31cb30bbac16c57144398ce64626b3a}{Render}} (\mbox{\hyperlink{classsf_1_1_render_window}{sf\+::\+Render\+Window}} \&window)
+\begin{DoxyCompactList}\small\item\em Render the menu. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pacman_1_1_menu_screen_a334c4d3bb118754782c1cb476850dec5}{Should\+Close}} () const
+\begin{DoxyCompactList}\small\item\em Check if window close was requested. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Enhanced main menu screen with improved visuals. 
+
+Features\+:
+\begin{DoxyItemize}
+\item Animated background with pulsing pellets
+\item Gradient background
+\item Glowing button effects
+\item Smooth hover animations
+\item Decorative border 
+\end{DoxyItemize}
+
+\label{doc-constructors}
+\Hypertarget{class_pacman_1_1_menu_screen_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_pacman_1_1_menu_screen_a6944cdb97374fee867003bf9461d1a8a}\index{Pacman::MenuScreen@{Pacman::MenuScreen}!MenuScreen@{MenuScreen}}
+\index{MenuScreen@{MenuScreen}!Pacman::MenuScreen@{Pacman::MenuScreen}}
+\doxysubsubsection{\texorpdfstring{MenuScreen()}{MenuScreen()}}
+{\footnotesize\ttfamily \label{class_pacman_1_1_menu_screen_a6944cdb97374fee867003bf9461d1a8a} 
+Pacman\+::\+Menu\+Screen\+::\+Menu\+Screen (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_pacman_1_1_i_menu_listener}{IMenu\+Listener}} $>$}]{listener}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Construct a new \doxylink{class_pacman_1_1_menu_screen}{Menu\+Screen}. 
+
+Menu constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em listener} & Menu event listener\\
+\hline
+{\em listener} & \doxylink{class_interface}{Interface} that will react to button presses (Play/\+Quit). \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{class_pacman_1_1_menu_screen_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_pacman_1_1_menu_screen_ae98249a0ac066564ac6a0279c1473a15}\index{Pacman::MenuScreen@{Pacman::MenuScreen}!HandleEvent@{HandleEvent}}
+\index{HandleEvent@{HandleEvent}!Pacman::MenuScreen@{Pacman::MenuScreen}}
+\doxysubsubsection{\texorpdfstring{HandleEvent()}{HandleEvent()}}
+{\footnotesize\ttfamily \label{class_pacman_1_1_menu_screen_ae98249a0ac066564ac6a0279c1473a15} 
+void Pacman\+::\+Menu\+Screen\+::\+Handle\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1_event}{sf\+::\+Event}} \&}]{event}{}\end{DoxyParamCaption})}
+
+
+
+Handle SFML events. 
+
+Handles input events (keyboard and mouse).
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The SFML event to handle\\
+\hline
+{\em event} & The current SFML event. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_pacman_1_1_menu_screen_ada70e1d4ddf2fd3d42ba4fd82ff23929}\index{Pacman::MenuScreen@{Pacman::MenuScreen}!LoadAssets@{LoadAssets}}
+\index{LoadAssets@{LoadAssets}!Pacman::MenuScreen@{Pacman::MenuScreen}}
+\doxysubsubsection{\texorpdfstring{LoadAssets()}{LoadAssets()}}
+{\footnotesize\ttfamily \label{class_pacman_1_1_menu_screen_ada70e1d4ddf2fd3d42ba4fd82ff23929} 
+bool Pacman\+::\+Menu\+Screen\+::\+Load\+Assets (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{asset\+Path}{}\end{DoxyParamCaption})}
+
+
+
+Load menu assets (fonts). 
+
+Loads necessary resources (fonts) and initializes text.
+
+
+\begin{DoxyParams}{Parameters}
+{\em asset\+Path} & Path to assets directory \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if assets loaded successfully
+
+true if resources loaded correctly. 
+\end{DoxyReturn}
+\Hypertarget{class_pacman_1_1_menu_screen_ac31cb30bbac16c57144398ce64626b3a}\index{Pacman::MenuScreen@{Pacman::MenuScreen}!Render@{Render}}
+\index{Render@{Render}!Pacman::MenuScreen@{Pacman::MenuScreen}}
+\doxysubsubsection{\texorpdfstring{Render()}{Render()}}
+{\footnotesize\ttfamily \label{class_pacman_1_1_menu_screen_ac31cb30bbac16c57144398ce64626b3a} 
+void Pacman\+::\+Menu\+Screen\+::\+Render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_render_window}{sf\+::\+Render\+Window}} \&}]{window}{}\end{DoxyParamCaption})}
+
+
+
+Render the menu. 
+
+Renders the entire menu to the window.
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & The SFML render window\\
+\hline
+{\em window} & The SFML render window. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_pacman_1_1_menu_screen_a334c4d3bb118754782c1cb476850dec5}\index{Pacman::MenuScreen@{Pacman::MenuScreen}!ShouldClose@{ShouldClose}}
+\index{ShouldClose@{ShouldClose}!Pacman::MenuScreen@{Pacman::MenuScreen}}
+\doxysubsubsection{\texorpdfstring{ShouldClose()}{ShouldClose()}}
+{\footnotesize\ttfamily \label{class_pacman_1_1_menu_screen_a334c4d3bb118754782c1cb476850dec5} 
+bool Pacman\+::\+Menu\+Screen\+::\+Should\+Close (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Check if window close was requested. 
+
+\begin{DoxyReturn}{Returns}
+True if close requested 
+\end{DoxyReturn}
+\Hypertarget{class_pacman_1_1_menu_screen_a4b856a5b6f7838d5d95c60407c4ce64d}\index{Pacman::MenuScreen@{Pacman::MenuScreen}!Update@{Update}}
+\index{Update@{Update}!Pacman::MenuScreen@{Pacman::MenuScreen}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_pacman_1_1_menu_screen_a4b856a5b6f7838d5d95c60407c4ce64d} 
+void Pacman\+::\+Menu\+Screen\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})}
+
+
+
+Update menu animations. 
+
+Updates the internal menu state (animations).
+
+
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & Time elapsed since last frame\\
+\hline
+{\em delta\+Time} & Time elapsed since the last frame (in seconds). \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+GUI/\+Include/Menu\+Screen.\+hpp\item 
+GUI/\+Source/\mbox{\hyperlink{_menu_screen_8cpp}{Menu\+Screen.\+cpp}}\end{DoxyCompactItemize}

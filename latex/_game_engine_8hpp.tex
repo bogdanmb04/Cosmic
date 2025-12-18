@@ -1,0 +1,28 @@
+\doxysection{Logic/\+Include/\+Game\+Engine.hpp File Reference}
+\hypertarget{_game_engine_8hpp}{}\label{_game_engine_8hpp}\index{Logic/Include/GameEngine.hpp@{Logic/Include/GameEngine.hpp}}
+
+
+Concrete implementation of the game logic and state management.  
+
+
+{\ttfamily \#include "{}IGame\+Engine.\+hpp"{}}\newline
+{\ttfamily \#include "{}Map.\+hpp"{}}\newline
+{\ttfamily \#include "{}IGhost.\+hpp"{}}\newline
+{\ttfamily \#include "{}Game\+Config.\+hpp"{}}\newline
+{\ttfamily \#include "{}Ghost\+Mode\+Controller.\+hpp"{}}\newline
+{\ttfamily \#include "{}Game\+Types/\+Game\+State.\+hpp"{}}\newline
+{\ttfamily \#include "{}Game\+Types/\+Tile\+Type.\+hpp"{}}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_pacman_1_1_game_engine}{Pacman\+::\+Game\+Engine}}
+\begin{DoxyCompactList}\small\item\em The central brain of the application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Concrete implementation of the game logic and state management. 
+
+This class manages the game loop, entity updates, collision detection, and notifies listeners (UI) about state changes. 

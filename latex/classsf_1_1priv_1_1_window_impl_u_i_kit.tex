@@ -1,0 +1,872 @@
+\doxysection{sf\+::priv\+::Window\+Impl\+UIKit Class Reference}
+\hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit}{}\label{classsf_1_1priv_1_1_window_impl_u_i_kit}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+
+
+i\+OS (UIKit) implementation of \doxylink{classsf_1_1priv_1_1_window_impl}{Window\+Impl}  
+
+
+
+
+{\ttfamily \#include $<$Window\+Impl\+UIKit.\+hpp$>$}
+
+Inheritance diagram for sf\+::priv\+::Window\+Impl\+UIKit\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.709677cm]{classsf_1_1priv_1_1_window_impl_u_i_kit}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_ae11063576f6378ea2a4292d81a73c386}{Window\+Impl\+UIKit}} (Window\+Handle handle)
+\begin{DoxyCompactList}\small\item\em Construct the window implementation from an existing control. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_a59158f142fc230e0d6acb4d8498f17cb}{Window\+Impl\+UIKit}} (\mbox{\hyperlink{classsf_1_1_video_mode}{Video\+Mode}} mode, const \mbox{\hyperlink{class_string}{String}} \&title, unsigned long style, const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&settings)
+\begin{DoxyCompactList}\small\item\em Create the window implementation. \end{DoxyCompactList}\item 
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_a0d7f184fbdaf3a1872ba35cab9f25062}\label{classsf_1_1priv_1_1_window_impl_u_i_kit_a0d7f184fbdaf3a1872ba35cab9f25062} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Window\+Impl\+UIKit} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual Window\+Handle \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_a6ad5c6c95682f8357635cbb45ca031f8}{get\+System\+Handle}} () const
+\begin{DoxyCompactList}\small\item\em Get the OS-\/specific handle of the window. \end{DoxyCompactList}\item 
+virtual Vector2i \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_ac3e49d23b52ea731529ca86f950ff1b3}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Get the position of the window. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_aa34c43dfd3ceadc7795515056c3838da}{set\+Position}} (const Vector2i \&position)
+\begin{DoxyCompactList}\small\item\em Change the position of the window on screen. \end{DoxyCompactList}\item 
+virtual Vector2u \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_a194036b2d9e43d844f9afef6d8243637}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Get the client size of the window. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_a88cb338b192b2206bad7e6d165d050f0}{set\+Size}} (const Vector2u \&size)
+\begin{DoxyCompactList}\small\item\em Change the size of the rendering region of the window. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_ad018981b3c9232475ffdc944b9da1670}{set\+Title}} (const \mbox{\hyperlink{class_string}{String}} \&title)
+\begin{DoxyCompactList}\small\item\em Change the title of the window. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_a40430a5e098181d776747b5f5a19f732}{set\+Icon}} (unsigned int width, unsigned int height, const Uint8 \texorpdfstring{$\ast$}{*}pixels)
+\begin{DoxyCompactList}\small\item\em Change the window\textquotesingle{}s icon. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_ac89ed9173230790ce6f654c8112bd060}{set\+Visible}} (bool visible)
+\begin{DoxyCompactList}\small\item\em Show or hide the window. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_a00c59f393662805e358289f4d6d87411}{set\+Mouse\+Cursor\+Visible}} (bool visible)
+\begin{DoxyCompactList}\small\item\em Show or hide the mouse cursor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_ad4184cc1c8afd53943a15b16b9630436}{set\+Mouse\+Cursor\+Grabbed}} (bool grabbed)
+\begin{DoxyCompactList}\small\item\em Clips or releases the mouse cursor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_ab85e5f08e19946c9e8fafdcd266c05a1}{set\+Mouse\+Cursor}} (const \mbox{\hyperlink{classsf_1_1priv_1_1_cursor_impl}{Cursor\+Impl}} \&cursor)
+\begin{DoxyCompactList}\small\item\em Set the displayed cursor to a native system cursor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_a280211c20a21852697fe0dcbb67b8ad4}{set\+Key\+Repeat\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enable or disable automatic key-\/repeat. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_a34f92bfb601d379e352badd224845444}{request\+Focus}} ()
+\begin{DoxyCompactList}\small\item\em Request the current window to be made the active foreground window. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_aa839c93743607b9eec083b9083a71058}{has\+Focus}} () const
+\begin{DoxyCompactList}\small\item\em Check whether the window has the input focus. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_a7619ffbf727bf85f326f19d54feae904}{forward\+Event}} (\mbox{\hyperlink{classsf_1_1_event}{Event}} event)
+\begin{DoxyCompactList}\small\item\em Notify an event. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_s_f_view}{SFView}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_acd4fd320570a71204677620334ffd985}{get\+Gl\+View}} () const
+\begin{DoxyCompactList}\small\item\em Get the window\textquotesingle{}s view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_a7c1a0931a0801cdfa553792885958a2a}{set\+Virtual\+Keyboard\+Visible}} (bool visible)
+\begin{DoxyCompactList}\small\item\em Show or hide the virtual keyboard. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_ae11063576f6378ea2a4292d81a73c386}{Window\+Impl\+UIKit}} (Window\+Handle handle)
+\begin{DoxyCompactList}\small\item\em Construct the window implementation from an existing control. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_a59158f142fc230e0d6acb4d8498f17cb}{Window\+Impl\+UIKit}} (\mbox{\hyperlink{classsf_1_1_video_mode}{Video\+Mode}} mode, const \mbox{\hyperlink{class_string}{String}} \&title, unsigned long style, const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&settings)
+\begin{DoxyCompactList}\small\item\em Create the window implementation. \end{DoxyCompactList}\item 
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_a0d7f184fbdaf3a1872ba35cab9f25062}\label{classsf_1_1priv_1_1_window_impl_u_i_kit_a0d7f184fbdaf3a1872ba35cab9f25062} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Window\+Impl\+UIKit} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+virtual Window\+Handle \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_ac08f37f7e0657904ea16b8d82c4add7e}{get\+System\+Handle}} () const
+\begin{DoxyCompactList}\small\item\em Get the OS-\/specific handle of the window. \end{DoxyCompactList}\item 
+virtual Vector2i \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_ab9837955568680ec31b28e37488ec923}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Get the position of the window. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_a789836e2d13b640df3bc335866bc46c3}{set\+Position}} (const Vector2i \&position)
+\begin{DoxyCompactList}\small\item\em Change the position of the window on screen. \end{DoxyCompactList}\item 
+virtual Vector2u \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_a89dd2eda85f2ea342f90594c29f1a2cc}{get\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Get the client size of the window. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_ad1a3360ff4527d20c3f3745956e426d1}{set\+Size}} (const Vector2u \&size)
+\begin{DoxyCompactList}\small\item\em Change the size of the rendering region of the window. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_a10439d1de36548160b2162577b8c9eeb}{set\+Title}} (const \mbox{\hyperlink{class_string}{String}} \&title)
+\begin{DoxyCompactList}\small\item\em Change the title of the window. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_aa9e6dae2eed666dda2f763d1374c9e06}{set\+Icon}} (unsigned int width, unsigned int height, const Uint8 \texorpdfstring{$\ast$}{*}pixels)
+\begin{DoxyCompactList}\small\item\em Change the window\textquotesingle{}s icon. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_a9b4d7975e6315296b65549525e78926b}{set\+Visible}} (bool visible)
+\begin{DoxyCompactList}\small\item\em Show or hide the window. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_ac868af1cbf1704fd276f59cb7f79d801}{set\+Mouse\+Cursor\+Visible}} (bool visible)
+\begin{DoxyCompactList}\small\item\em Show or hide the mouse cursor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_aea56153cd016f5a158983069cbccc941}{set\+Mouse\+Cursor\+Grabbed}} (bool grabbed)
+\begin{DoxyCompactList}\small\item\em Clips or releases the mouse cursor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_a0dd34185f972b69372bbe6860977d4ad}{set\+Mouse\+Cursor}} (const \mbox{\hyperlink{classsf_1_1priv_1_1_cursor_impl}{Cursor\+Impl}} \&cursor)
+\begin{DoxyCompactList}\small\item\em Set the displayed cursor to a native system cursor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_a877cb7f8c02aebd9885bb677b8006a5a}{set\+Key\+Repeat\+Enabled}} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enable or disable automatic key-\/repeat. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_a1d1c8949a1305db4c8065438e620e706}{request\+Focus}} ()
+\begin{DoxyCompactList}\small\item\em Request the current window to be made the active foreground window. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_a9601c0836b5597af6401d714fb927764}{has\+Focus}} () const
+\begin{DoxyCompactList}\small\item\em Check whether the window has the input focus. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_a7619ffbf727bf85f326f19d54feae904}{forward\+Event}} (\mbox{\hyperlink{classsf_1_1_event}{Event}} event)
+\begin{DoxyCompactList}\small\item\em Notify an event. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{interface_s_f_view}{SFView}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_acd4fd320570a71204677620334ffd985}{get\+Gl\+View}} () const
+\begin{DoxyCompactList}\small\item\em Get the window\textquotesingle{}s view. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_a7c1a0931a0801cdfa553792885958a2a}{set\+Virtual\+Keyboard\+Visible}} (bool visible)
+\begin{DoxyCompactList}\small\item\em Show or hide the virtual keyboard. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl}{sf\+::priv\+::\+Window\+Impl}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Window\+Impl} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_ad63050d99580126233581cbd013527ef}{set\+Joystick\+Threshold}} (float threshold)
+\begin{DoxyCompactList}\small\item\em Change the joystick threshold, i.\+e. the value below which no move event will be generated. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_ac03b5e66fbf0b64d00f28dfb06f25a94}{pop\+Event}} (\mbox{\hyperlink{classsf_1_1_event}{Event}} \&event, bool block)
+\begin{DoxyCompactList}\small\item\em Return the next window event available. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_aa34c17d9a20afe522b3d70b81947dcbf}{create\+Vulkan\+Surface}} (const Vk\+Instance \&instance, Vk\+Surface\+KHR \&surface, const \mbox{\hyperlink{struct_vk_allocation_callbacks}{Vk\+Allocation\+Callbacks}} \texorpdfstring{$\ast$}{*}allocator)
+\begin{DoxyCompactList}\small\item\em Create a \doxylink{classsf_1_1_vulkan}{Vulkan} rendering surface. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Window\+Impl} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_ad63050d99580126233581cbd013527ef}{set\+Joystick\+Threshold}} (float threshold)
+\begin{DoxyCompactList}\small\item\em Change the joystick threshold, i.\+e. the value below which no move event will be generated. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_ac03b5e66fbf0b64d00f28dfb06f25a94}{pop\+Event}} (\mbox{\hyperlink{classsf_1_1_event}{Event}} \&event, bool block)
+\begin{DoxyCompactList}\small\item\em Return the next window event available. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_aa34c17d9a20afe522b3d70b81947dcbf}{create\+Vulkan\+Surface}} (const Vk\+Instance \&instance, Vk\+Surface\+KHR \&surface, const \mbox{\hyperlink{struct_vk_allocation_callbacks}{Vk\+Allocation\+Callbacks}} \texorpdfstring{$\ast$}{*}allocator)
+\begin{DoxyCompactList}\small\item\em Create a \doxylink{classsf_1_1_vulkan}{Vulkan} rendering surface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_a38b4f82d78000b4e07ad7791317b71c8}{process\+Events}} ()
+\begin{DoxyCompactList}\small\item\em Process incoming events from the operating system. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_u_i_kit_a898da826cb26a39433e3b9a1559bb69a}{process\+Events}} ()
+\begin{DoxyCompactList}\small\item\em Process incoming events from the operating system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl}{sf\+::priv\+::\+Window\+Impl}}}
+\begin{DoxyCompactItemize}
+\item 
+{\bfseries Window\+Impl} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a9b540a7c8b1b782d771e8fdf8f451837}{push\+Event}} (const \mbox{\hyperlink{classsf_1_1_event}{Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Push a new event into the event queue. \end{DoxyCompactList}\item 
+{\bfseries Window\+Impl} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a9b540a7c8b1b782d771e8fdf8f451837}{push\+Event}} (const \mbox{\hyperlink{classsf_1_1_event}{Event}} \&event)
+\begin{DoxyCompactList}\small\item\em Push a new event into the event queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl}{sf\+::priv\+::\+Window\+Impl}}}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a1328634be04374d905e1f68d0688b30a}{Window\+Impl}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a070ce3d5db3b9bd99ec61e3526e2a077}{create}} (\mbox{\hyperlink{classsf_1_1_video_mode}{Video\+Mode}} mode, const \mbox{\hyperlink{class_string}{String}} \&title, Uint32 style, const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&settings)
+\begin{DoxyCompactList}\small\item\em Create a new window depending on the current OS. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a1328634be04374d905e1f68d0688b30a}{Window\+Impl}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a2d0dd44bbf2ec974217f1f5da038ead6}{create}} (Window\+Handle handle)
+\begin{DoxyCompactList}\small\item\em Create a new window depending on to the current OS. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a1328634be04374d905e1f68d0688b30a}{Window\+Impl}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_af6a7f473861cbdf95290874261d43c7b}{create}} (\mbox{\hyperlink{classsf_1_1_video_mode}{Video\+Mode}} mode, const \mbox{\hyperlink{class_string}{String}} \&title, Uint32 style, const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&settings)
+\begin{DoxyCompactList}\small\item\em Create a new window depending on the current OS. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a1328634be04374d905e1f68d0688b30a}{Window\+Impl}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a1efd065fd11adc664bfd9b74736f0a7a}{create}} (Window\+Handle handle)
+\begin{DoxyCompactList}\small\item\em Create a new window depending on to the current OS. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+i\+OS (UIKit) implementation of \doxylink{classsf_1_1priv_1_1_window_impl}{Window\+Impl} 
+
+\label{doc-constructors}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_ae11063576f6378ea2a4292d81a73c386}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!WindowImplUIKit@{WindowImplUIKit}}
+\index{WindowImplUIKit@{WindowImplUIKit}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{WindowImplUIKit()}{WindowImplUIKit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_ae11063576f6378ea2a4292d81a73c386} 
+sf\+::priv\+::\+Window\+Impl\+UIKit\+::\+Window\+Impl\+UIKit (\begin{DoxyParamCaption}\item[{Window\+Handle}]{handle}{}\end{DoxyParamCaption})}
+
+
+
+Construct the window implementation from an existing control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Platform-\/specific handle of the control \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_a59158f142fc230e0d6acb4d8498f17cb}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!WindowImplUIKit@{WindowImplUIKit}}
+\index{WindowImplUIKit@{WindowImplUIKit}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{WindowImplUIKit()}{WindowImplUIKit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_a59158f142fc230e0d6acb4d8498f17cb} 
+sf\+::priv\+::\+Window\+Impl\+UIKit\+::\+Window\+Impl\+UIKit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_video_mode}{Video\+Mode}}}]{mode}{, }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{title}{, }\item[{unsigned long}]{style}{, }\item[{const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&}]{settings}{}\end{DoxyParamCaption})}
+
+
+
+Create the window implementation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & Video mode to use \\
+\hline
+{\em title} & Title of the window \\
+\hline
+{\em style} & \doxylink{classsf_1_1_window}{Window} style (resizable, fixed, or fullscren) \\
+\hline
+{\em settings} & Additional settings for the underlying Open\+GL context \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_ae11063576f6378ea2a4292d81a73c386}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!WindowImplUIKit@{WindowImplUIKit}}
+\index{WindowImplUIKit@{WindowImplUIKit}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{WindowImplUIKit()}{WindowImplUIKit()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_ae11063576f6378ea2a4292d81a73c386} 
+sf\+::priv\+::\+Window\+Impl\+UIKit\+::\+Window\+Impl\+UIKit (\begin{DoxyParamCaption}\item[{Window\+Handle}]{handle}{}\end{DoxyParamCaption})}
+
+
+
+Construct the window implementation from an existing control. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em handle} & Platform-\/specific handle of the control \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_a59158f142fc230e0d6acb4d8498f17cb}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!WindowImplUIKit@{WindowImplUIKit}}
+\index{WindowImplUIKit@{WindowImplUIKit}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{WindowImplUIKit()}{WindowImplUIKit()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_a59158f142fc230e0d6acb4d8498f17cb} 
+sf\+::priv\+::\+Window\+Impl\+UIKit\+::\+Window\+Impl\+UIKit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_video_mode}{Video\+Mode}}}]{mode}{, }\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{title}{, }\item[{unsigned long}]{style}{, }\item[{const \mbox{\hyperlink{structsf_1_1_context_settings}{Context\+Settings}} \&}]{settings}{}\end{DoxyParamCaption})}
+
+
+
+Create the window implementation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & Video mode to use \\
+\hline
+{\em title} & Title of the window \\
+\hline
+{\em style} & \doxylink{classsf_1_1_window}{Window} style (resizable, fixed, or fullscren) \\
+\hline
+{\em settings} & Additional settings for the underlying Open\+GL context \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_a7619ffbf727bf85f326f19d54feae904}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!forwardEvent@{forwardEvent}}
+\index{forwardEvent@{forwardEvent}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{forwardEvent()}{forwardEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_a7619ffbf727bf85f326f19d54feae904} 
+void sf\+::priv\+::\+Window\+Impl\+UIKit\+::forward\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_event}{Event}}}]{event}{}\end{DoxyParamCaption})}
+
+
+
+Notify an event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \doxylink{classsf_1_1_event}{Event} to forward \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_a7619ffbf727bf85f326f19d54feae904}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!forwardEvent@{forwardEvent}}
+\index{forwardEvent@{forwardEvent}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{forwardEvent()}{forwardEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_a7619ffbf727bf85f326f19d54feae904} 
+void sf\+::priv\+::\+Window\+Impl\+UIKit\+::forward\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_event}{Event}}}]{event}{}\end{DoxyParamCaption})}
+
+
+
+Notify an event. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & \doxylink{classsf_1_1_event}{Event} to forward \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_acd4fd320570a71204677620334ffd985}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!getGlView@{getGlView}}
+\index{getGlView@{getGlView}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{getGlView()}{getGlView()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_acd4fd320570a71204677620334ffd985} 
+\mbox{\hyperlink{interface_s_f_view}{SFView}} \texorpdfstring{$\ast$}{*} sf\+::priv\+::\+Window\+Impl\+UIKit\+::get\+Gl\+View (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the window\textquotesingle{}s view. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the window\textquotesingle{}s view 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_acd4fd320570a71204677620334ffd985}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!getGlView@{getGlView}}
+\index{getGlView@{getGlView}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{getGlView()}{getGlView()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_acd4fd320570a71204677620334ffd985} 
+\mbox{\hyperlink{interface_s_f_view}{SFView}} \texorpdfstring{$\ast$}{*} sf\+::priv\+::\+Window\+Impl\+UIKit\+::get\+Gl\+View (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the window\textquotesingle{}s view. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the window\textquotesingle{}s view 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_ac3e49d23b52ea731529ca86f950ff1b3}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_ac3e49d23b52ea731529ca86f950ff1b3} 
+Vector2i sf\+::priv\+::\+Window\+Impl\+UIKit\+::get\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the position of the window. 
+
+\begin{DoxyReturn}{Returns}
+Position of the window, in pixels 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a2d824d8166f5f5a2d5554eb3d7244066}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_ab9837955568680ec31b28e37488ec923}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_ab9837955568680ec31b28e37488ec923} 
+virtual Vector2i sf\+::priv\+::\+Window\+Impl\+UIKit\+::get\+Position (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the position of the window. 
+
+\begin{DoxyReturn}{Returns}
+Position of the window, in pixels 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a2d824d8166f5f5a2d5554eb3d7244066}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_a194036b2d9e43d844f9afef6d8243637}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!getSize@{getSize}}
+\index{getSize@{getSize}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_a194036b2d9e43d844f9afef6d8243637} 
+Vector2u sf\+::priv\+::\+Window\+Impl\+UIKit\+::get\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the client size of the window. 
+
+\begin{DoxyReturn}{Returns}
+Size of the window, in pixels 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a2bc72a00e9960e7b4ae2d61865667c3f}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_a89dd2eda85f2ea342f90594c29f1a2cc}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!getSize@{getSize}}
+\index{getSize@{getSize}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_a89dd2eda85f2ea342f90594c29f1a2cc} 
+virtual Vector2u sf\+::priv\+::\+Window\+Impl\+UIKit\+::get\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the client size of the window. 
+
+\begin{DoxyReturn}{Returns}
+Size of the window, in pixels 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a2bc72a00e9960e7b4ae2d61865667c3f}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_a6ad5c6c95682f8357635cbb45ca031f8}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!getSystemHandle@{getSystemHandle}}
+\index{getSystemHandle@{getSystemHandle}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{getSystemHandle()}{getSystemHandle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_a6ad5c6c95682f8357635cbb45ca031f8} 
+Window\+Handle sf\+::priv\+::\+Window\+Impl\+UIKit\+::get\+System\+Handle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the OS-\/specific handle of the window. 
+
+\begin{DoxyReturn}{Returns}
+Handle of the window 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a9d6b9ab4c233daf333429b3e7ee77403}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_ac08f37f7e0657904ea16b8d82c4add7e}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!getSystemHandle@{getSystemHandle}}
+\index{getSystemHandle@{getSystemHandle}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{getSystemHandle()}{getSystemHandle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_ac08f37f7e0657904ea16b8d82c4add7e} 
+virtual Window\+Handle sf\+::priv\+::\+Window\+Impl\+UIKit\+::get\+System\+Handle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get the OS-\/specific handle of the window. 
+
+\begin{DoxyReturn}{Returns}
+Handle of the window 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a9d6b9ab4c233daf333429b3e7ee77403}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_aa839c93743607b9eec083b9083a71058}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!hasFocus@{hasFocus}}
+\index{hasFocus@{hasFocus}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{hasFocus()}{hasFocus()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_aa839c93743607b9eec083b9083a71058} 
+bool sf\+::priv\+::\+Window\+Impl\+UIKit\+::has\+Focus (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check whether the window has the input focus. 
+
+\begin{DoxyReturn}{Returns}
+True if window has focus, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_ac5c0f4a801bb04de673a476ceafcd704}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_a9601c0836b5597af6401d714fb927764}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!hasFocus@{hasFocus}}
+\index{hasFocus@{hasFocus}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{hasFocus()}{hasFocus()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_a9601c0836b5597af6401d714fb927764} 
+virtual bool sf\+::priv\+::\+Window\+Impl\+UIKit\+::has\+Focus (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Check whether the window has the input focus. 
+
+\begin{DoxyReturn}{Returns}
+True if window has focus, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_ac5c0f4a801bb04de673a476ceafcd704}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_a38b4f82d78000b4e07ad7791317b71c8}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!processEvents@{processEvents}}
+\index{processEvents@{processEvents}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{processEvents()}{processEvents()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_a38b4f82d78000b4e07ad7791317b71c8} 
+void sf\+::priv\+::\+Window\+Impl\+UIKit\+::process\+Events (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Process incoming events from the operating system. 
+
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a3e91b707ca4b995fabd71b7bd031530a}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_a898da826cb26a39433e3b9a1559bb69a}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!processEvents@{processEvents}}
+\index{processEvents@{processEvents}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{processEvents()}{processEvents()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_a898da826cb26a39433e3b9a1559bb69a} 
+virtual void sf\+::priv\+::\+Window\+Impl\+UIKit\+::process\+Events (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Process incoming events from the operating system. 
+
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a3e91b707ca4b995fabd71b7bd031530a}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_a34f92bfb601d379e352badd224845444}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!requestFocus@{requestFocus}}
+\index{requestFocus@{requestFocus}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{requestFocus()}{requestFocus()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_a34f92bfb601d379e352badd224845444} 
+void sf\+::priv\+::\+Window\+Impl\+UIKit\+::request\+Focus (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Request the current window to be made the active foreground window. 
+
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_afe73f678b6a53b2a231f8044663d1fca}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_a1d1c8949a1305db4c8065438e620e706}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!requestFocus@{requestFocus}}
+\index{requestFocus@{requestFocus}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{requestFocus()}{requestFocus()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_a1d1c8949a1305db4c8065438e620e706} 
+virtual void sf\+::priv\+::\+Window\+Impl\+UIKit\+::request\+Focus (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Request the current window to be made the active foreground window. 
+
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_afe73f678b6a53b2a231f8044663d1fca}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_a40430a5e098181d776747b5f5a19f732}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!setIcon@{setIcon}}
+\index{setIcon@{setIcon}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{setIcon()}{setIcon()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_a40430a5e098181d776747b5f5a19f732} 
+void sf\+::priv\+::\+Window\+Impl\+UIKit\+::set\+Icon (\begin{DoxyParamCaption}\item[{unsigned int}]{width}{, }\item[{unsigned int}]{height}{, }\item[{const Uint8 \texorpdfstring{$\ast$}{*}}]{pixels}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Change the window\textquotesingle{}s icon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Icon\textquotesingle{}s width, in pixels \\
+\hline
+{\em height} & Icon\textquotesingle{}s height, in pixels \\
+\hline
+{\em pixels} & Pointer to the pixels in memory, format must be RGBA 32 bits \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a08c9d33b1a059b3825bb71e255f4dab8}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_aa9e6dae2eed666dda2f763d1374c9e06}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!setIcon@{setIcon}}
+\index{setIcon@{setIcon}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{setIcon()}{setIcon()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_aa9e6dae2eed666dda2f763d1374c9e06} 
+virtual void sf\+::priv\+::\+Window\+Impl\+UIKit\+::set\+Icon (\begin{DoxyParamCaption}\item[{unsigned int}]{width}{, }\item[{unsigned int}]{height}{, }\item[{const Uint8 \texorpdfstring{$\ast$}{*}}]{pixels}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Change the window\textquotesingle{}s icon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & Icon\textquotesingle{}s width, in pixels \\
+\hline
+{\em height} & Icon\textquotesingle{}s height, in pixels \\
+\hline
+{\em pixels} & Pointer to the pixels in memory, format must be RGBA 32 bits \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a08c9d33b1a059b3825bb71e255f4dab8}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_a280211c20a21852697fe0dcbb67b8ad4}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!setKeyRepeatEnabled@{setKeyRepeatEnabled}}
+\index{setKeyRepeatEnabled@{setKeyRepeatEnabled}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{setKeyRepeatEnabled()}{setKeyRepeatEnabled()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_a280211c20a21852697fe0dcbb67b8ad4} 
+void sf\+::priv\+::\+Window\+Impl\+UIKit\+::set\+Key\+Repeat\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Enable or disable automatic key-\/repeat. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enabled} & True to enable, false to disable \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a367e5c89de51decd13444ddce3265b18}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_a877cb7f8c02aebd9885bb677b8006a5a}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!setKeyRepeatEnabled@{setKeyRepeatEnabled}}
+\index{setKeyRepeatEnabled@{setKeyRepeatEnabled}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{setKeyRepeatEnabled()}{setKeyRepeatEnabled()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_a877cb7f8c02aebd9885bb677b8006a5a} 
+virtual void sf\+::priv\+::\+Window\+Impl\+UIKit\+::set\+Key\+Repeat\+Enabled (\begin{DoxyParamCaption}\item[{bool}]{enabled}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Enable or disable automatic key-\/repeat. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enabled} & True to enable, false to disable \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a367e5c89de51decd13444ddce3265b18}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_ab85e5f08e19946c9e8fafdcd266c05a1}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!setMouseCursor@{setMouseCursor}}
+\index{setMouseCursor@{setMouseCursor}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{setMouseCursor()}{setMouseCursor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_ab85e5f08e19946c9e8fafdcd266c05a1} 
+void sf\+::priv\+::\+Window\+Impl\+UIKit\+::set\+Mouse\+Cursor (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1priv_1_1_cursor_impl}{Cursor\+Impl}} \&}]{cursor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the displayed cursor to a native system cursor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cursor} & Native system cursor type to display \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_afad987ac0e04ffb10643d7a41e008207}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_a0dd34185f972b69372bbe6860977d4ad}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!setMouseCursor@{setMouseCursor}}
+\index{setMouseCursor@{setMouseCursor}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{setMouseCursor()}{setMouseCursor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_a0dd34185f972b69372bbe6860977d4ad} 
+virtual void sf\+::priv\+::\+Window\+Impl\+UIKit\+::set\+Mouse\+Cursor (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1priv_1_1_cursor_impl}{Cursor\+Impl}} \&}]{cursor}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Set the displayed cursor to a native system cursor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cursor} & Native system cursor type to display \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_afad987ac0e04ffb10643d7a41e008207}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_ad4184cc1c8afd53943a15b16b9630436}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!setMouseCursorGrabbed@{setMouseCursorGrabbed}}
+\index{setMouseCursorGrabbed@{setMouseCursorGrabbed}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{setMouseCursorGrabbed()}{setMouseCursorGrabbed()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_ad4184cc1c8afd53943a15b16b9630436} 
+void sf\+::priv\+::\+Window\+Impl\+UIKit\+::set\+Mouse\+Cursor\+Grabbed (\begin{DoxyParamCaption}\item[{bool}]{grabbed}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Clips or releases the mouse cursor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grabbed} & True to enable, false to disable \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a608f2da781271c3b305bb7a6e72d71b2}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_aea56153cd016f5a158983069cbccc941}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!setMouseCursorGrabbed@{setMouseCursorGrabbed}}
+\index{setMouseCursorGrabbed@{setMouseCursorGrabbed}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{setMouseCursorGrabbed()}{setMouseCursorGrabbed()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_aea56153cd016f5a158983069cbccc941} 
+virtual void sf\+::priv\+::\+Window\+Impl\+UIKit\+::set\+Mouse\+Cursor\+Grabbed (\begin{DoxyParamCaption}\item[{bool}]{grabbed}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Clips or releases the mouse cursor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grabbed} & True to enable, false to disable \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a608f2da781271c3b305bb7a6e72d71b2}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_a00c59f393662805e358289f4d6d87411}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!setMouseCursorVisible@{setMouseCursorVisible}}
+\index{setMouseCursorVisible@{setMouseCursorVisible}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{setMouseCursorVisible()}{setMouseCursorVisible()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_a00c59f393662805e358289f4d6d87411} 
+void sf\+::priv\+::\+Window\+Impl\+UIKit\+::set\+Mouse\+Cursor\+Visible (\begin{DoxyParamCaption}\item[{bool}]{visible}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Show or hide the mouse cursor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em visible} & True to show, false to hide \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_ae04d680901e8c302a92ef879966d752b}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_ac868af1cbf1704fd276f59cb7f79d801}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!setMouseCursorVisible@{setMouseCursorVisible}}
+\index{setMouseCursorVisible@{setMouseCursorVisible}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{setMouseCursorVisible()}{setMouseCursorVisible()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_ac868af1cbf1704fd276f59cb7f79d801} 
+virtual void sf\+::priv\+::\+Window\+Impl\+UIKit\+::set\+Mouse\+Cursor\+Visible (\begin{DoxyParamCaption}\item[{bool}]{visible}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Show or hide the mouse cursor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em visible} & True to show, false to hide \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_ae04d680901e8c302a92ef879966d752b}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_aa34c43dfd3ceadc7795515056c3838da}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_aa34c43dfd3ceadc7795515056c3838da} 
+void sf\+::priv\+::\+Window\+Impl\+UIKit\+::set\+Position (\begin{DoxyParamCaption}\item[{const Vector2i \&}]{position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Change the position of the window on screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & New position of the window, in pixels \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a6f2513c0a97af5311a81744a9448c57e}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_a789836e2d13b640df3bc335866bc46c3}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_a789836e2d13b640df3bc335866bc46c3} 
+virtual void sf\+::priv\+::\+Window\+Impl\+UIKit\+::set\+Position (\begin{DoxyParamCaption}\item[{const Vector2i \&}]{position}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Change the position of the window on screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & New position of the window, in pixels \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a6f2513c0a97af5311a81744a9448c57e}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_a88cb338b192b2206bad7e6d165d050f0}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!setSize@{setSize}}
+\index{setSize@{setSize}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_a88cb338b192b2206bad7e6d165d050f0} 
+void sf\+::priv\+::\+Window\+Impl\+UIKit\+::set\+Size (\begin{DoxyParamCaption}\item[{const Vector2u \&}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Change the size of the rendering region of the window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & New size, in pixels \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a7a6c2bbc383a912213ce8ec1bffe8954}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_ad1a3360ff4527d20c3f3745956e426d1}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!setSize@{setSize}}
+\index{setSize@{setSize}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{setSize()}{setSize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_ad1a3360ff4527d20c3f3745956e426d1} 
+virtual void sf\+::priv\+::\+Window\+Impl\+UIKit\+::set\+Size (\begin{DoxyParamCaption}\item[{const Vector2u \&}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Change the size of the rendering region of the window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & New size, in pixels \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a7a6c2bbc383a912213ce8ec1bffe8954}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_ad018981b3c9232475ffdc944b9da1670}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!setTitle@{setTitle}}
+\index{setTitle@{setTitle}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{setTitle()}{setTitle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_ad018981b3c9232475ffdc944b9da1670} 
+void sf\+::priv\+::\+Window\+Impl\+UIKit\+::set\+Title (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{title}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Change the title of the window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & New title \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a5548a506ce7a5cb9c6c7f92fcdd7689a}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_a10439d1de36548160b2162577b8c9eeb}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!setTitle@{setTitle}}
+\index{setTitle@{setTitle}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{setTitle()}{setTitle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_a10439d1de36548160b2162577b8c9eeb} 
+virtual void sf\+::priv\+::\+Window\+Impl\+UIKit\+::set\+Title (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_string}{String}} \&}]{title}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Change the title of the window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title} & New title \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a5548a506ce7a5cb9c6c7f92fcdd7689a}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_a7c1a0931a0801cdfa553792885958a2a}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!setVirtualKeyboardVisible@{setVirtualKeyboardVisible}}
+\index{setVirtualKeyboardVisible@{setVirtualKeyboardVisible}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{setVirtualKeyboardVisible()}{setVirtualKeyboardVisible()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_a7c1a0931a0801cdfa553792885958a2a} 
+void sf\+::priv\+::\+Window\+Impl\+UIKit\+::set\+Virtual\+Keyboard\+Visible (\begin{DoxyParamCaption}\item[{bool}]{visible}{}\end{DoxyParamCaption})}
+
+
+
+Show or hide the virtual keyboard. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em visible} & True to show, false to hide \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_a7c1a0931a0801cdfa553792885958a2a}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!setVirtualKeyboardVisible@{setVirtualKeyboardVisible}}
+\index{setVirtualKeyboardVisible@{setVirtualKeyboardVisible}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{setVirtualKeyboardVisible()}{setVirtualKeyboardVisible()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_a7c1a0931a0801cdfa553792885958a2a} 
+void sf\+::priv\+::\+Window\+Impl\+UIKit\+::set\+Virtual\+Keyboard\+Visible (\begin{DoxyParamCaption}\item[{bool}]{visible}{}\end{DoxyParamCaption})}
+
+
+
+Show or hide the virtual keyboard. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em visible} & True to show, false to hide \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_ac89ed9173230790ce6f654c8112bd060}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!setVisible@{setVisible}}
+\index{setVisible@{setVisible}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{setVisible()}{setVisible()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_ac89ed9173230790ce6f654c8112bd060} 
+void sf\+::priv\+::\+Window\+Impl\+UIKit\+::set\+Visible (\begin{DoxyParamCaption}\item[{bool}]{visible}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Show or hide the window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em visible} & True to show, false to hide \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a9119bdb8b8413c1dbfb06aa4ad78c7b5}{sf\+::priv\+::\+Window\+Impl}}.
+
+\Hypertarget{classsf_1_1priv_1_1_window_impl_u_i_kit_a9b4d7975e6315296b65549525e78926b}\index{sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}!setVisible@{setVisible}}
+\index{setVisible@{setVisible}!sf::priv::WindowImplUIKit@{sf::priv::WindowImplUIKit}}
+\doxysubsubsection{\texorpdfstring{setVisible()}{setVisible()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_window_impl_u_i_kit_a9b4d7975e6315296b65549525e78926b} 
+virtual void sf\+::priv\+::\+Window\+Impl\+UIKit\+::set\+Visible (\begin{DoxyParamCaption}\item[{bool}]{visible}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Show or hide the window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em visible} & True to show, false to hide \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classsf_1_1priv_1_1_window_impl_a9119bdb8b8413c1dbfb06aa4ad78c7b5}{sf\+::priv\+::\+Window\+Impl}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+build/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/i\+OS/Window\+Impl\+UIKit.\+hpp\item 
+out/build/x64-\/\+Debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/i\+OS/Window\+Impl\+UIKit.\+hpp\item 
+build/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/i\+OS/Window\+Impl\+UIKit.\+mm\item 
+out/build/x64-\/\+Debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/i\+OS/Window\+Impl\+UIKit.\+mm\end{DoxyCompactItemize}

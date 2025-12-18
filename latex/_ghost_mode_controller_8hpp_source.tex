@@ -1,0 +1,39 @@
+\doxysection{Ghost\+Mode\+Controller.\+hpp}
+\hypertarget{_ghost_mode_controller_8hpp_source}{}\label{_ghost_mode_controller_8hpp_source}\index{Logic/Include/GhostModeController.hpp@{Logic/Include/GhostModeController.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}GameConfig.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}GameTypes/GhostMode.hpp"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{namespace\ }Pacman\ }
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_pacman_1_1_ghost_mode_controller_aa5f76c6819002e539d0be6ee3e536405}{GhostModeController}}\ }
+\DoxyCodeLine{00015\ \ \ \ \ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_pacman_1_1_ghost_mode_controller_aa5f76c6819002e539d0be6ee3e536405}{GhostModeController}}();}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_ghost_mode_controller_a0e5eeb6aefb12e2a2adc3b0e9af92683}{Reset}}();}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_ghost_mode_controller_a73d0217bfd4c95d5cb1e9f4130cdcf8d}{Update}}(\textcolor{keywordtype}{float}\ deltaTime);}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_ghost_mode_controller_aa61fac841b6fc0a9098060acf7fe1fb1}{TriggerFrightenedMode}}(\textcolor{keywordtype}{float}\ duration\ =\ GameConfig::PowerUpDuration);}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_pacman_1_1_ghost_mode_controller_a63dc07ce1630c42503e71eded1c5db45}{ShouldReverseDirection}}();}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ GhostMode\ \mbox{\hyperlink{class_pacman_1_1_ghost_mode_controller_a46dde1fa8af6558be8d3bbaf44d559b3}{GetCurrentMode}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_pacman_1_1_ghost_mode_controller_af25b84c5402f810f99645d64dce6a521}{IsFrightened}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_pacman_1_1_ghost_mode_controller_add8fd8ee884980cf79e8a44d6684c130}{GetFrightenedTimeRemaining}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_pacman_1_1_ghost_mode_controller_a9dd87d81c9c6950ae71f9ccdca391f4f}{IsFrightenedWarning}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ GetCurrentPhaseDuration()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ currentWave\_\ =\ 0;}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ waveTimer\_\ =\ 0.0f;}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isScatterPhase\_\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isPermanentChase\_\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ modeJustChanged\_\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ frightenedTimer\_\ =\ 0.0f;}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isFrightened\_\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00036\ \ \ \ \ \};}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \}}
+
+\end{DoxyCode}

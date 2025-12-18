@@ -1,0 +1,117 @@
+\doxysection{Pacman\+::Ghost Class Reference}
+\hypertarget{class_pacman_1_1_ghost}{}\label{class_pacman_1_1_ghost}\index{Pacman::Ghost@{Pacman::Ghost}}
+
+
+Represents a single ghost entity in the game.  
+
+
+
+
+{\ttfamily \#include $<$Ghost.\+hpp$>$}
+
+Inheritance diagram for Pacman\+::Ghost\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pacman_1_1_ghost}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pacman_1_1_ghost_ad43ef4e91e7443414cbb10aa209a6d6a}{Ghost}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_pacman_1_1_i_ghost_strategy}{IGhost\+Strategy}} $>$ ghost\+Strategy, Ghost\+Type type)
+\begin{DoxyCompactList}\small\item\em Constructor used to inject dependencies. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \mbox{\hyperlink{class_pacman_1_1_ghost_ae81763dea481e72240f975d4913b2ee1}{Calculate\+Chase\+Target}} (const \mbox{\hyperlink{struct_pacman_1_1_ghost_state}{Ghost\+State}} \&ghost, const \mbox{\hyperlink{struct_pacman_1_1_player_state}{Player\+State}} \&player, const \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \&blinky\+Position) const override
+\begin{DoxyCompactList}\small\item\em Calculates the next target tile during Chase mode. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \mbox{\hyperlink{class_pacman_1_1_ghost_a6e0893748a5931f15ffd65614734b255}{Get\+Scatter\+Target}} () const override
+\begin{DoxyCompactList}\small\item\em Gets the fixed corner target for Scatter mode. \end{DoxyCompactList}\item 
+virtual Ghost\+Type \mbox{\hyperlink{class_pacman_1_1_ghost_a9247aad5092f7e39d489560c91bc8d44}{Get\+Ghost\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the type (color) of this ghost. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a single ghost entity in the game. 
+
+Inherits from \doxylink{class_pacman_1_1_i_ghost}{IGhost} interface and manages the ghost\textquotesingle{}s identity (Type) and AI Strategy. 
+
+\label{doc-constructors}
+\Hypertarget{class_pacman_1_1_ghost_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_pacman_1_1_ghost_ad43ef4e91e7443414cbb10aa209a6d6a}\index{Pacman::Ghost@{Pacman::Ghost}!Ghost@{Ghost}}
+\index{Ghost@{Ghost}!Pacman::Ghost@{Pacman::Ghost}}
+\doxysubsubsection{\texorpdfstring{Ghost()}{Ghost()}}
+{\footnotesize\ttfamily \label{class_pacman_1_1_ghost_ad43ef4e91e7443414cbb10aa209a6d6a} 
+Pacman\+::\+Ghost\+::\+Ghost (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_pacman_1_1_i_ghost_strategy}{IGhost\+Strategy}} $>$}]{ghost\+Strategy}{, }\item[{Ghost\+Type}]{type}{}\end{DoxyParamCaption})}
+
+
+
+Constructor used to inject dependencies. 
+
+Initializes the ghost with a specific strategy and type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ghost\+Strategy} & The specific AI strategy (movement logic) for this ghost. \\
+\hline
+{\em type} & The visual identity (color) of the ghost.\\
+\hline
+\end{DoxyParams}
+Uses std\+::move to take ownership of the unique\+\_\+ptr strategy. 
+
+\label{doc-func-members}
+\Hypertarget{class_pacman_1_1_ghost_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_pacman_1_1_ghost_ae81763dea481e72240f975d4913b2ee1}\index{Pacman::Ghost@{Pacman::Ghost}!CalculateChaseTarget@{CalculateChaseTarget}}
+\index{CalculateChaseTarget@{CalculateChaseTarget}!Pacman::Ghost@{Pacman::Ghost}}
+\doxysubsubsection{\texorpdfstring{CalculateChaseTarget()}{CalculateChaseTarget()}}
+{\footnotesize\ttfamily \label{class_pacman_1_1_ghost_ae81763dea481e72240f975d4913b2ee1} 
+\mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} Pacman\+::\+Ghost\+::\+Calculate\+Chase\+Target (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_pacman_1_1_ghost_state}{Ghost\+State}} \&}]{ghost}{, }\item[{const \mbox{\hyperlink{struct_pacman_1_1_player_state}{Player\+State}} \&}]{player}{, }\item[{const \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \&}]{blinky\+Position}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Calculates the next target tile during Chase mode. 
+
+Delegates the target calculation to the strategy.
+
+Delegates the calculation to the injected strategy.
+
+\begin{DoxyReturn}{Returns}
+The target grid coordinate calculated by the specific AI strategy. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_pacman_1_1_i_ghost_aafa0179bac9a4fca4e90593fdd8b1974}{Pacman\+::\+IGhost}}.
+
+\Hypertarget{class_pacman_1_1_ghost_a9247aad5092f7e39d489560c91bc8d44}\index{Pacman::Ghost@{Pacman::Ghost}!GetGhostType@{GetGhostType}}
+\index{GetGhostType@{GetGhostType}!Pacman::Ghost@{Pacman::Ghost}}
+\doxysubsubsection{\texorpdfstring{GetGhostType()}{GetGhostType()}}
+{\footnotesize\ttfamily \label{class_pacman_1_1_ghost_a9247aad5092f7e39d489560c91bc8d44} 
+Ghost\+Type Pacman\+::\+Ghost\+::\+Get\+Ghost\+Type (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the type (color) of this ghost. 
+
+Returns the stored ghost type. 
+
+Implements \mbox{\hyperlink{class_pacman_1_1_i_ghost_a4eb7b36c5e8b5d8fce2a48880a757531}{Pacman\+::\+IGhost}}.
+
+\Hypertarget{class_pacman_1_1_ghost_a6e0893748a5931f15ffd65614734b255}\index{Pacman::Ghost@{Pacman::Ghost}!GetScatterTarget@{GetScatterTarget}}
+\index{GetScatterTarget@{GetScatterTarget}!Pacman::Ghost@{Pacman::Ghost}}
+\doxysubsubsection{\texorpdfstring{GetScatterTarget()}{GetScatterTarget()}}
+{\footnotesize\ttfamily \label{class_pacman_1_1_ghost_a6e0893748a5931f15ffd65614734b255} 
+\mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} Pacman\+::\+Ghost\+::\+Get\+Scatter\+Target (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets the fixed corner target for Scatter mode. 
+
+Gets the scatter target from the strategy. 
+
+Implements \mbox{\hyperlink{class_pacman_1_1_i_ghost_afb89afbab403339dc6a574c02c8dc2e0}{Pacman\+::\+IGhost}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Logic/\+Include/\mbox{\hyperlink{_ghost_8hpp}{Ghost.\+hpp}}\item 
+Logic/\+Source/\mbox{\hyperlink{_ghost_8cpp}{Ghost.\+cpp}}\end{DoxyCompactItemize}

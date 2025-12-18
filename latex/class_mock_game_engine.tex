@@ -1,0 +1,175 @@
+\doxysection{Mock\+Game\+Engine Class Reference}
+\hypertarget{class_mock_game_engine}{}\label{class_mock_game_engine}\index{MockGameEngine@{MockGameEngine}}
+Inheritance diagram for Mock\+Game\+Engine\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_mock_game_engine}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_mock_game_engine_a14f0ce6e3b88662dfc88ff981e224206}\label{class_mock_game_engine_a14f0ce6e3b88662dfc88ff981e224206} 
+{\bfseries MOCK\+\_\+\+METHOD} (void, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a5da0dcd27547ed4f4a9a9fb16c15434c}{Start\+New\+Game}},(),(override))
+\item 
+\Hypertarget{class_mock_game_engine_a1839bfa69b02caed390e918916c8615e}\label{class_mock_game_engine_a1839bfa69b02caed390e918916c8615e} 
+{\bfseries MOCK\+\_\+\+METHOD} (void, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a7f01cf4bb5baba6ccf70fba6abedb731}{Update}},(float delta\+Time),(override))
+\item 
+\Hypertarget{class_mock_game_engine_a73e0b4ef3c851cf05387934edeb79616}\label{class_mock_game_engine_a73e0b4ef3c851cf05387934edeb79616} 
+{\bfseries MOCK\+\_\+\+METHOD} (void, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a5e6e165c7767b5de14c06422ddfa2fe1}{Set\+Paused}},(bool is\+Paused),(override))
+\item 
+\Hypertarget{class_mock_game_engine_a4311e0121a3869aa79b21079442bb22f}\label{class_mock_game_engine_a4311e0121a3869aa79b21079442bb22f} 
+{\bfseries MOCK\+\_\+\+METHOD} (void, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a7f6a11d6d24fbc2153a3bd197e29883f}{Set\+Player\+Direction}},(Direction direction),(override))
+\item 
+\Hypertarget{class_mock_game_engine_a20c089e0b448259932e1776f1a3b3cb8}\label{class_mock_game_engine_a20c089e0b448259932e1776f1a3b3cb8} 
+{\bfseries MOCK\+\_\+\+METHOD} (Game\+State, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_aeb79b2e26c1ccd3368815c15eceb11b3}{Get\+State}},(),(const, override))
+\item 
+\Hypertarget{class_mock_game_engine_acf702ce76d40c01300ba0a0005abaa94}\label{class_mock_game_engine_acf702ce76d40c01300ba0a0005abaa94} 
+{\bfseries MOCK\+\_\+\+METHOD} (\mbox{\hyperlink{struct_pacman_1_1_player_state}{Player\+State}}, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a73a7c52b7c1a2ebe257027cbc52cdbd1}{Get\+Player\+State}},(),(const, override))
+\item 
+\Hypertarget{class_mock_game_engine_a0d3cbf18850640a2ac273a517a2bd952}\label{class_mock_game_engine_a0d3cbf18850640a2ac273a517a2bd952} 
+{\bfseries MOCK\+\_\+\+METHOD} (\mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}}, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_ace4ae2ab0f6cd93d402d0121df5ddb1c}{Get\+Map\+Size}},(),(const, override))
+\item 
+\Hypertarget{class_mock_game_engine_af2bb9bedc0f72b20a3e9d24c7a1c3c30}\label{class_mock_game_engine_af2bb9bedc0f72b20a3e9d24c7a1c3c30} 
+{\bfseries MOCK\+\_\+\+METHOD} (Tile\+Type, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a0d5205194bfb41896a7661adc5ab143f}{Get\+Tile\+At}},(const \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \&position),(const, override))
+\item 
+\Hypertarget{class_mock_game_engine_af3950806adee1b2d1b4810dc4240e7a8}\label{class_mock_game_engine_af3950806adee1b2d1b4810dc4240e7a8} 
+{\bfseries MOCK\+\_\+\+METHOD} (std\+::vector$<$ \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} $>$, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_abc8cc7a2f25f2d1c30848ca30bc5f3be}{Get\+Pellet\+Positions}},(),(const, override))
+\item 
+\Hypertarget{class_mock_game_engine_a3d353f7233e7ec954d50f03b8dab2f3d}\label{class_mock_game_engine_a3d353f7233e7ec954d50f03b8dab2f3d} 
+{\bfseries MOCK\+\_\+\+METHOD} (int, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_afbfe40336fe0beeb6f17cf66fe099687}{Get\+Pellet\+Count}},(),(const, override))
+\item 
+\Hypertarget{class_mock_game_engine_ae6a0992ec892577a7fe2a55abd9f6d66}\label{class_mock_game_engine_ae6a0992ec892577a7fe2a55abd9f6d66} 
+{\bfseries MOCK\+\_\+\+METHOD} (std\+::vector$<$ \mbox{\hyperlink{struct_pacman_1_1_ghost_state}{Ghost\+State}} $>$, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a74be0d70208a327d5511cf1ccbe13b7e}{Get\+Ghost\+States}},(),(const, override))
+\item 
+\Hypertarget{class_mock_game_engine_afeea8a4ca6e58744a2951b9ff0970344}\label{class_mock_game_engine_afeea8a4ca6e58744a2951b9ff0970344} 
+{\bfseries MOCK\+\_\+\+METHOD} (Ghost\+Mode, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a51ca4f4425fb48b026743773c64fff51}{Get\+Global\+Ghost\+Mode}},(),(const, override))
+\item 
+\Hypertarget{class_mock_game_engine_a7d11d41dd229c3eb6ee29ccbde062d2f}\label{class_mock_game_engine_a7d11d41dd229c3eb6ee29ccbde062d2f} 
+{\bfseries MOCK\+\_\+\+METHOD} (void, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a08e9b463cd8f56f00f2e6c9792d0a191}{Add\+Listener}},(std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_pacman_1_1_i_event_listener}{IEvent\+Listener}} $>$ listener),(override))
+\item 
+\Hypertarget{class_mock_game_engine_a172b0548cc6aafed9faf531023acceb4}\label{class_mock_game_engine_a172b0548cc6aafed9faf531023acceb4} 
+{\bfseries MOCK\+\_\+\+METHOD} (void, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a09df1761c5746fa64301bc7a4f516c2f}{Remove\+Listener}},(std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_pacman_1_1_i_event_listener}{IEvent\+Listener}} $>$ listener),(override))
+\item 
+\Hypertarget{class_mock_game_engine_a14f0ce6e3b88662dfc88ff981e224206}\label{class_mock_game_engine_a14f0ce6e3b88662dfc88ff981e224206} 
+{\bfseries MOCK\+\_\+\+METHOD} (void, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a5da0dcd27547ed4f4a9a9fb16c15434c}{Start\+New\+Game}},(),(override))
+\item 
+\Hypertarget{class_mock_game_engine_a1839bfa69b02caed390e918916c8615e}\label{class_mock_game_engine_a1839bfa69b02caed390e918916c8615e} 
+{\bfseries MOCK\+\_\+\+METHOD} (void, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a7f01cf4bb5baba6ccf70fba6abedb731}{Update}},(float delta\+Time),(override))
+\item 
+\Hypertarget{class_mock_game_engine_a73e0b4ef3c851cf05387934edeb79616}\label{class_mock_game_engine_a73e0b4ef3c851cf05387934edeb79616} 
+{\bfseries MOCK\+\_\+\+METHOD} (void, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a5e6e165c7767b5de14c06422ddfa2fe1}{Set\+Paused}},(bool is\+Paused),(override))
+\item 
+\Hypertarget{class_mock_game_engine_a4311e0121a3869aa79b21079442bb22f}\label{class_mock_game_engine_a4311e0121a3869aa79b21079442bb22f} 
+{\bfseries MOCK\+\_\+\+METHOD} (void, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a7f6a11d6d24fbc2153a3bd197e29883f}{Set\+Player\+Direction}},(Direction direction),(override))
+\item 
+\Hypertarget{class_mock_game_engine_a20c089e0b448259932e1776f1a3b3cb8}\label{class_mock_game_engine_a20c089e0b448259932e1776f1a3b3cb8} 
+{\bfseries MOCK\+\_\+\+METHOD} (Game\+State, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_aeb79b2e26c1ccd3368815c15eceb11b3}{Get\+State}},(),(const, override))
+\item 
+\Hypertarget{class_mock_game_engine_acf702ce76d40c01300ba0a0005abaa94}\label{class_mock_game_engine_acf702ce76d40c01300ba0a0005abaa94} 
+{\bfseries MOCK\+\_\+\+METHOD} (\mbox{\hyperlink{struct_pacman_1_1_player_state}{Player\+State}}, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a73a7c52b7c1a2ebe257027cbc52cdbd1}{Get\+Player\+State}},(),(const, override))
+\item 
+\Hypertarget{class_mock_game_engine_a0d3cbf18850640a2ac273a517a2bd952}\label{class_mock_game_engine_a0d3cbf18850640a2ac273a517a2bd952} 
+{\bfseries MOCK\+\_\+\+METHOD} (\mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}}, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_ace4ae2ab0f6cd93d402d0121df5ddb1c}{Get\+Map\+Size}},(),(const, override))
+\item 
+\Hypertarget{class_mock_game_engine_af2bb9bedc0f72b20a3e9d24c7a1c3c30}\label{class_mock_game_engine_af2bb9bedc0f72b20a3e9d24c7a1c3c30} 
+{\bfseries MOCK\+\_\+\+METHOD} (Tile\+Type, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a0d5205194bfb41896a7661adc5ab143f}{Get\+Tile\+At}},(const \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \&position),(const, override))
+\item 
+\Hypertarget{class_mock_game_engine_af3950806adee1b2d1b4810dc4240e7a8}\label{class_mock_game_engine_af3950806adee1b2d1b4810dc4240e7a8} 
+{\bfseries MOCK\+\_\+\+METHOD} (std\+::vector$<$ \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} $>$, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_abc8cc7a2f25f2d1c30848ca30bc5f3be}{Get\+Pellet\+Positions}},(),(const, override))
+\item 
+\Hypertarget{class_mock_game_engine_a3d353f7233e7ec954d50f03b8dab2f3d}\label{class_mock_game_engine_a3d353f7233e7ec954d50f03b8dab2f3d} 
+{\bfseries MOCK\+\_\+\+METHOD} (int, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_afbfe40336fe0beeb6f17cf66fe099687}{Get\+Pellet\+Count}},(),(const, override))
+\item 
+\Hypertarget{class_mock_game_engine_ae6a0992ec892577a7fe2a55abd9f6d66}\label{class_mock_game_engine_ae6a0992ec892577a7fe2a55abd9f6d66} 
+{\bfseries MOCK\+\_\+\+METHOD} (std\+::vector$<$ \mbox{\hyperlink{struct_pacman_1_1_ghost_state}{Ghost\+State}} $>$, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a74be0d70208a327d5511cf1ccbe13b7e}{Get\+Ghost\+States}},(),(const, override))
+\item 
+\Hypertarget{class_mock_game_engine_afeea8a4ca6e58744a2951b9ff0970344}\label{class_mock_game_engine_afeea8a4ca6e58744a2951b9ff0970344} 
+{\bfseries MOCK\+\_\+\+METHOD} (Ghost\+Mode, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a51ca4f4425fb48b026743773c64fff51}{Get\+Global\+Ghost\+Mode}},(),(const, override))
+\item 
+\Hypertarget{class_mock_game_engine_a7d11d41dd229c3eb6ee29ccbde062d2f}\label{class_mock_game_engine_a7d11d41dd229c3eb6ee29ccbde062d2f} 
+{\bfseries MOCK\+\_\+\+METHOD} (void, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a08e9b463cd8f56f00f2e6c9792d0a191}{Add\+Listener}},(std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_pacman_1_1_i_event_listener}{IEvent\+Listener}} $>$ listener),(override))
+\item 
+\Hypertarget{class_mock_game_engine_a172b0548cc6aafed9faf531023acceb4}\label{class_mock_game_engine_a172b0548cc6aafed9faf531023acceb4} 
+{\bfseries MOCK\+\_\+\+METHOD} (void, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a09df1761c5746fa64301bc7a4f516c2f}{Remove\+Listener}},(std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_pacman_1_1_i_event_listener}{IEvent\+Listener}} $>$ listener),(override))
+\item 
+\Hypertarget{class_mock_game_engine_a14f0ce6e3b88662dfc88ff981e224206}\label{class_mock_game_engine_a14f0ce6e3b88662dfc88ff981e224206} 
+{\bfseries MOCK\+\_\+\+METHOD} (void, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a5da0dcd27547ed4f4a9a9fb16c15434c}{Start\+New\+Game}},(),(override))
+\item 
+\Hypertarget{class_mock_game_engine_a1839bfa69b02caed390e918916c8615e}\label{class_mock_game_engine_a1839bfa69b02caed390e918916c8615e} 
+{\bfseries MOCK\+\_\+\+METHOD} (void, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a7f01cf4bb5baba6ccf70fba6abedb731}{Update}},(float delta\+Time),(override))
+\item 
+\Hypertarget{class_mock_game_engine_a73e0b4ef3c851cf05387934edeb79616}\label{class_mock_game_engine_a73e0b4ef3c851cf05387934edeb79616} 
+{\bfseries MOCK\+\_\+\+METHOD} (void, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a5e6e165c7767b5de14c06422ddfa2fe1}{Set\+Paused}},(bool is\+Paused),(override))
+\item 
+\Hypertarget{class_mock_game_engine_a4311e0121a3869aa79b21079442bb22f}\label{class_mock_game_engine_a4311e0121a3869aa79b21079442bb22f} 
+{\bfseries MOCK\+\_\+\+METHOD} (void, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a7f6a11d6d24fbc2153a3bd197e29883f}{Set\+Player\+Direction}},(Direction direction),(override))
+\item 
+\Hypertarget{class_mock_game_engine_a20c089e0b448259932e1776f1a3b3cb8}\label{class_mock_game_engine_a20c089e0b448259932e1776f1a3b3cb8} 
+{\bfseries MOCK\+\_\+\+METHOD} (Game\+State, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_aeb79b2e26c1ccd3368815c15eceb11b3}{Get\+State}},(),(const, override))
+\item 
+\Hypertarget{class_mock_game_engine_acf702ce76d40c01300ba0a0005abaa94}\label{class_mock_game_engine_acf702ce76d40c01300ba0a0005abaa94} 
+{\bfseries MOCK\+\_\+\+METHOD} (\mbox{\hyperlink{struct_pacman_1_1_player_state}{Player\+State}}, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a73a7c52b7c1a2ebe257027cbc52cdbd1}{Get\+Player\+State}},(),(const, override))
+\item 
+\Hypertarget{class_mock_game_engine_a0d3cbf18850640a2ac273a517a2bd952}\label{class_mock_game_engine_a0d3cbf18850640a2ac273a517a2bd952} 
+{\bfseries MOCK\+\_\+\+METHOD} (\mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}}, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_ace4ae2ab0f6cd93d402d0121df5ddb1c}{Get\+Map\+Size}},(),(const, override))
+\item 
+\Hypertarget{class_mock_game_engine_af2bb9bedc0f72b20a3e9d24c7a1c3c30}\label{class_mock_game_engine_af2bb9bedc0f72b20a3e9d24c7a1c3c30} 
+{\bfseries MOCK\+\_\+\+METHOD} (Tile\+Type, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a0d5205194bfb41896a7661adc5ab143f}{Get\+Tile\+At}},(const \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \&position),(const, override))
+\item 
+\Hypertarget{class_mock_game_engine_af3950806adee1b2d1b4810dc4240e7a8}\label{class_mock_game_engine_af3950806adee1b2d1b4810dc4240e7a8} 
+{\bfseries MOCK\+\_\+\+METHOD} (std\+::vector$<$ \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} $>$, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_abc8cc7a2f25f2d1c30848ca30bc5f3be}{Get\+Pellet\+Positions}},(),(const, override))
+\item 
+\Hypertarget{class_mock_game_engine_a3d353f7233e7ec954d50f03b8dab2f3d}\label{class_mock_game_engine_a3d353f7233e7ec954d50f03b8dab2f3d} 
+{\bfseries MOCK\+\_\+\+METHOD} (int, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_afbfe40336fe0beeb6f17cf66fe099687}{Get\+Pellet\+Count}},(),(const, override))
+\item 
+\Hypertarget{class_mock_game_engine_ae6a0992ec892577a7fe2a55abd9f6d66}\label{class_mock_game_engine_ae6a0992ec892577a7fe2a55abd9f6d66} 
+{\bfseries MOCK\+\_\+\+METHOD} (std\+::vector$<$ \mbox{\hyperlink{struct_pacman_1_1_ghost_state}{Ghost\+State}} $>$, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a74be0d70208a327d5511cf1ccbe13b7e}{Get\+Ghost\+States}},(),(const, override))
+\item 
+\Hypertarget{class_mock_game_engine_afeea8a4ca6e58744a2951b9ff0970344}\label{class_mock_game_engine_afeea8a4ca6e58744a2951b9ff0970344} 
+{\bfseries MOCK\+\_\+\+METHOD} (Ghost\+Mode, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a51ca4f4425fb48b026743773c64fff51}{Get\+Global\+Ghost\+Mode}},(),(const, override))
+\item 
+\Hypertarget{class_mock_game_engine_a7d11d41dd229c3eb6ee29ccbde062d2f}\label{class_mock_game_engine_a7d11d41dd229c3eb6ee29ccbde062d2f} 
+{\bfseries MOCK\+\_\+\+METHOD} (void, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a08e9b463cd8f56f00f2e6c9792d0a191}{Add\+Listener}},(std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_pacman_1_1_i_event_listener}{IEvent\+Listener}} $>$ listener),(override))
+\item 
+\Hypertarget{class_mock_game_engine_a172b0548cc6aafed9faf531023acceb4}\label{class_mock_game_engine_a172b0548cc6aafed9faf531023acceb4} 
+{\bfseries MOCK\+\_\+\+METHOD} (void, \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a09df1761c5746fa64301bc7a4f516c2f}{Remove\+Listener}},(std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_pacman_1_1_i_event_listener}{IEvent\+Listener}} $>$ listener),(override))
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_pacman_1_1_i_game_engine}{Pacman\+::\+IGame\+Engine}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a5da0dcd27547ed4f4a9a9fb16c15434c}{Start\+New\+Game}} ()=0
+\begin{DoxyCompactList}\small\item\em Resets the map, score, and entity positions for a new game. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a7f01cf4bb5baba6ccf70fba6abedb731}{Update}} (float delta\+Time)=0
+\begin{DoxyCompactList}\small\item\em Updates the game logic by one time step. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a5e6e165c7767b5de14c06422ddfa2fe1}{Set\+Paused}} (bool is\+Paused)=0
+\begin{DoxyCompactList}\small\item\em Pauses or resumes the game. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a7f6a11d6d24fbc2153a3bd197e29883f}{Set\+Player\+Direction}} (Direction direction)=0
+\begin{DoxyCompactList}\small\item\em Submits the player\textquotesingle{}s intent to change direction. \end{DoxyCompactList}\item 
+virtual Game\+State \mbox{\hyperlink{class_pacman_1_1_i_game_engine_aeb79b2e26c1ccd3368815c15eceb11b3}{Get\+State}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the current state of the game. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{struct_pacman_1_1_player_state}{Player\+State}} \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a73a7c52b7c1a2ebe257027cbc52cdbd1}{Get\+Player\+State}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns current player data (position, score, lives). \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \mbox{\hyperlink{class_pacman_1_1_i_game_engine_ace4ae2ab0f6cd93d402d0121df5ddb1c}{Get\+Map\+Size}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns map dimensions (Width x Height). \end{DoxyCompactList}\item 
+virtual Tile\+Type \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a0d5205194bfb41896a7661adc5ab143f}{Get\+Tile\+At}} (const \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \&position) const =0
+\begin{DoxyCompactList}\small\item\em Gets the type of tile at a specific coordinate (Wall, Pellet, etc.). \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} $>$ \mbox{\hyperlink{class_pacman_1_1_i_game_engine_abc8cc7a2f25f2d1c30848ca30bc5f3be}{Get\+Pellet\+Positions}} () const =0
+\begin{DoxyCompactList}\small\item\em Gets a list of all positions where pellets currently exist (for rendering). \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{class_pacman_1_1_i_game_engine_afbfe40336fe0beeb6f17cf66fe099687}{Get\+Pellet\+Count}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the count of remaining pellets on the map. \end{DoxyCompactList}\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{struct_pacman_1_1_ghost_state}{Ghost\+State}} $>$ \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a74be0d70208a327d5511cf1ccbe13b7e}{Get\+Ghost\+States}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the state of all 4 ghosts. \end{DoxyCompactList}\item 
+virtual Ghost\+Mode \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a51ca4f4425fb48b026743773c64fff51}{Get\+Global\+Ghost\+Mode}} () const =0
+\begin{DoxyCompactList}\small\item\em Returns the current global ghost mode (Chase/\+Scatter/\+Frightened). \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a08e9b463cd8f56f00f2e6c9792d0a191}{Add\+Listener}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_pacman_1_1_i_event_listener}{IEvent\+Listener}} $>$ listener)=0
+\begin{DoxyCompactList}\small\item\em Registers a listener for game events. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pacman_1_1_i_game_engine_a09df1761c5746fa64301bc7a4f516c2f}{Remove\+Listener}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_pacman_1_1_i_event_listener}{IEvent\+Listener}} $>$ listener)=0
+\begin{DoxyCompactList}\small\item\em Unsubscribes a listener from game events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Tests/\+Source/Game\+Screen\+Test.\+cpp\item 
+Tests/\+Source/IGame\+Engine\+Test.\+cpp\item 
+Tests/\+Source/Input\+Controller\+Test.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,72 @@
+\doxysection{Pacman\+::IGhost\+Strategy Interface Reference}
+\hypertarget{class_pacman_1_1_i_ghost_strategy}{}\label{class_pacman_1_1_i_ghost_strategy}\index{Pacman::IGhostStrategy@{Pacman::IGhostStrategy}}
+
+
+Abstract base class for ghost AI behaviors.  
+
+
+
+
+{\ttfamily \#include $<$IGhost\+Strategy.\+hpp$>$}
+
+Inheritance diagram for Pacman\+::IGhost\+Strategy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.739130cm]{class_pacman_1_1_i_ghost_strategy}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \mbox{\hyperlink{class_pacman_1_1_i_ghost_strategy_acd55719c4262ca766ba79732945e8a60}{Calculate\+Chase\+Target}} (const \mbox{\hyperlink{struct_pacman_1_1_ghost_state}{Ghost\+State}} \&ghost, const \mbox{\hyperlink{struct_pacman_1_1_player_state}{Player\+State}} \&player, const \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \&blinky\+Position) const =0
+\begin{DoxyCompactList}\small\item\em Calculates the target tile for the ghost during Chase mode. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \mbox{\hyperlink{class_pacman_1_1_i_ghost_strategy_a39c70e69b60d0d37e3966adde9dfba2b}{Get\+Scatter\+Target}} () const =0
+\begin{DoxyCompactList}\small\item\em Gets the fixed target tile for Scatter mode. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class for ghost AI behaviors. 
+
+\label{doc-func-members}
+\Hypertarget{class_pacman_1_1_i_ghost_strategy_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_pacman_1_1_i_ghost_strategy_acd55719c4262ca766ba79732945e8a60}\index{Pacman::IGhostStrategy@{Pacman::IGhostStrategy}!CalculateChaseTarget@{CalculateChaseTarget}}
+\index{CalculateChaseTarget@{CalculateChaseTarget}!Pacman::IGhostStrategy@{Pacman::IGhostStrategy}}
+\doxysubsubsection{\texorpdfstring{CalculateChaseTarget()}{CalculateChaseTarget()}}
+{\footnotesize\ttfamily \label{class_pacman_1_1_i_ghost_strategy_acd55719c4262ca766ba79732945e8a60} 
+virtual \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} Pacman\+::\+IGhost\+Strategy\+::\+Calculate\+Chase\+Target (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_pacman_1_1_ghost_state}{Ghost\+State}} \&}]{ghost}{, }\item[{const \mbox{\hyperlink{struct_pacman_1_1_player_state}{Player\+State}} \&}]{player}{, }\item[{const \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} \&}]{blinky\+Position}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Calculates the target tile for the ghost during Chase mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ghost} & The current state of the ghost (position, direction). \\
+\hline
+{\em player} & The current state of the player (position, direction). \\
+\hline
+{\em blinky\+Position} & The position of the Red ghost (required for Inky\textquotesingle{}s vector calculation). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The target grid coordinate. 
+\end{DoxyReturn}
+\Hypertarget{class_pacman_1_1_i_ghost_strategy_a39c70e69b60d0d37e3966adde9dfba2b}\index{Pacman::IGhostStrategy@{Pacman::IGhostStrategy}!GetScatterTarget@{GetScatterTarget}}
+\index{GetScatterTarget@{GetScatterTarget}!Pacman::IGhostStrategy@{Pacman::IGhostStrategy}}
+\doxysubsubsection{\texorpdfstring{GetScatterTarget()}{GetScatterTarget()}}
+{\footnotesize\ttfamily \label{class_pacman_1_1_i_ghost_strategy_a39c70e69b60d0d37e3966adde9dfba2b} 
+virtual \mbox{\hyperlink{struct_pacman_1_1_vector2}{Vector2}} Pacman\+::\+IGhost\+Strategy\+::\+Get\+Scatter\+Target (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Gets the fixed target tile for Scatter mode. 
+
+Each ghost has a specific corner they circle around during Scatter mode. \begin{DoxyReturn}{Returns}
+The fixed grid coordinate of the scatter corner. 
+\end{DoxyReturn}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Logic/\+Include/\+Ghost\+Strategies/\mbox{\hyperlink{_i_ghost_strategy_8hpp}{IGhost\+Strategy.\+hpp}}\end{DoxyCompactItemize}

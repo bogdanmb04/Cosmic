@@ -1,0 +1,60 @@
+\doxysection{Pacman\+::Application Class Reference}
+\hypertarget{class_pacman_1_1_application}{}\label{class_pacman_1_1_application}\index{Pacman::Application@{Pacman::Application}}
+Inheritance diagram for Pacman\+::Application\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pacman_1_1_application}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_pacman_1_1_application_afa2e35a72919736fb65c28667d8bc4f4}{On\+Play\+Selected}} () override
+\begin{DoxyCompactList}\small\item\em Called when the "{}\+PLAY"{} button is selected and pressed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pacman_1_1_application_a580978997ff1ab5a912e821daa0400e7}{On\+Quit\+Selected}} () override
+\begin{DoxyCompactList}\small\item\em Called when the "{}\+QUIT"{} button is selected and pressed. \end{DoxyCompactList}\item 
+\Hypertarget{class_pacman_1_1_application_aacae29f84b1a1f8f08397460b00756c0}\label{class_pacman_1_1_application_aacae29f84b1a1f8f08397460b00756c0} 
+bool {\bfseries Should\+Start\+Game} () const
+\item 
+\Hypertarget{class_pacman_1_1_application_ac1817207188dc2dfa9351d72646073f0}\label{class_pacman_1_1_application_ac1817207188dc2dfa9351d72646073f0} 
+bool {\bfseries Should\+Quit} () const
+\end{DoxyCompactItemize}
+
+
+\label{doc-func-members}
+\Hypertarget{class_pacman_1_1_application_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_pacman_1_1_application_afa2e35a72919736fb65c28667d8bc4f4}\index{Pacman::Application@{Pacman::Application}!OnPlaySelected@{OnPlaySelected}}
+\index{OnPlaySelected@{OnPlaySelected}!Pacman::Application@{Pacman::Application}}
+\doxysubsubsection{\texorpdfstring{OnPlaySelected()}{OnPlaySelected()}}
+{\footnotesize\ttfamily \label{class_pacman_1_1_application_afa2e35a72919736fb65c28667d8bc4f4} 
+void Pacman\+::\+Application\+::\+On\+Play\+Selected (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when the "{}\+PLAY"{} button is selected and pressed. 
+
+The application should transition to the gameplay screen and initialize the game engine. 
+
+Implements \mbox{\hyperlink{class_pacman_1_1_i_menu_listener_a8c3c80a4fe74dfb0155a5dac6a6a589c}{Pacman\+::\+IMenu\+Listener}}.
+
+\Hypertarget{class_pacman_1_1_application_a580978997ff1ab5a912e821daa0400e7}\index{Pacman::Application@{Pacman::Application}!OnQuitSelected@{OnQuitSelected}}
+\index{OnQuitSelected@{OnQuitSelected}!Pacman::Application@{Pacman::Application}}
+\doxysubsubsection{\texorpdfstring{OnQuitSelected()}{OnQuitSelected()}}
+{\footnotesize\ttfamily \label{class_pacman_1_1_application_a580978997ff1ab5a912e821daa0400e7} 
+void Pacman\+::\+Application\+::\+On\+Quit\+Selected (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Called when the "{}\+QUIT"{} button is selected and pressed. 
+
+The application should close the window and terminate the process. 
+
+Implements \mbox{\hyperlink{class_pacman_1_1_i_menu_listener_a9089151ecf1f38d767d78b96ee1ae729}{Pacman\+::\+IMenu\+Listener}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+GUI/\+Include/Application.\+hpp\item 
+GUI/\+Source/Application.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,77 @@
+\doxysection{Audio\+Device.\+hpp}
+\hypertarget{out_2build_2x64-_debug_2__deps_2sfml-src_2src_2_s_f_m_l_2_audio_2_audio_device_8hpp_source}{}\label{out_2build_2x64-_debug_2__deps_2sfml-src_2src_2_s_f_m_l_2_audio_2_audio_device_8hpp_source}\index{out/build/x64-\/Debug/\_deps/sfml-\/src/src/SFML/Audio/AudioDevice.hpp@{out/build/x64-\/Debug/\_deps/sfml-\/src/src/SFML/Audio/AudioDevice.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{//}}
+\DoxyCodeLine{00003\ \textcolor{comment}{//\ SFML\ -\/\ Simple\ and\ Fast\ Multimedia\ Library}}
+\DoxyCodeLine{00004\ \textcolor{comment}{//\ Copyright\ (C)\ 2007-\/2023\ Laurent\ Gomila\ (laurent@sfml-\/dev.org)}}
+\DoxyCodeLine{00005\ \textcolor{comment}{//}}
+\DoxyCodeLine{00006\ \textcolor{comment}{//\ This\ software\ is\ provided\ 'as-\/is',\ without\ any\ express\ or\ implied\ warranty.}}
+\DoxyCodeLine{00007\ \textcolor{comment}{//\ In\ no\ event\ will\ the\ authors\ be\ held\ liable\ for\ any\ damages\ arising\ from\ the\ use\ of\ this\ software.}}
+\DoxyCodeLine{00008\ \textcolor{comment}{//}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//\ Permission\ is\ granted\ to\ anyone\ to\ use\ this\ software\ for\ any\ purpose,}}
+\DoxyCodeLine{00010\ \textcolor{comment}{//\ including\ commercial\ applications,\ and\ to\ alter\ it\ and\ redistribute\ it\ freely,}}
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ subject\ to\ the\ following\ restrictions:}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//}}
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ 1.\ The\ origin\ of\ this\ software\ must\ not\ be\ misrepresented;}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \ \ \ you\ must\ not\ claim\ that\ you\ wrote\ the\ original\ software.}}
+\DoxyCodeLine{00015\ \textcolor{comment}{//\ \ \ \ If\ you\ use\ this\ software\ in\ a\ product,\ an\ acknowledgment}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ \ \ \ in\ the\ product\ documentation\ would\ be\ appreciated\ but\ is\ not\ required.}}
+\DoxyCodeLine{00017\ \textcolor{comment}{//}}
+\DoxyCodeLine{00018\ \textcolor{comment}{//\ 2.\ Altered\ source\ versions\ must\ be\ plainly\ marked\ as\ such,}}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ \ \ \ and\ must\ not\ be\ misrepresented\ as\ being\ the\ original\ software.}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//}}
+\DoxyCodeLine{00021\ \textcolor{comment}{//\ 3.\ This\ notice\ may\ not\ be\ removed\ or\ altered\ from\ any\ source\ distribution.}}
+\DoxyCodeLine{00022\ \textcolor{comment}{//}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#ifndef\ SFML\_AUDIODEVICE\_HPP}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#define\ SFML\_AUDIODEVICE\_HPP}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{//\ Headers}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ <SFML/System/Vector3.hpp>}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespacesf}{sf}}}
+\DoxyCodeLine{00037\ \{}
+\DoxyCodeLine{00038\ \textcolor{keyword}{namespace\ }priv}
+\DoxyCodeLine{00039\ \{}
+\DoxyCodeLine{00046\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classsf_1_1priv_1_1_audio_device}{AudioDevice}}}
+\DoxyCodeLine{00047\ \{}
+\DoxyCodeLine{00048\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{classsf_1_1priv_1_1_audio_device_a0293ecd7da8ed8661510551278cbd097}{AudioDevice}}();}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00060\ \ \ \ \ \mbox{\hyperlink{classsf_1_1priv_1_1_audio_device_ab0286afbebc9187484e4e7f37e4511bc}{\string~AudioDevice}}();}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classsf_1_1priv_1_1_audio_device_a9d25e61b813e31b3e30c1427bd008fe6}{isExtensionSupported}}(\textcolor{keyword}{const}\ std::string\&\ extension);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classsf_1_1priv_1_1_audio_device_a17464e67d4dbc7a74df67f4d724cf382}{getFormatFromChannelCount}}(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ channelCount);}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00098\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsf_1_1priv_1_1_audio_device_a191113f192158a4c3e0d4f5908f970c9}{setGlobalVolume}}(\textcolor{keywordtype}{float}\ volume);}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{classsf_1_1priv_1_1_audio_device_a1acc35428d66d6d09f4c9cac90e536b6}{getGlobalVolume}}();}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsf_1_1priv_1_1_audio_device_aa86e5cacab5de6519be0365912560eed}{setPosition}}(\textcolor{keyword}{const}\ Vector3f\&\ position);}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keyword}{static}\ Vector3f\ \mbox{\hyperlink{classsf_1_1priv_1_1_audio_device_a6bb321651067e0b348dce9ec7eda26c1}{getPosition}}();}
+\DoxyCodeLine{00131\ }
+\DoxyCodeLine{00147\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsf_1_1priv_1_1_audio_device_a883916fe0fcab4c88a5fbe734c06eb19}{setDirection}}(\textcolor{keyword}{const}\ Vector3f\&\ direction);}
+\DoxyCodeLine{00148\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keyword}{static}\ Vector3f\ \mbox{\hyperlink{classsf_1_1priv_1_1_audio_device_a008864a94bfb008f86cb7e10abca2854}{getDirection}}();}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classsf_1_1priv_1_1_audio_device_a3f9be541dfb01bd3a69fd9ccafac83f0}{setUpVector}}(\textcolor{keyword}{const}\ Vector3f\&\ upVector);}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keyword}{static}\ Vector3f\ \mbox{\hyperlink{classsf_1_1priv_1_1_audio_device_a80c0abfd6ef68c6ed2e62c661f9d0b96}{getUpVector}}();}
+\DoxyCodeLine{00185\ \};}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \}\ \textcolor{comment}{//\ namespace\ priv}}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \}\ \textcolor{comment}{//\ namespace\ sf}}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00192\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SFML\_AUDIODEVICE\_HPP}}
+
+\end{DoxyCode}

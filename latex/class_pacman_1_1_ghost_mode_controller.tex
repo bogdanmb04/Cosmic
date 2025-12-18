@@ -1,0 +1,127 @@
+\doxysection{Pacman\+::Ghost\+Mode\+Controller Class Reference}
+\hypertarget{class_pacman_1_1_ghost_mode_controller}{}\label{class_pacman_1_1_ghost_mode_controller}\index{Pacman::GhostModeController@{Pacman::GhostModeController}}
+
+
+Controls ghost mode timing (Chase/\+Scatter waves).  
+
+
+
+
+{\ttfamily \#include $<$Ghost\+Mode\+Controller.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_pacman_1_1_ghost_mode_controller_aa5f76c6819002e539d0be6ee3e536405}\label{class_pacman_1_1_ghost_mode_controller_aa5f76c6819002e539d0be6ee3e536405} 
+{\bfseries Ghost\+Mode\+Controller} ()
+\begin{DoxyCompactList}\small\item\em Constructor. Initializes the controller in the reset state. \end{DoxyCompactList}\item 
+\Hypertarget{class_pacman_1_1_ghost_mode_controller_a0e5eeb6aefb12e2a2adc3b0e9af92683}\label{class_pacman_1_1_ghost_mode_controller_a0e5eeb6aefb12e2a2adc3b0e9af92683} 
+void {\bfseries Reset} ()
+\begin{DoxyCompactList}\small\item\em Resets the controller to the beginning of the level (Wave 0, Scatter Phase). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pacman_1_1_ghost_mode_controller_a73d0217bfd4c95d5cb1e9f4130cdcf8d}{Update}} (float delta\+Time)
+\begin{DoxyCompactList}\small\item\em Updates the internal timers and switches modes when necessary. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pacman_1_1_ghost_mode_controller_aa61fac841b6fc0a9098060acf7fe1fb1}{Trigger\+Frightened\+Mode}} (float duration=Game\+Config\+::\+Power\+Up\+Duration)
+\begin{DoxyCompactList}\small\item\em Activates Frightened mode when a Power Pellet is eaten. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pacman_1_1_ghost_mode_controller_a63dc07ce1630c42503e71eded1c5db45}{Should\+Reverse\+Direction}} ()
+\begin{DoxyCompactList}\small\item\em Checks if a mode switch occurred in the last frame. \end{DoxyCompactList}\item 
+Ghost\+Mode \mbox{\hyperlink{class_pacman_1_1_ghost_mode_controller_a46dde1fa8af6558be8d3bbaf44d559b3}{Get\+Current\+Mode}} () const
+\begin{DoxyCompactList}\small\item\em Determines the current effective behavior mode. \end{DoxyCompactList}\item 
+\Hypertarget{class_pacman_1_1_ghost_mode_controller_af25b84c5402f810f99645d64dce6a521}\label{class_pacman_1_1_ghost_mode_controller_af25b84c5402f810f99645d64dce6a521} 
+bool {\bfseries Is\+Frightened} () const
+\begin{DoxyCompactList}\small\item\em Checks if ghosts are currently vulnerable. \end{DoxyCompactList}\item 
+\Hypertarget{class_pacman_1_1_ghost_mode_controller_add8fd8ee884980cf79e8a44d6684c130}\label{class_pacman_1_1_ghost_mode_controller_add8fd8ee884980cf79e8a44d6684c130} 
+float {\bfseries Get\+Frightened\+Time\+Remaining} () const
+\begin{DoxyCompactList}\small\item\em Returns time remaining for the power-\/up effect. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_pacman_1_1_ghost_mode_controller_a9dd87d81c9c6950ae71f9ccdca391f4f}{Is\+Frightened\+Warning}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the power-\/up is about to expire. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Controls ghost mode timing (Chase/\+Scatter waves). 
+
+Original Pac-\/\+Man pattern (Level 1)\+: Scatter(7s) -\/\texorpdfstring{$>$}{>} Chase(20s) -\/\texorpdfstring{$>$}{>} Scatter(7s) -\/\texorpdfstring{$>$}{>} Chase(20s) -\/\texorpdfstring{$>$}{>} Scatter(5s) -\/\texorpdfstring{$>$}{>} Chase(20s) -\/\texorpdfstring{$>$}{>} Scatter(5s) -\/\texorpdfstring{$>$}{>} Chase(forever) 
+
+\label{doc-func-members}
+\Hypertarget{class_pacman_1_1_ghost_mode_controller_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_pacman_1_1_ghost_mode_controller_a46dde1fa8af6558be8d3bbaf44d559b3}\index{Pacman::GhostModeController@{Pacman::GhostModeController}!GetCurrentMode@{GetCurrentMode}}
+\index{GetCurrentMode@{GetCurrentMode}!Pacman::GhostModeController@{Pacman::GhostModeController}}
+\doxysubsubsection{\texorpdfstring{GetCurrentMode()}{GetCurrentMode()}}
+{\footnotesize\ttfamily \label{class_pacman_1_1_ghost_mode_controller_a46dde1fa8af6558be8d3bbaf44d559b3} 
+Ghost\+Mode Pacman\+::\+Ghost\+Mode\+Controller\+::\+Get\+Current\+Mode (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Determines the current effective behavior mode. 
+
+\begin{DoxyReturn}{Returns}
+The active mode (Frightened overrides everything, otherwise Scatter or Chase). 
+\end{DoxyReturn}
+\Hypertarget{class_pacman_1_1_ghost_mode_controller_a9dd87d81c9c6950ae71f9ccdca391f4f}\index{Pacman::GhostModeController@{Pacman::GhostModeController}!IsFrightenedWarning@{IsFrightenedWarning}}
+\index{IsFrightenedWarning@{IsFrightenedWarning}!Pacman::GhostModeController@{Pacman::GhostModeController}}
+\doxysubsubsection{\texorpdfstring{IsFrightenedWarning()}{IsFrightenedWarning()}}
+{\footnotesize\ttfamily \label{class_pacman_1_1_ghost_mode_controller_a9dd87d81c9c6950ae71f9ccdca391f4f} 
+bool Pacman\+::\+Ghost\+Mode\+Controller\+::\+Is\+Frightened\+Warning (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Checks if the power-\/up is about to expire. 
+
+Used by the renderer to make ghosts flash white. \Hypertarget{class_pacman_1_1_ghost_mode_controller_a63dc07ce1630c42503e71eded1c5db45}\index{Pacman::GhostModeController@{Pacman::GhostModeController}!ShouldReverseDirection@{ShouldReverseDirection}}
+\index{ShouldReverseDirection@{ShouldReverseDirection}!Pacman::GhostModeController@{Pacman::GhostModeController}}
+\doxysubsubsection{\texorpdfstring{ShouldReverseDirection()}{ShouldReverseDirection()}}
+{\footnotesize\ttfamily \label{class_pacman_1_1_ghost_mode_controller_a63dc07ce1630c42503e71eded1c5db45} 
+bool Pacman\+::\+Ghost\+Mode\+Controller\+::\+Should\+Reverse\+Direction (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a mode switch occurred in the last frame. 
+
+Ghosts in Pac-\/\+Man are required to reverse direction immediately when switching between Scatter and Chase modes. \begin{DoxyReturn}{Returns}
+true if direction should be reversed, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_pacman_1_1_ghost_mode_controller_aa61fac841b6fc0a9098060acf7fe1fb1}\index{Pacman::GhostModeController@{Pacman::GhostModeController}!TriggerFrightenedMode@{TriggerFrightenedMode}}
+\index{TriggerFrightenedMode@{TriggerFrightenedMode}!Pacman::GhostModeController@{Pacman::GhostModeController}}
+\doxysubsubsection{\texorpdfstring{TriggerFrightenedMode()}{TriggerFrightenedMode()}}
+{\footnotesize\ttfamily \label{class_pacman_1_1_ghost_mode_controller_aa61fac841b6fc0a9098060acf7fe1fb1} 
+void Pacman\+::\+Ghost\+Mode\+Controller\+::\+Trigger\+Frightened\+Mode (\begin{DoxyParamCaption}\item[{float}]{duration}{ = {\ttfamily GameConfig\+:\+:PowerUpDuration}}\end{DoxyParamCaption})}
+
+
+
+Activates Frightened mode when a Power Pellet is eaten. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em duration} & How long the mode lasts (in seconds). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_pacman_1_1_ghost_mode_controller_a73d0217bfd4c95d5cb1e9f4130cdcf8d}\index{Pacman::GhostModeController@{Pacman::GhostModeController}!Update@{Update}}
+\index{Update@{Update}!Pacman::GhostModeController@{Pacman::GhostModeController}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_pacman_1_1_ghost_mode_controller_a73d0217bfd4c95d5cb1e9f4130cdcf8d} 
+void Pacman\+::\+Ghost\+Mode\+Controller\+::\+Update (\begin{DoxyParamCaption}\item[{float}]{delta\+Time}{}\end{DoxyParamCaption})}
+
+
+
+Updates the internal timers and switches modes when necessary. 
+
+The logic follows standard Pac-\/\+Man rules\+:
+\begin{DoxyEnumerate}
+\item If Frightened, decrement that timer only (Wave timer is paused).
+\item If in Permanent Chase (end of level logic), do nothing.
+\item Otherwise, increment Wave timer.
+\item If Wave timer exceeds duration, switch mode (Scatter \texorpdfstring{$<$}{<}-\/\texorpdfstring{$>$}{>} Chase) and advance wave count.
+\end{DoxyEnumerate}
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em delta\+Time} & Time elapsed since the last frame (in seconds). \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Logic/\+Include/Ghost\+Mode\+Controller.\+hpp\item 
+Logic/\+Source/\mbox{\hyperlink{_ghost_mode_controller_8cpp}{Ghost\+Mode\+Controller.\+cpp}}\end{DoxyCompactItemize}

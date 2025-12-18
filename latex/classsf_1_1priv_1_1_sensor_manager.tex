@@ -1,0 +1,233 @@
+\doxysection{sf\+::priv\+::Sensor\+Manager Class Reference}
+\hypertarget{classsf_1_1priv_1_1_sensor_manager}{}\label{classsf_1_1priv_1_1_sensor_manager}\index{sf::priv::SensorManager@{sf::priv::SensorManager}}
+
+
+Global sensor manager.  
+
+
+
+
+{\ttfamily \#include $<$Sensor\+Manager.\+hpp$>$}
+
+Inheritance diagram for sf\+::priv\+::Sensor\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classsf_1_1priv_1_1_sensor_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_manager_acd34f542bb8cd397b71dd4f751d52e59}{is\+Available}} (\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}} sensor)
+\begin{DoxyCompactList}\small\item\em Check if a sensor is available on the underlying platform. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_manager_a8eed920a83371de4f89da8708b4334e8}{set\+Enabled}} (\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}} sensor, bool enabled)
+\begin{DoxyCompactList}\small\item\em Enable or disable a sensor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_manager_a526897f9528f3a17676ca1afc088f628}{is\+Enabled}} (\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}} sensor) const
+\begin{DoxyCompactList}\small\item\em Check if a sensor is enabled. \end{DoxyCompactList}\item 
+Vector3f \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_manager_a505c819a6c3757ab5f0c3c7643e95553}{get\+Value}} (\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}} sensor) const
+\begin{DoxyCompactList}\small\item\em Get the current value of a sensor. \end{DoxyCompactList}\item 
+\Hypertarget{classsf_1_1priv_1_1_sensor_manager_ad4b02b4d29c6c8846fde11a0bf7c4967}\label{classsf_1_1priv_1_1_sensor_manager_ad4b02b4d29c6c8846fde11a0bf7c4967} 
+void {\bfseries update} ()
+\begin{DoxyCompactList}\small\item\em Update the state of all the sensors. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_manager_acd34f542bb8cd397b71dd4f751d52e59}{is\+Available}} (\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}} sensor)
+\begin{DoxyCompactList}\small\item\em Check if a sensor is available on the underlying platform. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_manager_a8eed920a83371de4f89da8708b4334e8}{set\+Enabled}} (\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}} sensor, bool enabled)
+\begin{DoxyCompactList}\small\item\em Enable or disable a sensor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_manager_a526897f9528f3a17676ca1afc088f628}{is\+Enabled}} (\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}} sensor) const
+\begin{DoxyCompactList}\small\item\em Check if a sensor is enabled. \end{DoxyCompactList}\item 
+Vector3f \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_manager_a505c819a6c3757ab5f0c3c7643e95553}{get\+Value}} (\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}} sensor) const
+\begin{DoxyCompactList}\small\item\em Get the current value of a sensor. \end{DoxyCompactList}\item 
+\Hypertarget{classsf_1_1priv_1_1_sensor_manager_ad4b02b4d29c6c8846fde11a0bf7c4967}\label{classsf_1_1priv_1_1_sensor_manager_ad4b02b4d29c6c8846fde11a0bf7c4967} 
+void {\bfseries update} ()
+\begin{DoxyCompactList}\small\item\em Update the state of all the sensors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Sensor\+Manager \& \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_manager_ad3bf38a8e8cfde5b200400681da13b46}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Get the global unique instance of the manager. \end{DoxyCompactList}\item 
+static Sensor\+Manager \& \mbox{\hyperlink{classsf_1_1priv_1_1_sensor_manager_aa776a76ac32d0c7aa2c83fb6a57dd77e}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Get the global unique instance of the manager. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Global sensor manager. 
+
+\label{doc-func-members}
+\Hypertarget{classsf_1_1priv_1_1_sensor_manager_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classsf_1_1priv_1_1_sensor_manager_ad3bf38a8e8cfde5b200400681da13b46}\index{sf::priv::SensorManager@{sf::priv::SensorManager}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!sf::priv::SensorManager@{sf::priv::SensorManager}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_sensor_manager_ad3bf38a8e8cfde5b200400681da13b46} 
+Sensor\+Manager \& sf\+::priv\+::\+Sensor\+Manager\+::get\+Instance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the global unique instance of the manager. 
+
+\begin{DoxyReturn}{Returns}
+Unique instance of the sensor manager 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_sensor_manager_aa776a76ac32d0c7aa2c83fb6a57dd77e}\index{sf::priv::SensorManager@{sf::priv::SensorManager}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!sf::priv::SensorManager@{sf::priv::SensorManager}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_sensor_manager_aa776a76ac32d0c7aa2c83fb6a57dd77e} 
+Sensor\+Manager \& sf\+::priv\+::\+Sensor\+Manager\+::get\+Instance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Get the global unique instance of the manager. 
+
+\begin{DoxyReturn}{Returns}
+Unique instance of the sensor manager 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_sensor_manager_a505c819a6c3757ab5f0c3c7643e95553}\index{sf::priv::SensorManager@{sf::priv::SensorManager}!getValue@{getValue}}
+\index{getValue@{getValue}!sf::priv::SensorManager@{sf::priv::SensorManager}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_sensor_manager_a505c819a6c3757ab5f0c3c7643e95553} 
+Vector3f sf\+::priv\+::\+Sensor\+Manager\+::get\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}}}]{sensor}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the current value of a sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor} & \doxylink{classsf_1_1_sensor}{Sensor} to read\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current value of the sensor 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_sensor_manager_a505c819a6c3757ab5f0c3c7643e95553}\index{sf::priv::SensorManager@{sf::priv::SensorManager}!getValue@{getValue}}
+\index{getValue@{getValue}!sf::priv::SensorManager@{sf::priv::SensorManager}}
+\doxysubsubsection{\texorpdfstring{getValue()}{getValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_sensor_manager_a505c819a6c3757ab5f0c3c7643e95553} 
+Vector3f sf\+::priv\+::\+Sensor\+Manager\+::get\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}}}]{sensor}{}\end{DoxyParamCaption}) const}
+
+
+
+Get the current value of a sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor} & \doxylink{classsf_1_1_sensor}{Sensor} to read\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current value of the sensor 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_sensor_manager_acd34f542bb8cd397b71dd4f751d52e59}\index{sf::priv::SensorManager@{sf::priv::SensorManager}!isAvailable@{isAvailable}}
+\index{isAvailable@{isAvailable}!sf::priv::SensorManager@{sf::priv::SensorManager}}
+\doxysubsubsection{\texorpdfstring{isAvailable()}{isAvailable()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_sensor_manager_acd34f542bb8cd397b71dd4f751d52e59} 
+bool sf\+::priv\+::\+Sensor\+Manager\+::is\+Available (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}}}]{sensor}{}\end{DoxyParamCaption})}
+
+
+
+Check if a sensor is available on the underlying platform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor} & \doxylink{classsf_1_1_sensor}{Sensor} to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the sensor is available, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_sensor_manager_acd34f542bb8cd397b71dd4f751d52e59}\index{sf::priv::SensorManager@{sf::priv::SensorManager}!isAvailable@{isAvailable}}
+\index{isAvailable@{isAvailable}!sf::priv::SensorManager@{sf::priv::SensorManager}}
+\doxysubsubsection{\texorpdfstring{isAvailable()}{isAvailable()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_sensor_manager_acd34f542bb8cd397b71dd4f751d52e59} 
+bool sf\+::priv\+::\+Sensor\+Manager\+::is\+Available (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}}}]{sensor}{}\end{DoxyParamCaption})}
+
+
+
+Check if a sensor is available on the underlying platform. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor} & \doxylink{classsf_1_1_sensor}{Sensor} to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the sensor is available, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_sensor_manager_a526897f9528f3a17676ca1afc088f628}\index{sf::priv::SensorManager@{sf::priv::SensorManager}!isEnabled@{isEnabled}}
+\index{isEnabled@{isEnabled}!sf::priv::SensorManager@{sf::priv::SensorManager}}
+\doxysubsubsection{\texorpdfstring{isEnabled()}{isEnabled()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_sensor_manager_a526897f9528f3a17676ca1afc088f628} 
+bool sf\+::priv\+::\+Sensor\+Manager\+::is\+Enabled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}}}]{sensor}{}\end{DoxyParamCaption}) const}
+
+
+
+Check if a sensor is enabled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor} & \doxylink{classsf_1_1_sensor}{Sensor} to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the sensor is enabled, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_sensor_manager_a526897f9528f3a17676ca1afc088f628}\index{sf::priv::SensorManager@{sf::priv::SensorManager}!isEnabled@{isEnabled}}
+\index{isEnabled@{isEnabled}!sf::priv::SensorManager@{sf::priv::SensorManager}}
+\doxysubsubsection{\texorpdfstring{isEnabled()}{isEnabled()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_sensor_manager_a526897f9528f3a17676ca1afc088f628} 
+bool sf\+::priv\+::\+Sensor\+Manager\+::is\+Enabled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}}}]{sensor}{}\end{DoxyParamCaption}) const}
+
+
+
+Check if a sensor is enabled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor} & \doxylink{classsf_1_1_sensor}{Sensor} to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the sensor is enabled, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{classsf_1_1priv_1_1_sensor_manager_a8eed920a83371de4f89da8708b4334e8}\index{sf::priv::SensorManager@{sf::priv::SensorManager}!setEnabled@{setEnabled}}
+\index{setEnabled@{setEnabled}!sf::priv::SensorManager@{sf::priv::SensorManager}}
+\doxysubsubsection{\texorpdfstring{setEnabled()}{setEnabled()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_sensor_manager_a8eed920a83371de4f89da8708b4334e8} 
+void sf\+::priv\+::\+Sensor\+Manager\+::set\+Enabled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}}}]{sensor}{, }\item[{bool}]{enabled}{}\end{DoxyParamCaption})}
+
+
+
+Enable or disable a sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor} & \doxylink{classsf_1_1_sensor}{Sensor} to modify \\
+\hline
+{\em enabled} & Whether it should be enabled or not \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classsf_1_1priv_1_1_sensor_manager_a8eed920a83371de4f89da8708b4334e8}\index{sf::priv::SensorManager@{sf::priv::SensorManager}!setEnabled@{setEnabled}}
+\index{setEnabled@{setEnabled}!sf::priv::SensorManager@{sf::priv::SensorManager}}
+\doxysubsubsection{\texorpdfstring{setEnabled()}{setEnabled()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classsf_1_1priv_1_1_sensor_manager_a8eed920a83371de4f89da8708b4334e8} 
+void sf\+::priv\+::\+Sensor\+Manager\+::set\+Enabled (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_sensor_a687375af3ab77b818fca73735bcaea84}{Sensor\+::\+Type}}}]{sensor}{, }\item[{bool}]{enabled}{}\end{DoxyParamCaption})}
+
+
+
+Enable or disable a sensor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sensor} & \doxylink{classsf_1_1_sensor}{Sensor} to modify \\
+\hline
+{\em enabled} & Whether it should be enabled or not \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+build/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/Sensor\+Manager.\+hpp\item 
+out/build/x64-\/\+Debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/Sensor\+Manager.\+hpp\item 
+build/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/Sensor\+Manager.\+cpp\item 
+out/build/x64-\/\+Debug/\+\_\+deps/sfml-\/src/src/\+SFML/\+Window/Sensor\+Manager.\+cpp\end{DoxyCompactItemize}

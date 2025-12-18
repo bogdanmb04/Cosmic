@@ -1,0 +1,128 @@
+\chapter{Cosmic (Pacman-\/like) — C++ / CMake project }
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{Cosmic (Pacman-\/like) — C++ / CMake project@{Cosmic (Pacman-\/like) — C++ / CMake project}}
+\label{md__r_e_a_d_m_e_autotoc_md998}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md998}%
+
+
+A small Pacman-\/style game implemented in C++ using SFML and CMake. The repository contains the application source under {\ttfamily GUI/} and {\ttfamily Logic/}, assets under {\ttfamily assets/}, and CMake configuration files for building on multiple platforms.\hypertarget{md__r_e_a_d_m_e_autotoc_md999}{}\doxysection{\texorpdfstring{Features}{Features}}\label{md__r_e_a_d_m_e_autotoc_md999}
+
+\begin{DoxyItemize}
+\item Simple 2D game using SFML
+\item CMake-\/based cross-\/platform build
+\item Unit tests available under {\ttfamily Tests/}
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md1000}{}\doxysection{\texorpdfstring{Requirements}{Requirements}}\label{md__r_e_a_d_m_e_autotoc_md1000}
+
+\begin{DoxyItemize}
+\item CMake 3.\+15+
+\item A C++17-\/capable compiler (g++, clang, or MSVC)
+\item Network connection
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md1001}{}\doxysection{\texorpdfstring{Build methods}{Build methods}}\label{md__r_e_a_d_m_e_autotoc_md1001}
+This project supports two primary workflows\+:
+
+
+\begin{DoxyItemize}
+\item CL/\+CI method — command-\/line builds suitable for local development and CI pipelines.
+\item Visual Studio (VS) method — for developers using Visual Studio on Windows.
+\end{DoxyItemize}
+
+Each method includes the essential commands; platform-\/specific dependency installation is noted where required.\hypertarget{md__r_e_a_d_m_e_autotoc_md1002}{}\doxysubsection{\texorpdfstring{CL/\+CI method (command-\/line and CI)}{CL/\+CI method (command-\/line and CI)}}\label{md__r_e_a_d_m_e_autotoc_md1002}
+Use this method for command-\/line development and for continuous integration pipelines (Git\+Hub Actions, Git\+Lab CI, etc.). The CMake commands are cross-\/platform; dependency installation is platform-\/specific.
+
+\begin{quote}
+{\bfseries{Note\+:}} If you run CI on {\ttfamily ubuntu-\/latest} or develop on Debian/\+Ubuntu, install the packages below. For other distros or platforms, install equivalent packages or provide prebuilt binaries (e.\+g., {\ttfamily SFML}) via your package manager or a dependency manager.
+
+Install dependencies (example for Debian/\+Ubuntu CI runner or developer machine)\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{sudo\ add-\/apt-\/repository\ universe}
+\DoxyCodeLine{sudo\ apt-\/get\ update}
+\DoxyCodeLine{sudo\ apt-\/get\ install\ -\/y\ \(\backslash\)}
+\DoxyCodeLine{\ \ libx11-\/dev\ libxrandr-\/dev\ libxcursor-\/dev\ libxi-\/dev\ libudev-\/dev\ \(\backslash\)}
+\DoxyCodeLine{\ \ libopenal-\/dev\ libflac-\/dev\ libvorbis-\/dev\ \(\backslash\)}
+\DoxyCodeLine{\ \ libgl1-\/mesa-\/dev\ libglu1-\/mesa-\/dev\ \(\backslash\)}
+\DoxyCodeLine{\ \ libfreetype6-\/dev\ libjpeg-\/dev\ libpng-\/dev\ \(\backslash\)}
+\DoxyCodeLine{\ \ cmake\ g++}
+
+\end{DoxyCode}
+ \end{quote}
+
+
+Configure, build and test (CLI)\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\#\ Optional:\ export\ BUILD\_TYPE=Release}
+\DoxyCodeLine{cmake\ -\/S\ .\ -\/B\ build\ -\/DCMAKE\_BUILD\_TYPE=\$\{BUILD\_TYPE:-\/Release\}}
+\DoxyCodeLine{cmake\ -\/-\/build\ build\ -\/-\/config\ \$\{BUILD\_TYPE:-\/Release\}\ -\/-\/\ -\/j\$(nproc)}
+\DoxyCodeLine{cd\ build}
+\DoxyCodeLine{ctest\ -\/C\ \$\{BUILD\_TYPE:-\/Release\}\ -\/-\/output-\/on-\/failure}
+
+\end{DoxyCode}
+
+
+Run the application (from project root)\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{./build/PacmanGame}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md1003}{}\doxysubsection{\texorpdfstring{Visual Studio (VS) method}{Visual Studio (VS) method}}\label{md__r_e_a_d_m_e_autotoc_md1003}
+Use this method if you develop with Visual Studio on Windows. It uses the Visual Studio generator and preserves Visual Studio project/solution metadata in the {\ttfamily build/} directory.
+
+
+\begin{DoxyEnumerate}
+\item Open "{}x64 Native Tools Command Prompt for VS"{} or Developer Power\+Shell for Visual Studio.
+\item Configure and generate Visual Studio project files\+:
+\end{DoxyEnumerate}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake\ -\/S\ .\ -\/B\ build\ -\/G\ "{}Visual\ Studio\ 17\ 2022"{}\ -\/A\ x64\ -\/DCMAKE\_BUILD\_TYPE=Release}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyEnumerate}
+\item Build the solution from the command line or from within Visual Studio\+:
+\end{DoxyEnumerate}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cmake\ -\/-\/build\ build\ -\/-\/config\ Release}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyEnumerate}
+\item Run tests (optional)\+:
+\end{DoxyEnumerate}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{cd\ build/tests}
+\DoxyCodeLine{ctest\ -\/C\ Release}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyEnumerate}
+\item Run the built executable (for example {\ttfamily Pacman\+Game.\+exe}) from {\ttfamily build/} (usually in build/\+Bin) or the Visual Studio output directory.
+\end{DoxyEnumerate}\hypertarget{md__r_e_a_d_m_e_autotoc_md1004}{}\doxysection{\texorpdfstring{Project layout (important files)}{Project layout (important files)}}\label{md__r_e_a_d_m_e_autotoc_md1004}
+
+\begin{DoxyItemize}
+\item {\ttfamily CMake\+Lists.\+txt} — top-\/level CMake configuration
+\item {\ttfamily GUI/}, {\ttfamily Logic/} — project source code
+\item {\ttfamily assets/} — images and other runtime assets (ensure these are copied to the runtime working directory)
+\item {\ttfamily Tests/} — unit tests and test configuration
+\item {\ttfamily diagrams/} — UML diagrams realized in Visual Paradigm
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md1005}{}\doxysection{\texorpdfstring{Diagrams Legend}{Diagrams Legend}}\label{md__r_e_a_d_m_e_autotoc_md1005}
+
+\begin{DoxyItemize}
+\item {\bfseries{Orange}} represent structures
+\item {\bfseries{Blue}} represent behaviors/classes
+\item {\bfseries{Green}} represent interfaces
+\item {\bfseries{Magenta}} represent enumerations 
+\end{DoxyItemize}

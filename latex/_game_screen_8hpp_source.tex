@@ -1,0 +1,80 @@
+\doxysection{Game\+Screen.\+hpp}
+\hypertarget{_game_screen_8hpp_source}{}\label{_game_screen_8hpp_source}\index{GUI/Include/GameScreen.hpp@{GUI/Include/GameScreen.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_event_listener_8hpp}{IEventListener.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_i_game_engine_8hpp}{IGameEngine.hpp}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <functional>}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{namespace\ }Pacman\ \{}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{class\ }GameScreen\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_pacman_1_1_i_event_listener}{IEventListener}}\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ GameScreen();}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_pacman_1_1_game_screen_a80f7e6966c5bd7cf2e96b59ec4204bf6}{LoadAssets}}(\textcolor{keyword}{const}\ std::string\&\ assetPath);}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_game_screen_aee64ef164880f514a4007b3c3783bfd2}{SetGameEngine}}(std::shared\_ptr<IGameEngine>\ gameEngine);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ IEventListener\ implementation}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_game_screen_ad03b8a955211c03101959f64b885334f}{OnTileUpdated}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_pacman_1_1_tile_update}{TileUpdate}}\&\ update)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_game_screen_a12fcea6672a72f566a1f7dda72aa5383}{OnPlayerStateChanged}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_pacman_1_1_player_state}{PlayerState}}\&\ state)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_game_screen_aeeb452d7ac185a348beaa86f4a49e1b6}{OnGameStateChanged}}(GameState\ state)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_game_screen_a3a782197efc7f9cb4373036e30245761}{OnGhostsUpdated}}(\textcolor{keyword}{const}\ std::vector<GhostState>\&\ ghosts)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_game_screen_a528455dc3e942eb9f49c3f3f0655c010}{Render}}(\mbox{\hyperlink{classsf_1_1_render_window}{sf::RenderWindow}}\&\ window);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_game_screen_a001fd1e3df62ecbdb4e2ecd2524b58ca}{SetPlayCallback}}(std::function<\textcolor{keywordtype}{void}()>\ cb);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_game_screen_a4addb8e4d803d7a91e57144487afe156}{HandleEvent}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classsf_1_1_event}{sf::Event}}\&\ event,\ \mbox{\hyperlink{classsf_1_1_render_window}{sf::RenderWindow}}\&\ window);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ UpdateAnimations();}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ RenderMap(\mbox{\hyperlink{classsf_1_1_render_window}{sf::RenderWindow}}\&\ window);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ RenderPlayer(\mbox{\hyperlink{classsf_1_1_render_window}{sf::RenderWindow}}\&\ window);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ RenderGhosts(\mbox{\hyperlink{classsf_1_1_render_window}{sf::RenderWindow}}\&\ window);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ RenderHud(\mbox{\hyperlink{classsf_1_1_render_window}{sf::RenderWindow}}\&\ window);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ CalculateWallSpriteIndex(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ std::shared\_ptr<IGameEngine>\ gameEngine\_;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cached\ state}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ std::vector<TileUpdate>\ updatedTiles\_;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_pacman_1_1_player_state}{PlayerState}}\ playerState\_\{\};}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ std::vector<GhostState>\ ghostStates\_;}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ GameState\ gameState\_\ =\ GameState::Paused;}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Assets}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_texture}{sf::Texture}}\ pacmanTexture\_;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_texture}{sf::Texture}}\ pacmanDeathTexture\_;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_texture}{sf::Texture}}\ ghostTexture\_;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_texture}{sf::Texture}}\ mapTexture\_;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_font}{sf::Font}}\ hudFont\_;}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sprites}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_sprite}{sf::Sprite}}\ pacmanSprite\_;}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ std::vector<sf::Sprite>\ ghostSprites\_;}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Animation\ state}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ animationTimer\_\ =\ 0.0f;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pacmanFrame\_\ =\ 0;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ ghostFrame\_\ =\ 0;}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Asset\ availability\ flags}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ hasMapTexture\_\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ \textcolor{keywordtype}{int}\ TILE\_SIZE\ =\ 16;}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ std::function<void()>\ playCallback\_;}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ sf::FloatRect\ playAgainButtonRect\_;}
+\DoxyCodeLine{00087\ \ \ \ \ \};}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \}}
+
+\end{DoxyCode}

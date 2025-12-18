@@ -1,7 +1,7 @@
 ﻿/**
  * @file MenuScreen.cpp
- * @brief Implementarea logicii pentru meniul principal al jocului Pacman.
- * @details Include gestionarea input-ului (mouse/tastatură), randarea grafică și animațiile de fundal.
+ * @brief Implementation of the main menu logic for the Pacman game.
+ * @details Includes input handling (mouse/keyboard), graphic rendering, and background animations.
  */
 
 #include "MenuScreen.hpp"
@@ -14,17 +14,17 @@ namespace Pacman {
 
     namespace {
         /**
-         * @brief Încearcă să încarce un font dintr-o listă de căi comune de sistem.
+         * @brief Attempts to load a font from a list of common system paths.
          *
-         * Această funcție este utilă pentru a asigura portabilitatea între Windows, Linux și macOS,
-         * căutând fonturi standard (Arial, Segoe UI, etc.) dacă asset-ul local lipsește.
+         * This function ensures portability across Windows, Linux, and macOS by
+         * searching for standard fonts (Arial, Segoe UI, etc.) if the local asset is missing.
          *
-         * @param font Referință către obiectul sf::Font care va fi încărcat.
-         * @return true dacă fontul a fost încărcat cu succes, false altfel.
+         * @param font Reference to the sf::Font object to be loaded.
+         * @return true if the font was loaded successfully, false otherwise.
          */
         bool TryLoadFont(sf::Font& font) {
             const char* candidates[] = {
-                "assets/arial.ttf", // Prioritizăm fișierul local
+                "assets/arial.ttf", // Prioritize local file
                 "C:/Windows/Fonts/arial.ttf",
                 "C:/Windows/Fonts/segoeui.ttf",
                 "C:/Windows/Fonts/tahoma.ttf",
@@ -44,23 +44,23 @@ namespace Pacman {
     }
 
     /**
-     * @brief Constructorul meniului.
-     * @param listener Interfața care va reacționa la butoanele apăsate (Play/Quit).
+     * @brief Menu constructor.
+     * @param listener Interface that will react to button presses (Play/Quit).
      */
     MenuScreen::MenuScreen(std::shared_ptr<IMenuListener> listener)
         : listener_(std::move(listener)), animationTimer_(0.0f) {
     }
 
     /**
-     * @brief Încarcă resursele necesare (fonturi) și inițializează textele.
-     * @return true dacă resursele au fost încărcate corect.
+     * @brief Loads necessary resources (fonts) and initializes text.
+     * @return true if resources loaded correctly.
      */
     bool MenuScreen::LoadAssets(const std::string& /*assetPath*/) {
         if (!TryLoadFont(font_)) {
-            return false; // Nu putem rula fără font
+            return false; // Cannot run without font
         }
 
-        // Configurare Titlu
+        // Configure Title
         titleText_.setFont(font_);
         titleText_.setString("PAC-MAN");
         titleText_.setCharacterSize(72);
@@ -68,13 +68,13 @@ namespace Pacman {
         titleText_.setOutlineColor(sf::Color(200, 150, 0));
         titleText_.setOutlineThickness(3.0f);
 
-        // Configurare buton Play
+        // Configure Play button
         playText_.setFont(font_);
         playText_.setString("PLAY");
         playText_.setCharacterSize(48);
         playText_.setFillColor(sf::Color::White);
 
-        // Configurare buton Quit
+        // Configure Quit button
         quitText_.setFont(font_);
         quitText_.setString("QUIT");
         quitText_.setCharacterSize(48);
@@ -84,39 +84,39 @@ namespace Pacman {
     }
 
     /**
-     * @brief Actualizează starea internă a meniului (animații).
-     * @param deltaTime Timpul scurs de la ultimul frame (în secunde).
+     * @brief Updates the internal menu state (animations).
+     * @param deltaTime Time elapsed since the last frame (in seconds).
      */
     void MenuScreen::Update(float deltaTime) {
         animationTimer_ += deltaTime;
     }
 
     /**
-     * @brief Schimbă selecția curentă (navigare cu tastatura).
-     * @param delta +1 pentru jos, -1 pentru sus.
+     * @brief Changes the current selection (keyboard navigation).
+     * @param delta +1 for down, -1 for up.
      */
     void MenuScreen::UpdateSelection(int delta) {
-        // Folosim formula matematica pentru a cicla intre 0 si 1 (Play si Quit)
-        // Adunăm 2 pentru a evita numerele negative în modulo.
+        // Use math formula to cycle between 0 and 1 (Play and Quit)
+        // Add 2 to avoid negative numbers in modulo.
         selectedIndex_ = (selectedIndex_ + delta + 2) % 2;
     }
 
     /**
-     * @brief Recalculează pozițiile elementelor pe ecran.
+     * @brief Recalculates element positions on the screen.
      *
-     * Această funcție asigură că meniul rămâne centrat chiar dacă fereastra este redimensionată.
-     * De asemenea, aplică efectul de "pulsare" asupra titlului.
+     * This function ensures the menu remains centered even if the window is resized.
+     * It also applies the "pulsing" effect to the title.
      */
     void MenuScreen::UpdateLayout(sf::RenderWindow& window) {
         const float width = static_cast<float>(window.getSize().x);
         const float height = static_cast<float>(window.getSize().y);
 
-        // --- Animație Titlu ---
-        // Folosim sin() pentru a mări și micșora titlul în timp
+        // --- Title Animation ---
+        // Use sin() to scale the title up and down over time
         float pulseScale = 1.0f + 0.05f * std::sin(animationTimer_ * 3.0f);
 
         sf::FloatRect titleBounds = titleText_.getLocalBounds();
-        // Setăm originea în centrul textului pentru scalare corectă
+        // Set origin to the center of the text for correct scaling
         titleText_.setOrigin(
             titleBounds.left + titleBounds.width / 2.0f,
             titleBounds.top + titleBounds.height / 2.0f
@@ -124,7 +124,7 @@ namespace Pacman {
         titleText_.setPosition(width * 0.5f, height * 0.18f);
         titleText_.setScale(pulseScale, pulseScale);
 
-        // --- Poziționare Buton Play ---
+        // --- Play Button Positioning ---
         sf::FloatRect playBounds = playText_.getLocalBounds();
         playText_.setOrigin(
             playBounds.left + playBounds.width / 2.0f,
@@ -132,7 +132,7 @@ namespace Pacman {
         );
         playText_.setPosition(width * 0.5f, height * 0.45f);
 
-        // --- Poziționare Buton Quit ---
+        // --- Quit Button Positioning ---
         sf::FloatRect quitBounds = quitText_.getLocalBounds();
         quitText_.setOrigin(
             quitBounds.left + quitBounds.width / 2.0f,
@@ -140,7 +140,7 @@ namespace Pacman {
         );
         quitText_.setPosition(width * 0.5f, height * 0.65f);
 
-        // --- Calculare zone de click (Hitboxes) ---
+        // --- Calculate Hitboxes ---
         const float padding = 25.0f;
         playRect_ = sf::FloatRect(
             playText_.getPosition().x - playBounds.width / 2.0f - padding,
@@ -158,20 +158,20 @@ namespace Pacman {
     }
 
     /**
-     * @brief Gestionează evenimentele de input (tastatură și mouse).
-     * @param event Evenimentul SFML curent.
+     * @brief Handles input events (keyboard and mouse).
+     * @param event The current SFML event.
      */
     void MenuScreen::HandleEvent(const sf::Event& event) {
-        // --- Input Tastatură ---
+        // --- Keyboard Input ---
         if (event.type == sf::Event::KeyPressed) {
-            // Navigare Sus/Jos
+            // Navigate Up/Down
             if (event.key.code == sf::Keyboard::Up || event.key.code == sf::Keyboard::W) {
                 UpdateSelection(-1);
             }
             else if (event.key.code == sf::Keyboard::Down || event.key.code == sf::Keyboard::S) {
                 UpdateSelection(+1);
             }
-            // Confirmare (Enter/Space)
+            // Confirm (Enter/Space)
             else if (event.key.code == sf::Keyboard::Enter || event.key.code == sf::Keyboard::Space) {
                 if (selectedIndex_ == 0 && listener_) {
                     listener_->OnPlaySelected();
@@ -180,14 +180,14 @@ namespace Pacman {
                     listener_->OnQuitSelected();
                 }
             }
-            // Ieșire rapidă cu ESC
+            // Quick Exit with ESC
             else if (event.key.code == sf::Keyboard::Escape) {
                 if (listener_) {
                     listener_->OnQuitSelected();
                 }
             }
         }
-        // --- Input Mouse Click ---
+        // --- Mouse Click Input ---
         else if (event.type == sf::Event::MouseButtonPressed) {
             if (event.mouseButton.button == sf::Mouse::Left) {
                 sf::Vector2f mousePos(
@@ -203,14 +203,14 @@ namespace Pacman {
                 }
             }
         }
-        // --- Input Mouse Movement (Hover) ---
+        // --- Mouse Movement (Hover) ---
         else if (event.type == sf::Event::MouseMoved) {
             sf::Vector2f mousePos(
                 static_cast<float>(event.mouseMove.x),
                 static_cast<float>(event.mouseMove.y)
             );
 
-            // Selectăm automat butonul peste care este mouse-ul
+            // Automatically select the button under the mouse
             if (playRect_.contains(mousePos)) {
                 selectedIndex_ = 0;
             }
@@ -227,11 +227,11 @@ namespace Pacman {
     }
 
     /**
-     * @brief Desenează întregul meniu pe fereastră.
-     * @param window Fereastra de randare SFML.
+     * @brief Renders the entire menu to the window.
+     * @param window The SFML render window.
      */
     void MenuScreen::Render(sf::RenderWindow& window) {
-        // 1. Desenăm fundalul (gradient simplu din două dreptunghiuri)
+        // 1. Draw background (simple gradient from two rectangles)
         sf::RectangleShape bgTop(sf::Vector2f(window.getSize().x, window.getSize().y / 2.0f));
         bgTop.setFillColor(sf::Color(10, 10, 50));
         bgTop.setPosition(0, 0);
@@ -242,20 +242,20 @@ namespace Pacman {
         bgBottom.setPosition(0, window.getSize().y / 2.0f);
         window.draw(bgBottom);
 
-        // 2. Desenăm efectele de fundal (buline animate)
+        // 2. Draw background effects (animated pellets)
         DrawBackgroundPellets(window);
 
-        // 3. Recalculăm layout-ul înainte de desenare
+        // 3. Recalculate layout before drawing
         UpdateLayout(window);
 
         bool playSelected = (selectedIndex_ == 0);
         bool quitSelected = (selectedIndex_ == 1);
 
-        // 4. Setăm culorile textului în funcție de selecție
+        // 4. Set text colors based on selection
         playText_.setFillColor(playSelected ? sf::Color::Cyan : sf::Color::White);
         quitText_.setFillColor(quitSelected ? sf::Color::Cyan : sf::Color::White);
 
-        // Adăugăm un outline subtil pentru textul selectat
+        // Add subtle outline for selected text
         if (playSelected) {
             playText_.setOutlineColor(sf::Color(0, 255, 255, 100));
             playText_.setOutlineThickness(2.0f);
@@ -272,13 +272,13 @@ namespace Pacman {
             quitText_.setOutlineThickness(0.0f);
         }
 
-        // 5. Desenăm butoanele și cutiile lor
+        // 5. Draw buttons and their boxes
         DrawButton(window, playRect_, playSelected);
         DrawButton(window, quitRect_, quitSelected);
 
         DrawDecorativeBorder(window);
 
-        // 6. Desenăm textele deasupra a tot
+        // 6. Draw text on top
         window.draw(titleText_);
         window.draw(playText_);
         window.draw(quitText_);
@@ -287,12 +287,12 @@ namespace Pacman {
     }
 
     /**
-     * @brief Helper pentru desenarea unui buton cu efecte vizuale.
-     * @param rect Dimensiunile și poziția butonului.
-     * @param isSelected Dacă butonul este selectat (mouse hover sau tastatură).
+     * @brief Helper to draw a button with visual effects.
+     * @param rect Dimensions and position of the button.
+     * @param isSelected Whether the button is currently selected/hovered.
      */
     void MenuScreen::DrawButton(sf::RenderWindow& window, const sf::FloatRect& rect, bool isSelected) {
-        // Efect de strălucire (Glow) dacă este selectat
+        // Glow effect if selected
         if (isSelected) {
             sf::RectangleShape glow;
             float glowSize = 8.0f;
@@ -302,17 +302,17 @@ namespace Pacman {
             window.draw(glow);
         }
 
-        // Corpul butonului
+        // Button body
         sf::RectangleShape background;
         background.setPosition(rect.left, rect.top);
         background.setSize(sf::Vector2f(rect.width, rect.height));
-        // Culoare mai deschisă dacă e selectat
+        // Lighter color if selected
         background.setFillColor(isSelected ? sf::Color(20, 40, 60, 180) : sf::Color(15, 15, 35, 150));
         background.setOutlineThickness(3.0f);
         background.setOutlineColor(isSelected ? sf::Color::Cyan : sf::Color(60, 60, 120));
         window.draw(background);
 
-        // Highlight (reflexie mică în colțul stânga-sus)
+        // Highlight (small reflection in top-left corner)
         sf::RectangleShape highlight;
         highlight.setPosition(rect.left + 3, rect.top + 3);
         highlight.setSize(sf::Vector2f(rect.width - 6, 2));
@@ -321,8 +321,8 @@ namespace Pacman {
     }
 
     /**
-     * @brief Desenează o grilă de "pellets" (buline) în fundal cu o animație de val.
-     * @details Folosește funcția sin() bazată pe poziția în grilă (row/col) și timp pentru a modifica opacitatea.
+     * @brief Draws a grid of pellets in the background with a wave animation.
+     * @details Uses the sin() function based on grid position (row/col) and time to modify opacity.
      */
     void MenuScreen::DrawBackgroundPellets(sf::RenderWindow& window) {
         const int rows = 8;
@@ -335,9 +335,9 @@ namespace Pacman {
                 float x = spacing * (col + 1);
                 float y = vSpacing * (row + 1);
 
-                // Animație tip "val" (Wave effect)
+                // Wave effect animation
                 float wave = std::sin(animationTimer_ * 2.0f + col * 0.3f + row * 0.2f);
-                // Mapăm valoarea sin (-1 la 1) la o valoare de transparență (Alpha)
+                // Map sin value (-1 to 1) to alpha transparency
                 float alpha = 30.0f + wave * 15.0f;
 
                 sf::CircleShape pellet(3.0f);
@@ -354,7 +354,7 @@ namespace Pacman {
         const float width = window.getSize().x - margin * 2;
         const float height = window.getSize().y - margin * 2;
 
-        // Desenăm marginile (stil retro arcade)
+        // Draw borders (retro arcade style)
         // Top
         sf::RectangleShape topBorder(sf::Vector2f(width, thickness));
         topBorder.setPosition(margin, margin);
