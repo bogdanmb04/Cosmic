@@ -19,29 +19,29 @@
 \DoxyCodeLine{00034\ }
 \DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_menu_screen_a4b856a5b6f7838d5d95c60407c4ce64d}{Update}}(\textcolor{keywordtype}{float}\ deltaTime);}
 \DoxyCodeLine{00040\ }
-\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_menu_screen_ae98249a0ac066564ac6a0279c1473a15}{HandleEvent}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classsf_1_1_event}{sf::Event}}\&\ event);}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_menu_screen_ae98249a0ac066564ac6a0279c1473a15}{HandleEvent}}(\textcolor{keyword}{const}\ sf::Event\&\ event);}
 \DoxyCodeLine{00046\ }
-\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_menu_screen_ac31cb30bbac16c57144398ce64626b3a}{Render}}(\mbox{\hyperlink{classsf_1_1_render_window}{sf::RenderWindow}}\&\ window);}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_menu_screen_ac31cb30bbac16c57144398ce64626b3a}{Render}}(sf::RenderWindow\&\ window);}
 \DoxyCodeLine{00052\ }
 \DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_pacman_1_1_menu_screen_a334c4d3bb118754782c1cb476850dec5}{ShouldClose}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ requestClose\_;\ \}}
 \DoxyCodeLine{00058\ }
 \DoxyCodeLine{00059\ \textcolor{keyword}{private}:}
 \DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{void}\ UpdateSelection(\textcolor{keywordtype}{int}\ delta);}
 \DoxyCodeLine{00065\ }
-\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ UpdateLayout(\mbox{\hyperlink{classsf_1_1_render_window}{sf::RenderWindow}}\&\ window);}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{void}\ UpdateLayout(sf::RenderWindow\&\ window);}
 \DoxyCodeLine{00071\ }
-\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ DrawButton(\mbox{\hyperlink{classsf_1_1_render_window}{sf::RenderWindow}}\&\ window,\ \textcolor{keyword}{const}\ sf::FloatRect\&\ rect,\ \textcolor{keywordtype}{bool}\ isSelected);}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ DrawButton(sf::RenderWindow\&\ window,\ \textcolor{keyword}{const}\ sf::FloatRect\&\ rect,\ \textcolor{keywordtype}{bool}\ isSelected);}
 \DoxyCodeLine{00079\ }
-\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ DrawBackgroundPellets(\mbox{\hyperlink{classsf_1_1_render_window}{sf::RenderWindow}}\&\ window);}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{void}\ DrawBackgroundPellets(sf::RenderWindow\&\ window);}
 \DoxyCodeLine{00085\ }
-\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ DrawDecorativeBorder(\mbox{\hyperlink{classsf_1_1_render_window}{sf::RenderWindow}}\&\ window);}
+\DoxyCodeLine{00090\ \ \ \ \ \textcolor{keywordtype}{void}\ DrawDecorativeBorder(sf::RenderWindow\&\ window);}
 \DoxyCodeLine{00091\ }
 \DoxyCodeLine{00092\ \ \ \ \ std::shared\_ptr<IMenuListener>\ listener\_;}
-\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{classsf_1_1_font}{sf::Font}}\ font\_;}
+\DoxyCodeLine{00093\ \ \ \ \ sf::Font\ font\_;}
 \DoxyCodeLine{00094\ }
-\DoxyCodeLine{00095\ \ \ \ \ \mbox{\hyperlink{classsf_1_1_text}{sf::Text}}\ titleText\_;}
-\DoxyCodeLine{00096\ \ \ \ \ \mbox{\hyperlink{classsf_1_1_text}{sf::Text}}\ playText\_;}
-\DoxyCodeLine{00097\ \ \ \ \ \mbox{\hyperlink{classsf_1_1_text}{sf::Text}}\ quitText\_;}
+\DoxyCodeLine{00095\ \ \ \ \ sf::Text\ titleText\_;}
+\DoxyCodeLine{00096\ \ \ \ \ sf::Text\ playText\_;}
+\DoxyCodeLine{00097\ \ \ \ \ sf::Text\ quitText\_;}
 \DoxyCodeLine{00098\ \ \ \ \ \textcolor{keywordtype}{int}\ selectedIndex\_\ =\ 0;}
 \DoxyCodeLine{00099\ \ \ \ \ \textcolor{keywordtype}{bool}\ requestClose\_\ =\ \textcolor{keyword}{false};}
 \DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{float}\ animationTimer\_;}

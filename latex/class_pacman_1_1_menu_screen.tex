@@ -18,9 +18,9 @@ bool \mbox{\hyperlink{class_pacman_1_1_menu_screen_ada70e1d4ddf2fd3d42ba4fd82ff2
 \begin{DoxyCompactList}\small\item\em Load menu assets (fonts). \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_pacman_1_1_menu_screen_a4b856a5b6f7838d5d95c60407c4ce64d}{Update}} (float delta\+Time)
 \begin{DoxyCompactList}\small\item\em Update menu animations. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_pacman_1_1_menu_screen_ae98249a0ac066564ac6a0279c1473a15}{Handle\+Event}} (const \mbox{\hyperlink{classsf_1_1_event}{sf\+::\+Event}} \&event)
+void \mbox{\hyperlink{class_pacman_1_1_menu_screen_ae98249a0ac066564ac6a0279c1473a15}{Handle\+Event}} (const sf\+::\+Event \&event)
 \begin{DoxyCompactList}\small\item\em Handle SFML events. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_pacman_1_1_menu_screen_ac31cb30bbac16c57144398ce64626b3a}{Render}} (\mbox{\hyperlink{classsf_1_1_render_window}{sf\+::\+Render\+Window}} \&window)
+void \mbox{\hyperlink{class_pacman_1_1_menu_screen_ac31cb30bbac16c57144398ce64626b3a}{Render}} (sf\+::\+Render\+Window \&window)
 \begin{DoxyCompactList}\small\item\em Render the menu. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_pacman_1_1_menu_screen_a334c4d3bb118754782c1cb476850dec5}{Should\+Close}} () const
 \begin{DoxyCompactList}\small\item\em Check if window close was requested. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -57,7 +57,7 @@ Menu constructor.
 \begin{DoxyParams}{Parameters}
 {\em listener} & Menu event listener\\
 \hline
-{\em listener} & \doxylink{class_interface}{Interface} that will react to button presses (Play/\+Quit). \\
+{\em listener} & Interface that will react to button presses (Play/\+Quit). \\
 \hline
 \end{DoxyParams}
 
@@ -69,7 +69,7 @@ Menu constructor.
 \index{HandleEvent@{HandleEvent}!Pacman::MenuScreen@{Pacman::MenuScreen}}
 \doxysubsubsection{\texorpdfstring{HandleEvent()}{HandleEvent()}}
 {\footnotesize\ttfamily \label{class_pacman_1_1_menu_screen_ae98249a0ac066564ac6a0279c1473a15} 
-void Pacman\+::\+Menu\+Screen\+::\+Handle\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1_event}{sf\+::\+Event}} \&}]{event}{}\end{DoxyParamCaption})}
+void Pacman\+::\+Menu\+Screen\+::\+Handle\+Event (\begin{DoxyParamCaption}\item[{const sf\+::\+Event \&}]{event}{}\end{DoxyParamCaption})}
 
 
 
@@ -110,7 +110,7 @@ true if resources loaded correctly.
 \index{Render@{Render}!Pacman::MenuScreen@{Pacman::MenuScreen}}
 \doxysubsubsection{\texorpdfstring{Render()}{Render()}}
 {\footnotesize\ttfamily \label{class_pacman_1_1_menu_screen_ac31cb30bbac16c57144398ce64626b3a} 
-void Pacman\+::\+Menu\+Screen\+::\+Render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_render_window}{sf\+::\+Render\+Window}} \&}]{window}{}\end{DoxyParamCaption})}
+void Pacman\+::\+Menu\+Screen\+::\+Render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window}{}\end{DoxyParamCaption})}
 
 
 

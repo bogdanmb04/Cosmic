@@ -27,18 +27,18 @@
 \DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_game_screen_aeeb452d7ac185a348beaa86f4a49e1b6}{OnGameStateChanged}}(GameState\ state)\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_game_screen_a3a782197efc7f9cb4373036e30245761}{OnGhostsUpdated}}(\textcolor{keyword}{const}\ std::vector<GhostState>\&\ ghosts)\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00032\ }
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_game_screen_a528455dc3e942eb9f49c3f3f0655c010}{Render}}(\mbox{\hyperlink{classsf_1_1_render_window}{sf::RenderWindow}}\&\ window);}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_game_screen_a528455dc3e942eb9f49c3f3f0655c010}{Render}}(sf::RenderWindow\&\ window);}
 \DoxyCodeLine{00036\ }
 \DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_game_screen_a001fd1e3df62ecbdb4e2ecd2524b58ca}{SetPlayCallback}}(std::function<\textcolor{keywordtype}{void}()>\ cb);}
 \DoxyCodeLine{00039\ }
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_game_screen_a4addb8e4d803d7a91e57144487afe156}{HandleEvent}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classsf_1_1_event}{sf::Event}}\&\ event,\ \mbox{\hyperlink{classsf_1_1_render_window}{sf::RenderWindow}}\&\ window);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_pacman_1_1_game_screen_a4addb8e4d803d7a91e57144487afe156}{HandleEvent}}(\textcolor{keyword}{const}\ sf::Event\&\ event,\ sf::RenderWindow\&\ window);}
 \DoxyCodeLine{00042\ }
 \DoxyCodeLine{00043\ \ \ \ \ \textcolor{keyword}{private}:}
 \DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ UpdateAnimations();}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ RenderMap(\mbox{\hyperlink{classsf_1_1_render_window}{sf::RenderWindow}}\&\ window);}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ RenderPlayer(\mbox{\hyperlink{classsf_1_1_render_window}{sf::RenderWindow}}\&\ window);}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ RenderGhosts(\mbox{\hyperlink{classsf_1_1_render_window}{sf::RenderWindow}}\&\ window);}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ RenderHud(\mbox{\hyperlink{classsf_1_1_render_window}{sf::RenderWindow}}\&\ window);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ RenderMap(sf::RenderWindow\&\ window);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ RenderPlayer(sf::RenderWindow\&\ window);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ RenderGhosts(sf::RenderWindow\&\ window);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ RenderHud(sf::RenderWindow\&\ window);}
 \DoxyCodeLine{00049\ }
 \DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ CalculateWallSpriteIndex(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00055\ }
@@ -51,14 +51,14 @@
 \DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ GameState\ gameState\_\ =\ GameState::Paused;}
 \DoxyCodeLine{00063\ }
 \DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Assets}}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_texture}{sf::Texture}}\ pacmanTexture\_;}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_texture}{sf::Texture}}\ pacmanDeathTexture\_;}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_texture}{sf::Texture}}\ ghostTexture\_;}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_texture}{sf::Texture}}\ mapTexture\_;}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_font}{sf::Font}}\ hudFont\_;}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ sf::Texture\ pacmanTexture\_;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ sf::Texture\ pacmanDeathTexture\_;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ sf::Texture\ ghostTexture\_;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ sf::Texture\ mapTexture\_;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ sf::Font\ hudFont\_;}
 \DoxyCodeLine{00070\ }
 \DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sprites}}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classsf_1_1_sprite}{sf::Sprite}}\ pacmanSprite\_;}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ sf::Sprite\ pacmanSprite\_;}
 \DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ std::vector<sf::Sprite>\ ghostSprites\_;}
 \DoxyCodeLine{00074\ }
 \DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Animation\ state}}

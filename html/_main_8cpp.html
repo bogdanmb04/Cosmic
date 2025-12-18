@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.15.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Cosmic: Member List</title>
+<title>Cosmic: GUI/Source/Main.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('class_menu_screen_test.html','',''); });
+$(function(){initNavTree('_main_8cpp.html','',''); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -88,23 +88,51 @@ $(function(){initNavTree('class_menu_screen_test.html','',''); });
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">MenuScreenTest Member List</div></div>
+  <div class="headertitle"><div class="title">Main.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="class_menu_screen_test.html">MenuScreenTest</a>, including all inherited members.</p>
-<table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>menuScreen</b> (defined in <a class="el" href="class_menu_screen_test.html">MenuScreenTest</a>)</td><td class="entry"><a class="el" href="class_menu_screen_test.html">MenuScreenTest</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>mockListener</b> (defined in <a class="el" href="class_menu_screen_test.html">MenuScreenTest</a>)</td><td class="entry"><a class="el" href="class_menu_screen_test.html">MenuScreenTest</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>SetUp</b>() override (defined in <a class="el" href="class_menu_screen_test.html">MenuScreenTest</a>)</td><td class="entry"><a class="el" href="class_menu_screen_test.html">MenuScreenTest</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="odd"><td class="entry"><b>TearDown</b>() override (defined in <a class="el" href="class_menu_screen_test.html">MenuScreenTest</a>)</td><td class="entry"><a class="el" href="class_menu_screen_test.html">MenuScreenTest</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>window</b> (defined in <a class="el" href="class_menu_screen_test.html">MenuScreenTest</a>)</td><td class="entry"><a class="el" href="class_menu_screen_test.html">MenuScreenTest</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-</table></div><!-- contents -->
+<p>Application entry point.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;SFML/Graphics.hpp&gt;</code><br />
+<code>#include &quot;<a class="el" href="_i_game_engine_8hpp_source.html">IGameEngine.hpp</a>&quot;</code><br />
+<code>#include &quot;GameConfig.hpp&quot;</code><br />
+<code>#include &quot;GameScreen.hpp&quot;</code><br />
+<code>#include &quot;InputController.hpp&quot;</code><br />
+<code>#include &quot;MenuScreen.hpp&quot;</code><br />
+<code>#include &quot;<a class="el" href="_i_menu_listener_8hpp_source.html">IMenuListener.hpp</a>&quot;</code><br />
+<code>#include &quot;Application.hpp&quot;</code><br />
+<code>#include &quot;<a class="el" href="_game_engine_8hpp_source.html">GameEngine.hpp</a>&quot;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top"><a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> ()</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Application entry point. </p>
+<p>Manages the high-level application flow:</p><ol type="1">
+<li>Initializes the Menu Window.</li>
+<li>Waits for user selection (Play/Quit).</li>
+<li>Initializes the Game Engine and Game Window.</li>
+<li>Runs the Main Game Loop. </li>
+</ol>
+</div></div><!-- contents -->
 </div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
 </div><!-- container -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
+    <li class="navelem"><b>GUI</b></li><li class="navelem"><b>Source</b></li><li class="navelem"><a href="_main_8cpp.html">Main.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.15.0 </li>
   </ul>
 </div>

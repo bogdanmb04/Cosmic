@@ -30,12 +30,12 @@ void \mbox{\hyperlink{class_pacman_1_1_game_screen_aeeb452d7ac185a348beaa86f4a49
 \begin{DoxyCompactList}\small\item\em Called when the global game flow state changes. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_pacman_1_1_game_screen_a3a782197efc7f9cb4373036e30245761}{On\+Ghosts\+Updated}} (const std\+::vector$<$ \mbox{\hyperlink{struct_pacman_1_1_ghost_state}{Ghost\+State}} $>$ \&ghosts) override
 \begin{DoxyCompactList}\small\item\em Called every frame when ghost positions or animations update. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_pacman_1_1_game_screen_a528455dc3e942eb9f49c3f3f0655c010}{Render}} (\mbox{\hyperlink{classsf_1_1_render_window}{sf\+::\+Render\+Window}} \&window)
+void \mbox{\hyperlink{class_pacman_1_1_game_screen_a528455dc3e942eb9f49c3f3f0655c010}{Render}} (sf\+::\+Render\+Window \&window)
 \begin{DoxyCompactList}\small\item\em Render the game. \end{DoxyCompactList}\item 
 \Hypertarget{class_pacman_1_1_game_screen_a001fd1e3df62ecbdb4e2ecd2524b58ca}\label{class_pacman_1_1_game_screen_a001fd1e3df62ecbdb4e2ecd2524b58ca} 
 void {\bfseries Set\+Play\+Callback} (std\+::function$<$ void()$>$ cb)
 \begin{DoxyCompactList}\small\item\em Set a callback invoked when the Play/\+Play Again button is pressed. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_pacman_1_1_game_screen_a4addb8e4d803d7a91e57144487afe156}{Handle\+Event}} (const \mbox{\hyperlink{classsf_1_1_event}{sf\+::\+Event}} \&event, \mbox{\hyperlink{classsf_1_1_render_window}{sf\+::\+Render\+Window}} \&window)
+void \mbox{\hyperlink{class_pacman_1_1_game_screen_a4addb8e4d803d7a91e57144487afe156}{Handle\+Event}} (const sf\+::\+Event \&event, sf\+::\+Render\+Window \&window)
 \begin{DoxyCompactList}\small\item\em Handle an SFML event (mouse clicks for Play Again button). \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_pacman_1_1_i_event_listener}{Pacman\+::\+IEvent\+Listener}}}
 \begin{DoxyCompactItemize}
@@ -54,7 +54,7 @@ SFML-\/based renderer implementing \doxylink{class_pacman_1_1_i_event_listener}{
 \index{HandleEvent@{HandleEvent}!Pacman::GameScreen@{Pacman::GameScreen}}
 \doxysubsubsection{\texorpdfstring{HandleEvent()}{HandleEvent()}}
 {\footnotesize\ttfamily \label{class_pacman_1_1_game_screen_a4addb8e4d803d7a91e57144487afe156} 
-void Pacman\+::\+Game\+Screen\+::\+Handle\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classsf_1_1_event}{sf\+::\+Event}} \&}]{event}{, }\item[{\mbox{\hyperlink{classsf_1_1_render_window}{sf\+::\+Render\+Window}} \&}]{window}{}\end{DoxyParamCaption})}
+void Pacman\+::\+Game\+Screen\+::\+Handle\+Event (\begin{DoxyParamCaption}\item[{const sf\+::\+Event \&}]{event}{, }\item[{sf\+::\+Render\+Window \&}]{window}{}\end{DoxyParamCaption})}
 
 
 
@@ -168,7 +168,7 @@ Implements \mbox{\hyperlink{class_pacman_1_1_i_event_listener_a7a088c3071e1d0fb9
 \index{Render@{Render}!Pacman::GameScreen@{Pacman::GameScreen}}
 \doxysubsubsection{\texorpdfstring{Render()}{Render()}}
 {\footnotesize\ttfamily \label{class_pacman_1_1_game_screen_a528455dc3e942eb9f49c3f3f0655c010} 
-void Pacman\+::\+Game\+Screen\+::\+Render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classsf_1_1_render_window}{sf\+::\+Render\+Window}} \&}]{window}{}\end{DoxyParamCaption})}
+void Pacman\+::\+Game\+Screen\+::\+Render (\begin{DoxyParamCaption}\item[{sf\+::\+Render\+Window \&}]{window}{}\end{DoxyParamCaption})}
 
 
 

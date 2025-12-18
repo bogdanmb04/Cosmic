@@ -109,29 +109,29 @@ $(function(){initNavTree('_menu_screen_8hpp_source.html','',''); });
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_pacman_1_1_menu_screen.html#a4b856a5b6f7838d5d95c60407c4ce64d">Update</a>(<span class="keywordtype">float</span> deltaTime);</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_pacman_1_1_menu_screen.html#ae98249a0ac066564ac6a0279c1473a15">HandleEvent</a>(<span class="keyword">const</span> <a class="code hl_class" href="classsf_1_1_event.html">sf::Event</a>&amp; event);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_pacman_1_1_menu_screen.html#ae98249a0ac066564ac6a0279c1473a15">HandleEvent</a>(<span class="keyword">const</span> sf::Event&amp; event);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_pacman_1_1_menu_screen.html#ac31cb30bbac16c57144398ce64626b3a">Render</a>(<a class="code hl_class" href="classsf_1_1_render_window.html">sf::RenderWindow</a>&amp; window);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_pacman_1_1_menu_screen.html#ac31cb30bbac16c57144398ce64626b3a">Render</a>(sf::RenderWindow&amp; window);</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_pacman_1_1_menu_screen.html#a334c4d3bb118754782c1cb476850dec5">   57</a></span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_pacman_1_1_menu_screen.html#a334c4d3bb118754782c1cb476850dec5">ShouldClose</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> requestClose_; }</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keyword">private</span>:</div>
 <div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="keywordtype">void</span> UpdateSelection(<span class="keywordtype">int</span> delta);</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">void</span> UpdateLayout(<a class="code hl_class" href="classsf_1_1_render_window.html">sf::RenderWindow</a>&amp; window);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keywordtype">void</span> UpdateLayout(sf::RenderWindow&amp; window);</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">void</span> DrawButton(<a class="code hl_class" href="classsf_1_1_render_window.html">sf::RenderWindow</a>&amp; window, <span class="keyword">const</span> sf::FloatRect&amp; rect, <span class="keywordtype">bool</span> isSelected);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">void</span> DrawButton(sf::RenderWindow&amp; window, <span class="keyword">const</span> sf::FloatRect&amp; rect, <span class="keywordtype">bool</span> isSelected);</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span></div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordtype">void</span> DrawBackgroundPellets(<a class="code hl_class" href="classsf_1_1_render_window.html">sf::RenderWindow</a>&amp; window);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keywordtype">void</span> DrawBackgroundPellets(sf::RenderWindow&amp; window);</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span></div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordtype">void</span> DrawDecorativeBorder(<a class="code hl_class" href="classsf_1_1_render_window.html">sf::RenderWindow</a>&amp; window);</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="keywordtype">void</span> DrawDecorativeBorder(sf::RenderWindow&amp; window);</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    std::shared_ptr&lt;IMenuListener&gt; listener_;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <a class="code hl_class" href="classsf_1_1_font.html">sf::Font</a> font_;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    sf::Font font_;</div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <a class="code hl_class" href="classsf_1_1_text.html">sf::Text</a> titleText_;</div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <a class="code hl_class" href="classsf_1_1_text.html">sf::Text</a> playText_;</div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <a class="code hl_class" href="classsf_1_1_text.html">sf::Text</a> quitText_;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    sf::Text titleText_;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    sf::Text playText_;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    sf::Text quitText_;</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordtype">int</span> selectedIndex_ = 0;</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    <span class="keywordtype">bool</span> requestClose_ = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordtype">float</span> animationTimer_;</div>
@@ -149,10 +149,6 @@ $(function(){initNavTree('_menu_screen_8hpp_source.html','',''); });
 <div class="ttc" id="aclass_pacman_1_1_menu_screen_html_ac31cb30bbac16c57144398ce64626b3a"><div class="ttname"><a href="class_pacman_1_1_menu_screen.html#ac31cb30bbac16c57144398ce64626b3a">Pacman::MenuScreen::Render</a></div><div class="ttdeci">void Render(sf::RenderWindow &amp;window)</div><div class="ttdoc">Render the menu.</div><div class="ttdef"><b>Definition</b> MenuScreen.cpp:233</div></div>
 <div class="ttc" id="aclass_pacman_1_1_menu_screen_html_ada70e1d4ddf2fd3d42ba4fd82ff23929"><div class="ttname"><a href="class_pacman_1_1_menu_screen.html#ada70e1d4ddf2fd3d42ba4fd82ff23929">Pacman::MenuScreen::LoadAssets</a></div><div class="ttdeci">bool LoadAssets(const std::string &amp;assetPath)</div><div class="ttdoc">Load menu assets (fonts).</div><div class="ttdef"><b>Definition</b> MenuScreen.cpp:58</div></div>
 <div class="ttc" id="aclass_pacman_1_1_menu_screen_html_ae98249a0ac066564ac6a0279c1473a15"><div class="ttname"><a href="class_pacman_1_1_menu_screen.html#ae98249a0ac066564ac6a0279c1473a15">Pacman::MenuScreen::HandleEvent</a></div><div class="ttdeci">void HandleEvent(const sf::Event &amp;event)</div><div class="ttdoc">Handle SFML events.</div><div class="ttdef"><b>Definition</b> MenuScreen.cpp:164</div></div>
-<div class="ttc" id="aclasssf_1_1_event_html"><div class="ttname"><a href="classsf_1_1_event.html">sf::Event</a></div><div class="ttdoc">Defines a system event and its parameters.</div><div class="ttdef"><b>Definition</b> Event.hpp:45</div></div>
-<div class="ttc" id="aclasssf_1_1_font_html"><div class="ttname"><a href="classsf_1_1_font.html">sf::Font</a></div><div class="ttdoc">Class for loading and manipulating character fonts.</div><div class="ttdef"><b>Definition</b> Font.hpp:49</div></div>
-<div class="ttc" id="aclasssf_1_1_render_window_html"><div class="ttname"><a href="classsf_1_1_render_window.html">sf::RenderWindow</a></div><div class="ttdoc">Window that can serve as a target for 2D drawing.</div><div class="ttdef"><b>Definition</b> RenderWindow.hpp:45</div></div>
-<div class="ttc" id="aclasssf_1_1_text_html"><div class="ttname"><a href="classsf_1_1_text.html">sf::Text</a></div><div class="ttdoc">Graphical text that can be drawn to a render target.</div><div class="ttdef"><b>Definition</b> Text.hpp:49</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

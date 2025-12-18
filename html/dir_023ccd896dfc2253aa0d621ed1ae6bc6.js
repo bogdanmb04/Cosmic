@@ -8,5 +8,5 @@ var dir_023ccd896dfc2253aa0d621ed1ae6bc6 =
     [ "PlayerState.hpp", "_player_state_8hpp_source.html", null ],
     [ "TileType.hpp", "_tile_type_8hpp_source.html", null ],
     [ "TileUpdate.hpp", "_tile_update_8hpp_source.html", null ],
-    [ "Vector2.hpp", "_logic_2_include_2_game_types_2_vector2_8hpp_source.html", null ]
+    [ "Vector2.hpp", "_vector2_8hpp_source.html", null ]
 ];

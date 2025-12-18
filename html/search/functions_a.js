@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['joystickimpl_0',['JoystickImpl',['../classsf_1_1priv_1_1_joystick_impl.html#ab175935d03c985d006030f213bf3eaa9',1,'sf::priv::JoystickImpl::JoystickImpl()'],['../classsf_1_1priv_1_1_joystick_impl.html#ab175935d03c985d006030f213bf3eaa9',1,'sf::priv::JoystickImpl::JoystickImpl()']]]
+  ['triggerfrightenedmode_0',['TriggerFrightenedMode',['../class_pacman_1_1_ghost_mode_controller.html#aa61fac841b6fc0a9098060acf7fe1fb1',1,'Pacman::GhostModeController']]]
 ];

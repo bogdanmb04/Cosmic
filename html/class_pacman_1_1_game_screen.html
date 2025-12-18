@@ -120,12 +120,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aeeb452d7ac185a348beaa86f4a49e1b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when the global game flow state changes.  <br /></td></tr>
 <tr class="memitem:a3a782197efc7f9cb4373036e30245761" id="r_a3a782197efc7f9cb4373036e30245761"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a782197efc7f9cb4373036e30245761">OnGhostsUpdated</a> (const std::vector&lt; <a class="el" href="struct_pacman_1_1_ghost_state.html">GhostState</a> &gt; &amp;ghosts) override</td></tr>
 <tr class="memdesc:a3a782197efc7f9cb4373036e30245761"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called every frame when ghost positions or animations update.  <br /></td></tr>
-<tr class="memitem:a528455dc3e942eb9f49c3f3f0655c010" id="r_a528455dc3e942eb9f49c3f3f0655c010"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a528455dc3e942eb9f49c3f3f0655c010">Render</a> (<a class="el" href="classsf_1_1_render_window.html">sf::RenderWindow</a> &amp;window)</td></tr>
+<tr class="memitem:a528455dc3e942eb9f49c3f3f0655c010" id="r_a528455dc3e942eb9f49c3f3f0655c010"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a528455dc3e942eb9f49c3f3f0655c010">Render</a> (sf::RenderWindow &amp;window)</td></tr>
 <tr class="memdesc:a528455dc3e942eb9f49c3f3f0655c010"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render the game.  <br /></td></tr>
 <tr class="memitem:a001fd1e3df62ecbdb4e2ecd2524b58ca" id="r_a001fd1e3df62ecbdb4e2ecd2524b58ca"><td class="memItemLeft" align="right" valign="top"><a id="a001fd1e3df62ecbdb4e2ecd2524b58ca" name="a001fd1e3df62ecbdb4e2ecd2524b58ca"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPlayCallback</b> (std::function&lt; void()&gt; cb)</td></tr>
 <tr class="memdesc:a001fd1e3df62ecbdb4e2ecd2524b58ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a callback invoked when the Play/Play Again button is pressed. <br /></td></tr>
-<tr class="memitem:a4addb8e4d803d7a91e57144487afe156" id="r_a4addb8e4d803d7a91e57144487afe156"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4addb8e4d803d7a91e57144487afe156">HandleEvent</a> (const <a class="el" href="classsf_1_1_event.html">sf::Event</a> &amp;event, <a class="el" href="classsf_1_1_render_window.html">sf::RenderWindow</a> &amp;window)</td></tr>
+<tr class="memitem:a4addb8e4d803d7a91e57144487afe156" id="r_a4addb8e4d803d7a91e57144487afe156"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4addb8e4d803d7a91e57144487afe156">HandleEvent</a> (const sf::Event &amp;event, sf::RenderWindow &amp;window)</td></tr>
 <tr class="memdesc:a4addb8e4d803d7a91e57144487afe156"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle an SFML event (mouse clicks for Play Again button).  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_pacman_1_1_i_event_listener"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_pacman_1_1_i_event_listener')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="class_pacman_1_1_i_event_listener.html">Pacman::IEventListener</a></td></tr>
 <tr class="memitem:a628444c976f5a6156ae71339f06d93b8 inherit pub_methods_class_pacman_1_1_i_event_listener" id="r_a628444c976f5a6156ae71339f06d93b8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pacman_1_1_i_event_listener.html#a628444c976f5a6156ae71339f06d93b8">OnGhostModeChanged</a> (GhostMode mode)</td></tr>
@@ -143,12 +143,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPlayCallback</b> (
         <tr>
           <td class="memname">void Pacman::GameScreen::HandleEvent </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classsf_1_1_event.html">sf::Event</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>event</em></span>, </td>
+          <td class="paramtype">const sf::Event &amp;</td>          <td class="paramname"><span class="paramname"><em>event</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classsf_1_1_render_window.html">sf::RenderWindow</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>window</em></span>&#160;)</td>
+          <td class="paramtype">sf::RenderWindow &amp;</td>          <td class="paramname"><span class="paramname"><em>window</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -341,7 +341,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetPlayCallback</b> (
         <tr>
           <td class="memname">void Pacman::GameScreen::Render </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classsf_1_1_render_window.html">sf::RenderWindow</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>window</em></span></td><td>)</td>
+          <td class="paramtype">sf::RenderWindow &amp;</td>          <td class="paramname"><span class="paramname"><em>window</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

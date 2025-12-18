@@ -105,9 +105,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ada70e1d4ddf2fd3d42ba4fd82ff23929"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load menu assets (fonts).  <br /></td></tr>
 <tr class="memitem:a4b856a5b6f7838d5d95c60407c4ce64d" id="r_a4b856a5b6f7838d5d95c60407c4ce64d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4b856a5b6f7838d5d95c60407c4ce64d">Update</a> (float deltaTime)</td></tr>
 <tr class="memdesc:a4b856a5b6f7838d5d95c60407c4ce64d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update menu animations.  <br /></td></tr>
-<tr class="memitem:ae98249a0ac066564ac6a0279c1473a15" id="r_ae98249a0ac066564ac6a0279c1473a15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae98249a0ac066564ac6a0279c1473a15">HandleEvent</a> (const <a class="el" href="classsf_1_1_event.html">sf::Event</a> &amp;event)</td></tr>
+<tr class="memitem:ae98249a0ac066564ac6a0279c1473a15" id="r_ae98249a0ac066564ac6a0279c1473a15"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae98249a0ac066564ac6a0279c1473a15">HandleEvent</a> (const sf::Event &amp;event)</td></tr>
 <tr class="memdesc:ae98249a0ac066564ac6a0279c1473a15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handle SFML events.  <br /></td></tr>
-<tr class="memitem:ac31cb30bbac16c57144398ce64626b3a" id="r_ac31cb30bbac16c57144398ce64626b3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac31cb30bbac16c57144398ce64626b3a">Render</a> (<a class="el" href="classsf_1_1_render_window.html">sf::RenderWindow</a> &amp;window)</td></tr>
+<tr class="memitem:ac31cb30bbac16c57144398ce64626b3a" id="r_ac31cb30bbac16c57144398ce64626b3a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac31cb30bbac16c57144398ce64626b3a">Render</a> (sf::RenderWindow &amp;window)</td></tr>
 <tr class="memdesc:ac31cb30bbac16c57144398ce64626b3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Render the menu.  <br /></td></tr>
 <tr class="memitem:a334c4d3bb118754782c1cb476850dec5" id="r_a334c4d3bb118754782c1cb476850dec5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a334c4d3bb118754782c1cb476850dec5">ShouldClose</a> () const</td></tr>
 <tr class="memdesc:a334c4d3bb118754782c1cb476850dec5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if window close was requested.  <br /></td></tr>
@@ -150,7 +150,7 @@ Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">listener</td><td>Menu event listener</td></tr>
-    <tr><td class="paramname">listener</td><td><a class="el" href="class_interface.html">Interface</a> that will react to button presses (Play/Quit). </td></tr>
+    <tr><td class="paramname">listener</td><td>Interface that will react to button presses (Play/Quit). </td></tr>
   </table>
   </dd>
 </dl>
@@ -167,7 +167,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Pacman::MenuScreen::HandleEvent </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classsf_1_1_event.html">sf::Event</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
+          <td class="paramtype">const sf::Event &amp;</td>          <td class="paramname"><span class="paramname"><em>event</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -223,7 +223,7 @@ true if resources loaded correctly. </dd></dl>
         <tr>
           <td class="memname">void Pacman::MenuScreen::Render </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classsf_1_1_render_window.html">sf::RenderWindow</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>window</em></span></td><td>)</td>
+          <td class="paramtype">sf::RenderWindow &amp;</td>          <td class="paramname"><span class="paramname"><em>window</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
