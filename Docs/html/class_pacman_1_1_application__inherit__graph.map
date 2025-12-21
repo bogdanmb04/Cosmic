@@ -1,5 +1,0 @@
-<map id="Pacman::Application" name="Pacman::Application">
-<area shape="rect" id="Node000001" title=" " alt="" coords="14,80,156,107"/>
-<area shape="rect" id="Node000002" href="$class_pacman_1_1_i_menu_listener.html" title="Interface for classes that want to react to Main Menu events." alt="" coords="5,5,165,32"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,46,87,81,83,79,83,50"/>
-</map>

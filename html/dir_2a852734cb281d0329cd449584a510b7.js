@@ -1,4 +1,0 @@
-var dir_2a852734cb281d0329cd449584a510b7 =
-[
-    [ "templates", "dir_6257043554b73fc3f97294629b641fe9.html", "dir_6257043554b73fc3f97294629b641fe9" ]
-];

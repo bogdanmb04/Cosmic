@@ -74,7 +74,7 @@ PROJECT_ICON           =
 # entered, it will be relative to the location where Doxygen was started. If
 # left blank the current directory will be used.
 
-OUTPUT_DIRECTORY       = C:/Users/Debora/Documents/GitHub/Cosmic/Docs
+OUTPUT_DIRECTORY       = .
 
 # If the CREATE_SUBDIRS tag is set to YES then Doxygen will create up to 4096
 # sub-directories (in 2 levels) under the output directory of each output format
@@ -1005,7 +1005,7 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = C:/Users/Debora/Documents/GitHub/Cosmic
+INPUT     = ../Logic/Include ../GUI/Include
 
 # This tag can be used to specify the character encoding of the source files
 # that Doxygen parses. Internally Doxygen uses the UTF-8 encoding. Doxygen uses
@@ -1152,7 +1152,7 @@ INPUT_FILTER           =
 
 FILTER_PATTERNS        =
 
-# If the FILTER_SOURCE_FILES tag is set to YES, the input filter (if set using
+# If the FILTER_SOURCE_FILES tag is set to YES then the input filter (if set using
 # INPUT_FILTER) will also be used to filter the input files that are used for
 # producing the source files to browse (i.e. when SOURCE_BROWSER is set to YES).
 # The default value is: NO.
@@ -2119,7 +2119,8 @@ EXTRA_PACKAGES         =
 # is highly recommended to start with a default header using
 # doxygen -w latex new_header.tex new_footer.tex new_stylesheet.sty
 # and then modify the file new_header.tex. See also section "Doxygen usage" for
-# information on how to generate the default header that Doxygen normally uses.
+# information on how to generate the default header that Doxygen normally
+# uses.
 #
 # Note: Only use a user-defined header if you know what you are doing!
 # Note: The header is subject to change so you typically have to regenerate the
@@ -2853,7 +2854,7 @@ INTERACTIVE_SVG        = NO
 # found. If left blank, it is assumed the dot tool can be found in the path.
 # This tag requires that the tag HAVE_DOT is set to YES.
 
-DOT_PATH               = "C:\Program Files\Graphviz-14.0.5-win64\bin"
+DOT_PATH               = "C:\Program Files\Graphviz\bin"
 
 # The DOTFILE_DIRS tag can be used to specify one or more directories that
 # contain dot files that are included in the documentation (see the \dotfile

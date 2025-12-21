@@ -1,9 +1,0 @@
-var dir_5584acee8a83083bfbabc892facc7015 =
-[
-    [ "ClipboardImpl.hpp", "out_2build_2x64-_debug_2__deps_2sfml-src_2src_2_s_f_m_l_2_window_2_android_2_clipboard_impl_8hpp_source.html", null ],
-    [ "CursorImpl.hpp", "out_2build_2x64-_debug_2__deps_2sfml-src_2src_2_s_f_m_l_2_window_2_android_2_cursor_impl_8hpp_source.html", null ],
-    [ "InputImpl.hpp", "out_2build_2x64-_debug_2__deps_2sfml-src_2src_2_s_f_m_l_2_window_2_android_2_input_impl_8hpp_source.html", null ],
-    [ "JoystickImpl.hpp", "out_2build_2x64-_debug_2__deps_2sfml-src_2src_2_s_f_m_l_2_window_2_android_2_joystick_impl_8hpp_source.html", null ],
-    [ "SensorImpl.hpp", "out_2build_2x64-_debug_2__deps_2sfml-src_2src_2_s_f_m_l_2_window_2_android_2_sensor_impl_8hpp_source.html", null ],
-    [ "WindowImplAndroid.hpp", "out_2build_2x64-_debug_2__deps_2sfml-src_2src_2_s_f_m_l_2_window_2_android_2_window_impl_android_8hpp_source.html", null ]
-];

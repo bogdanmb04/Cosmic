@@ -1,5 +1,0 @@
-var searchData=
-[
-  ['up_0',['Up',['../namespace_pacman.html#a1246fdcb0212561a19f291d22fb33969a258f49887ef8d14ac268c92b02503aaa',1,'Pacman']]],
-  ['update_1',['Update',['../class_pacman_1_1_menu_screen.html#a4b856a5b6f7838d5d95c60407c4ce64d',1,'Pacman::MenuScreen::Update()'],['../class_pacman_1_1_ghost_mode_controller.html#a73d0217bfd4c95d5cb1e9f4130cdcf8d',1,'Pacman::GhostModeController::Update()'],['../class_pacman_1_1_i_game_engine.html#a7f01cf4bb5baba6ccf70fba6abedb731',1,'Pacman::IGameEngine::Update()']]]
-];
