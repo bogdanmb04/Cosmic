@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\build\_deps\sfml-subbuild\CMakeFiles\3cd262c2403fd2527ec6e8246369d5ec\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{5E47339A-1EE0-3060-A9BF-50E98545013C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

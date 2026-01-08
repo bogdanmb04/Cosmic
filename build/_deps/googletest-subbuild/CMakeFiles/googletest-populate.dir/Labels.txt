@@ -1,0 +1,14 @@
+# Target labels
+ googletest-populate
+# Source files and their labels
+C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate
+C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/googletest-subbuild/CMakeFiles/65b09b335ff56038e758d804a5ef6f66/googletest-populate.rule
+C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/googletest-subbuild/CMakeFiles/ac4c8fca2c4510dbd73ec35ed4fc8837/googletest-populate-complete.rule
+C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/googletest-subbuild/CMakeFiles/f0fd9a13615e2cd817d32dfd79876814/googletest-populate-build.rule
+C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/googletest-subbuild/CMakeFiles/f0fd9a13615e2cd817d32dfd79876814/googletest-populate-configure.rule
+C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/googletest-subbuild/CMakeFiles/f0fd9a13615e2cd817d32dfd79876814/googletest-populate-download.rule
+C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/googletest-subbuild/CMakeFiles/f0fd9a13615e2cd817d32dfd79876814/googletest-populate-install.rule
+C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/googletest-subbuild/CMakeFiles/f0fd9a13615e2cd817d32dfd79876814/googletest-populate-mkdir.rule
+C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/googletest-subbuild/CMakeFiles/f0fd9a13615e2cd817d32dfd79876814/googletest-populate-patch.rule
+C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/googletest-subbuild/CMakeFiles/f0fd9a13615e2cd817d32dfd79876814/googletest-populate-test.rule
+C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/googletest-subbuild/CMakeFiles/f0fd9a13615e2cd817d32dfd79876814/googletest-populate-update.rule

@@ -46,6 +46,7 @@ target_link_libraries(PacmanGUI PUBLIC
         sfml-graphics
         sfml-window
         sfml-system
+        sfml-audio
 )
 
 # Compile features
@@ -77,14 +78,46 @@ target_compile_features(PacmanGame PRIVATE cxx_std_20)
 
 # Copy SFML DLLs (Windows only)
 if(WIN32)
-    add_custom_command(TARGET PacmanGame POST_BUILD
-            COMMAND ${CMAKE_COMMAND} -E copy_if_different
-            $<TARGET_FILE:sfml-graphics> $<TARGET_FILE_DIR:PacmanGame>
-            COMMAND ${CMAKE_COMMAND} -E copy_if_different
-            $<TARGET_FILE:sfml-window> $<TARGET_FILE_DIR:PacmanGame>
-            COMMAND ${CMAKE_COMMAND} -E copy_if_different
-            $<TARGET_FILE:sfml-system> $<TARGET_FILE_DIR:PacmanGame>
-    )
+        add_custom_command(TARGET PacmanGame POST_BUILD
+                        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                        $<TARGET_FILE:sfml-graphics> $<TARGET_FILE_DIR:PacmanGame>
+                        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                        $<TARGET_FILE:sfml-window> $<TARGET_FILE_DIR:PacmanGame>
+                        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                        $<TARGET_FILE:sfml-system> $<TARGET_FILE_DIR:PacmanGame>
+                        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+                        $<TARGET_FILE:sfml-audio> $<TARGET_FILE_DIR:PacmanGame>
+        )
+
+        # SFML's audio module requires OpenAL (openal32.dll) at runtime.
+        # Copy every dependency that ships with SFML's extlibs folder so the
+        # executable can find OpenAL even when launched outside the build tree.
+        set(_sfml_source_dir "")
+        if(DEFINED sfml_SOURCE_DIR)
+                set(_sfml_source_dir "${sfml_SOURCE_DIR}")
+        elseif(DEFINED SFML_SOURCE_DIR)
+                set(_sfml_source_dir "${SFML_SOURCE_DIR}")
+        endif()
+
+        if(_sfml_source_dir)
+                if(CMAKE_SIZEOF_VOID_P EQUAL 8)
+                        set(_sfml_extlibs_dir "${_sfml_source_dir}/extlibs/bin/x64")
+                else()
+                        set(_sfml_extlibs_dir "${_sfml_source_dir}/extlibs/bin/x86")
+                endif()
+
+                if(EXISTS "${_sfml_extlibs_dir}")
+                        add_custom_command(TARGET PacmanGame POST_BUILD
+                                        COMMAND ${CMAKE_COMMAND} -E copy_directory
+                                        "${_sfml_extlibs_dir}"
+                                        $<TARGET_FILE_DIR:PacmanGame>
+                        )
+                else()
+                        message(WARNING "SFML dependency directory not found: ${_sfml_extlibs_dir}")
+                endif()
+        else()
+                message(WARNING "sfml_SOURCE_DIR is not available; cannot copy OpenAL runtime")
+        endif()
 endif()
 
 # Copy assets

@@ -91,6 +91,20 @@ ctest -C Release
 - `Tests/` — unit tests and test configuration
 - `diagrams/` — UML diagrams realized in Visual Paradigm
 
+## Classic soundtrack
+
+The game now looks for a background track at `assets/audio/pacman_theme.ogg`. Because the original Namco recording is copyrighted, the repository does **not** ship the file. To enable the music:
+
+1. Obtain a legally licensed copy of the Pac-Man intro/loop.
+2. Convert it to `OGG`, `FLAC`, or `WAV` (OGG keeps the download small).
+3. Save/rename the file to `assets/audio/pacman_theme.ogg` (or the equivalent path next to your executable if you deploy elsewhere).
+
+At runtime the engine streams and loops this file. If the file is missing, the game logs a warning and continues silently.
+
+### Windows audio dependencies
+
+If you see `Failed to open the audio device` even though the soundtrack file is present, Windows cannot find OpenAL (the `openal32.dll` shipped with SFML). Re-run `cmake --build` so the post-build step copies SFML's `extlibs/bin/x64` (or `x86`) directory next to `PacmanGame.exe`, or copy `openal32.dll` manually from `build/_deps/sfml-src/extlibs/bin/<arch>/`. Without that DLL the SFML audio backend cannot initialize and the music stays muted.
+
 ## Diagrams Legend
 - **Orange** represent structures
 - **Blue** represent behaviors/classes

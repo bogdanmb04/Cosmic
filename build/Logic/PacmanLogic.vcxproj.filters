@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Source\GameEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Source\Ghost.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Source\GhostModeController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Source\Map.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Source\Vector2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Source\GhostStrategies\RedStrategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Source\GhostStrategies\PinkStrategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Source\GhostStrategies\BlueStrategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Source\GhostStrategies\OrangeStrategy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Include\GameConfig.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Include\GameEngine.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Include\GhostModeController.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Include\IEventListener.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Include\IGameEngine.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Include\IGhost.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Include\Map.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Include\GameTypes\Direction.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Include\GameTypes\GameState.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Include\GameTypes\GhostMode.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Include\GameTypes\GhostState.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Include\GameTypes\GhostType.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Include\GameTypes\PlayerState.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Include\GameTypes\TileType.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Include\GameTypes\TileUpdate.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Include\GameTypes\Vector2.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Include\GhostStrategies\IGhostStrategy.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Include\GhostStrategies\RedStrategy.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Include\GhostStrategies\PinkStrategy.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Include\GhostStrategies\BlueStrategy.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Include\GhostStrategies\OrangeStrategy.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{9F8A3DAD-F6CC-3F99-A830-6665E1EA333E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5EA6DFD6-FBAC-3E2B-B1E8-83514990BB18}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,7 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-4.2/Modules/FindOpenAL.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-4.2/Modules/FindPackageMessage.cmake
+C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/sfml-src/cmake/Modules/FindFLAC.cmake
+C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/sfml-src/cmake/Modules/FindVORBIS.cmake
+C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/sfml-src/src/SFML/Audio/CMakeLists.txt

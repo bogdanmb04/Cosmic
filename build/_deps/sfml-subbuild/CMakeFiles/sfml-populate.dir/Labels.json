@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/sfml-subbuild/CMakeFiles/sfml-populate"
+		},
+		{
+			"file" : "C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/sfml-subbuild/CMakeFiles/3cd262c2403fd2527ec6e8246369d5ec/sfml-populate.rule"
+		},
+		{
+			"file" : "C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/sfml-subbuild/CMakeFiles/60c0083235b76a07e74d281ef974a201/sfml-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/sfml-subbuild/CMakeFiles/2952adde672395ffb7690677f089bd97/sfml-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/sfml-subbuild/CMakeFiles/2952adde672395ffb7690677f089bd97/sfml-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/sfml-subbuild/CMakeFiles/2952adde672395ffb7690677f089bd97/sfml-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/sfml-subbuild/CMakeFiles/2952adde672395ffb7690677f089bd97/sfml-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/sfml-subbuild/CMakeFiles/2952adde672395ffb7690677f089bd97/sfml-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/sfml-subbuild/CMakeFiles/2952adde672395ffb7690677f089bd97/sfml-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/sfml-subbuild/CMakeFiles/2952adde672395ffb7690677f089bd97/sfml-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/sfml-subbuild/CMakeFiles/2952adde672395ffb7690677f089bd97/sfml-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"sfml-populate"
+		],
+		"name" : "sfml-populate"
+	}
+}

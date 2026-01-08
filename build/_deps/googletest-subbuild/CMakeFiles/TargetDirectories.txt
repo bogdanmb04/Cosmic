@@ -1,0 +1,3 @@
+C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir
+C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/googletest-subbuild/CMakeFiles/ALL_BUILD.dir
+C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/googletest-subbuild/CMakeFiles/ZERO_CHECK.dir

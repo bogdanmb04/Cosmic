@@ -1,0 +1,10 @@
+^C:\USERS\XMANN\DESKTOP\INFO_2025\IS_PROIECTE\COSMIC\TESTS\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic -BC:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build --check-stamp-file C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/Tests/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

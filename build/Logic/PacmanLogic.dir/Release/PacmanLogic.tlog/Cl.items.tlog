@@ -1,0 +1,9 @@
+C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Source\GameEngine.cpp;C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\build\Logic\PacmanLogic.dir\Release\GameEngine.obj
+C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Source\Ghost.cpp;C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\build\Logic\PacmanLogic.dir\Release\Ghost.obj
+C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Source\GhostModeController.cpp;C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\build\Logic\PacmanLogic.dir\Release\GhostModeController.obj
+C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Source\Map.cpp;C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\build\Logic\PacmanLogic.dir\Release\Map.obj
+C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Source\Vector2.cpp;C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\build\Logic\PacmanLogic.dir\Release\Vector2.obj
+C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Source\GhostStrategies\RedStrategy.cpp;C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\build\Logic\PacmanLogic.dir\Release\RedStrategy.obj
+C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Source\GhostStrategies\PinkStrategy.cpp;C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\build\Logic\PacmanLogic.dir\Release\PinkStrategy.obj
+C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Source\GhostStrategies\BlueStrategy.cpp;C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\build\Logic\PacmanLogic.dir\Release\BlueStrategy.obj
+C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\Logic\Source\GhostStrategies\OrangeStrategy.cpp;C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\build\Logic\PacmanLogic.dir\Release\OrangeStrategy.obj

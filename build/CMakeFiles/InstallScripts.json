@@ -1,0 +1,21 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/cmake_install.cmake",
+		"C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/Logic/cmake_install.cmake",
+		"C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/GUI/cmake_install.cmake",
+		"C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/sfml-build/cmake_install.cmake",
+		"C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/sfml-build/src/SFML/cmake_install.cmake",
+		"C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/sfml-build/src/SFML/System/cmake_install.cmake",
+		"C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/sfml-build/src/SFML/Main/cmake_install.cmake",
+		"C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/sfml-build/src/SFML/Window/cmake_install.cmake",
+		"C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/sfml-build/src/SFML/Network/cmake_install.cmake",
+		"C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/sfml-build/src/SFML/Graphics/cmake_install.cmake",
+		"C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/sfml-build/src/SFML/Audio/cmake_install.cmake",
+		"C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/Tests/cmake_install.cmake",
+		"C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/googletest-build/cmake_install.cmake",
+		"C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/googletest-build/googlemock/cmake_install.cmake",
+		"C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/googletest-build/googletest/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate"
+		},
+		{
+			"file" : "C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/googletest-subbuild/CMakeFiles/65b09b335ff56038e758d804a5ef6f66/googletest-populate.rule"
+		},
+		{
+			"file" : "C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/googletest-subbuild/CMakeFiles/ac4c8fca2c4510dbd73ec35ed4fc8837/googletest-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/googletest-subbuild/CMakeFiles/f0fd9a13615e2cd817d32dfd79876814/googletest-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/googletest-subbuild/CMakeFiles/f0fd9a13615e2cd817d32dfd79876814/googletest-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/googletest-subbuild/CMakeFiles/f0fd9a13615e2cd817d32dfd79876814/googletest-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/googletest-subbuild/CMakeFiles/f0fd9a13615e2cd817d32dfd79876814/googletest-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/googletest-subbuild/CMakeFiles/f0fd9a13615e2cd817d32dfd79876814/googletest-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/googletest-subbuild/CMakeFiles/f0fd9a13615e2cd817d32dfd79876814/googletest-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/googletest-subbuild/CMakeFiles/f0fd9a13615e2cd817d32dfd79876814/googletest-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/_deps/googletest-subbuild/CMakeFiles/f0fd9a13615e2cd817d32dfd79876814/googletest-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"googletest-populate"
+		],
+		"name" : "googletest-populate"
+	}
+}

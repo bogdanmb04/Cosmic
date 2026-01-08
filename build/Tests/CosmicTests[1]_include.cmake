@@ -1,0 +1,5 @@
+if(EXISTS "C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/Tests/CosmicTests[1]_tests.cmake")
+  include("C:/Users/Xmann/Desktop/Info_2025/IS_proiecte/Cosmic/build/Tests/CosmicTests[1]_tests.cmake")
+else()
+  add_test(CosmicTests_NOT_BUILT CosmicTests_NOT_BUILT)
+endif()

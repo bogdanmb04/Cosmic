@@ -1,51 +1,55 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include "IEventListener.hpp"
 #include "IGameEngine.hpp"
 #include <vector>
 #include <memory>
 #include <functional>
+#include <string>
 
-namespace Pacman {
+namespace Pacman
+{
 
     /// @brief SFML-based renderer implementing IEventListener
     /// Supports sprite-based map rendering with automatic wall tile selection
-    class GameScreen : public IEventListener {
+    class GameScreen : public IEventListener
+    {
     public:
         GameScreen();
 
         /// @brief Load rendering assets
         /// @param assetPath Path to assets directory
         /// @return True if all assets loaded successfully
-        bool LoadAssets(const std::string& assetPath);
+        bool LoadAssets(const std::string &assetPath);
 
         /// @brief Set the game engine reference
         /// @param gameEngine Game engine to render
         void SetGameEngine(std::shared_ptr<IGameEngine> gameEngine);
 
         // IEventListener implementation
-        void OnTileUpdated(const TileUpdate& update) override;
-        void OnPlayerStateChanged(const PlayerState& state) override;
+        void OnTileUpdated(const TileUpdate &update) override;
+        void OnPlayerStateChanged(const PlayerState &state) override;
         void OnGameStateChanged(GameState state) override;
-        void OnGhostsUpdated(const std::vector<GhostState>& ghosts) override;
+        void OnGhostsUpdated(const std::vector<GhostState> &ghosts) override;
 
         /// @brief Render the game
         /// @param window The window to render to
-        void Render(sf::RenderWindow& window);
+        void Render(sf::RenderWindow &window);
 
         /// @brief Set a callback invoked when the Play/Play Again button is pressed
         void SetPlayCallback(std::function<void()> cb);
 
         /// @brief Handle an SFML event (mouse clicks for Play Again button)
-        void HandleEvent(const sf::Event& event, sf::RenderWindow& window);
+        void HandleEvent(const sf::Event &event, sf::RenderWindow &window);
 
     private:
         void UpdateAnimations();
-        void RenderMap(sf::RenderWindow& window);
-        void RenderPlayer(sf::RenderWindow& window);
-        void RenderGhosts(sf::RenderWindow& window);
-        void RenderHud(sf::RenderWindow& window);
+        void RenderMap(sf::RenderWindow &window);
+        void RenderPlayer(sf::RenderWindow &window);
+        void RenderGhosts(sf::RenderWindow &window);
+        void RenderHud(sf::RenderWindow &window);
 
         /// @brief Calculate wall sprite index based on adjacent tiles (0-15)
         /// @param x X coordinate in tile space
@@ -84,6 +88,11 @@ namespace Pacman {
 
         std::function<void()> playCallback_;
         sf::FloatRect playAgainButtonRect_;
+
+        // Audio
+        sf::Music soundtrack_;
+        bool soundtrackLoaded_ = false;
+        float soundtrackVolume_ = 35.0f;
     };
 
 }

@@ -1,0 +1,1126 @@
+{
+  "tests": 212,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "ApplicationTest",
+      "tests": 10,
+      "testsuite": [
+        {
+          "name": "InitialState_ShouldNotStartGameOrQuit",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\ApplicationTest.cpp",
+          "line": 16
+        },
+        {
+          "name": "OnPlaySelected_ShouldSetStartGameFlag",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\ApplicationTest.cpp",
+          "line": 21
+        },
+        {
+          "name": "OnQuitSelected_ShouldSetQuitFlag",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\ApplicationTest.cpp",
+          "line": 27
+        },
+        {
+          "name": "MultiplePlaySelections_ShouldKeepStartGameFlagSet",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\ApplicationTest.cpp",
+          "line": 33
+        },
+        {
+          "name": "MultipleQuitSelections_ShouldKeepQuitFlagSet",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\ApplicationTest.cpp",
+          "line": 40
+        },
+        {
+          "name": "PlayThenQuit_ShouldHaveBothFlagsSet",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\ApplicationTest.cpp",
+          "line": 47
+        },
+        {
+          "name": "QuitThenPlay_ShouldHaveBothFlagsSet",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\ApplicationTest.cpp",
+          "line": 54
+        },
+        {
+          "name": "ImplementsIMenuListener",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\ApplicationTest.cpp",
+          "line": 61
+        },
+        {
+          "name": "ShouldMethodsAreConst",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\ApplicationTest.cpp",
+          "line": 66
+        },
+        {
+          "name": "FlagsAreIndependent",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\ApplicationTest.cpp",
+          "line": 72
+        }
+      ]
+    },
+    {
+      "name": "GameConfigTest",
+      "tests": 87,
+      "testsuite": [
+        {
+          "name": "MapWidth_IsPositive",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 6
+        },
+        {
+          "name": "MapHeight_IsPositive",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 10
+        },
+        {
+          "name": "MapWidth_MatchesExpectedValue",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 14
+        },
+        {
+          "name": "MapHeight_MatchesExpectedValue",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 18
+        },
+        {
+          "name": "PelletScore_IsPositive",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 22
+        },
+        {
+          "name": "PowerPelletScore_IsPositive",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 26
+        },
+        {
+          "name": "PowerPelletScore_GreaterThanPelletScore",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 30
+        },
+        {
+          "name": "GhostScore_IsPositive",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 34
+        },
+        {
+          "name": "GhostScoreMultiplier_IsPositive",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 38
+        },
+        {
+          "name": "PelletScore_MatchesExpectedValue",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 42
+        },
+        {
+          "name": "PowerPelletScore_MatchesExpectedValue",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 46
+        },
+        {
+          "name": "GhostScore_MatchesExpectedValue",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 50
+        },
+        {
+          "name": "GhostScoreMultiplier_MatchesExpectedValue",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 54
+        },
+        {
+          "name": "PlayerStepInterval_IsPositive",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 58
+        },
+        {
+          "name": "GhostStepInterval_IsPositive",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 62
+        },
+        {
+          "name": "GhostFrightenedStepInterval_IsPositive",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 66
+        },
+        {
+          "name": "GhostEatenStepInterval_IsPositive",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 70
+        },
+        {
+          "name": "PlayerStepInterval_MatchesExpectedValue",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 74
+        },
+        {
+          "name": "GhostStepInterval_MatchesExpectedValue",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 78
+        },
+        {
+          "name": "GhostFrightenedStepInterval_MatchesExpectedValue",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 82
+        },
+        {
+          "name": "GhostEatenStepInterval_MatchesExpectedValue",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 86
+        },
+        {
+          "name": "PlayerFasterThanGhost",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 90
+        },
+        {
+          "name": "FrightenedGhostSlowerThanNormal",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 94
+        },
+        {
+          "name": "EatenGhostFasterThanNormal",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 98
+        },
+        {
+          "name": "PowerUpDuration_IsPositive",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 102
+        },
+        {
+          "name": "PowerUpWarningTime_IsPositive",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 106
+        },
+        {
+          "name": "PowerUpWarningTime_LessThanDuration",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 110
+        },
+        {
+          "name": "PowerUpDuration_MatchesExpectedValue",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 114
+        },
+        {
+          "name": "PowerUpWarningTime_MatchesExpectedValue",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 118
+        },
+        {
+          "name": "ScatterChaseWaves_IsPositive",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 122
+        },
+        {
+          "name": "ScatterChaseWaves_MatchesExpectedValue",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 126
+        },
+        {
+          "name": "ScatterDurations_AllPositive",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 130
+        },
+        {
+          "name": "ChaseDurations_AllPositive",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 136
+        },
+        {
+          "name": "ScatterDurations_ArraySizeCorrect",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 142
+        },
+        {
+          "name": "ChaseDurations_ArraySizeCorrect",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 147
+        },
+        {
+          "name": "ScatterDurations_MatchExpectedValues",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 152
+        },
+        {
+          "name": "ChaseDurations_MatchExpectedValues",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 159
+        },
+        {
+          "name": "LastChaseDuration_IsVeryLarge",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 166
+        },
+        {
+          "name": "PinkTargetAhead_IsPositive",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 170
+        },
+        {
+          "name": "BlueTargetAhead_IsPositive",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 174
+        },
+        {
+          "name": "OrangeShyDistance_IsPositive",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 178
+        },
+        {
+          "name": "ElroyDotsThreshold1_IsPositive",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 182
+        },
+        {
+          "name": "ElroyDotsThreshold2_IsPositive",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 186
+        },
+        {
+          "name": "ElroyThresholds_Ordered",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 190
+        },
+        {
+          "name": "PinkTargetAhead_MatchesExpectedValue",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 194
+        },
+        {
+          "name": "BlueTargetAhead_MatchesExpectedValue",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 198
+        },
+        {
+          "name": "OrangeShyDistance_MatchesExpectedValue",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 202
+        },
+        {
+          "name": "ElroyDotsThreshold1_MatchesExpectedValue",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 206
+        },
+        {
+          "name": "ElroyDotsThreshold2_MatchesExpectedValue",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 210
+        },
+        {
+          "name": "RedScatterX_InValidRange",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 214
+        },
+        {
+          "name": "RedScatterY_CanBeNegative",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 219
+        },
+        {
+          "name": "PinkScatterX_InValidRange",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 223
+        },
+        {
+          "name": "PinkScatterY_CanBeNegative",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 228
+        },
+        {
+          "name": "BlueScatterX_InValidRange",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 232
+        },
+        {
+          "name": "BlueScatterY_CanBeOutOfBounds",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 237
+        },
+        {
+          "name": "OrangeScatterX_InValidRange",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 241
+        },
+        {
+          "name": "OrangeScatterY_CanBeOutOfBounds",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 246
+        },
+        {
+          "name": "ScatterCorners_AreInDifferentCorners",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 250
+        },
+        {
+          "name": "ScatterCorners_MatchExpectedValues",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 264
+        },
+        {
+          "name": "GhostHouseX_InMapBounds",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 275
+        },
+        {
+          "name": "GhostHouseY_InMapBounds",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 280
+        },
+        {
+          "name": "GhostHouseDoorY_InMapBounds",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 285
+        },
+        {
+          "name": "GhostHouseDoor_AboveGhostHouse",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 290
+        },
+        {
+          "name": "GhostHouse_MatchesExpectedValues",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 294
+        },
+        {
+          "name": "PlayerStartX_InMapBounds",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 300
+        },
+        {
+          "name": "PlayerStartY_InMapBounds",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 305
+        },
+        {
+          "name": "PlayerStart_MatchesExpectedValues",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 310
+        },
+        {
+          "name": "PlayerStart_BelowGhostHouse",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 315
+        },
+        {
+          "name": "StartingLives_IsPositive",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 319
+        },
+        {
+          "name": "MaxLives_IsPositive",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 323
+        },
+        {
+          "name": "MaxLives_GreaterThanOrEqualStartingLives",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 327
+        },
+        {
+          "name": "ExtraLifeScore_IsPositive",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 331
+        },
+        {
+          "name": "StartingLives_MatchesExpectedValue",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 335
+        },
+        {
+          "name": "MaxLives_MatchesExpectedValue",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 339
+        },
+        {
+          "name": "ExtraLifeScore_MatchesExpectedValue",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 343
+        },
+        {
+          "name": "TileSize_IsPositive",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 347
+        },
+        {
+          "name": "PacmanFrameCount_IsPositive",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 351
+        },
+        {
+          "name": "GhostFrameCount_IsPositive",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 355
+        },
+        {
+          "name": "TileSize_MatchesExpectedValue",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 359
+        },
+        {
+          "name": "GhostFrameCount_MatchesExpectedValue",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 363
+        },
+        {
+          "name": "MapDimensions_CreateReasonableMapSize",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 367
+        },
+        {
+          "name": "ScatterDurations_TotalIsReasonable",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 373
+        },
+        {
+          "name": "ChaseDurations_ExcludingLast_AreReasonable",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 382
+        },
+        {
+          "name": "GhostHouse_CenteredHorizontally",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 389
+        },
+        {
+          "name": "PlayerStart_CenteredHorizontally",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 393
+        },
+        {
+          "name": "StepIntervals_OrderMakesGameplayBalanced",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 397
+        },
+        {
+          "name": "ScoringProgression_MakesSense",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameConfigTest.cpp",
+          "line": 407
+        }
+      ]
+    },
+    {
+      "name": "GameScreenTest",
+      "tests": 47,
+      "testsuite": [
+        {
+          "name": "Construction_DoesNotCrash",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 45
+        },
+        {
+          "name": "SetGameEngine_StoresEngine",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 49
+        },
+        {
+          "name": "SetGameEngine_WithNullptr_DoesNotCrash",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 53
+        },
+        {
+          "name": "SetGameEngine_MultipleTimesAllowed",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 57
+        },
+        {
+          "name": "OnTileUpdated_StoresUpdate",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 63
+        },
+        {
+          "name": "OnTileUpdated_MultipleTiles",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 71
+        },
+        {
+          "name": "OnTileUpdated_AllTileTypes",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 84
+        },
+        {
+          "name": "OnPlayerStateChanged_UpdatesState",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 95
+        },
+        {
+          "name": "OnPlayerStateChanged_MultipleUpdates",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 106
+        },
+        {
+          "name": "OnPlayerStateChanged_AllDirections",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 116
+        },
+        {
+          "name": "OnPlayerStateChanged_PowerUpToggle",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 127
+        },
+        {
+          "name": "OnPlayerStateChanged_LivesChanges",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 138
+        },
+        {
+          "name": "OnGameStateChanged_AllStates",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 148
+        },
+        {
+          "name": "OnGameStateChanged_MultipleTransitions",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 155
+        },
+        {
+          "name": "OnGhostsUpdated_EmptyVector",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 162
+        },
+        {
+          "name": "OnGhostsUpdated_SingleGhost",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 167
+        },
+        {
+          "name": "OnGhostsUpdated_FourGhosts",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 176
+        },
+        {
+          "name": "OnGhostsUpdated_FrightenedGhosts",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 192
+        },
+        {
+          "name": "OnGhostsUpdated_EatenGhosts",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 200
+        },
+        {
+          "name": "OnGhostsUpdated_AllGhostModes",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 208
+        },
+        {
+          "name": "Render_WithoutEngine_DoesNotCrash",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 218
+        },
+        {
+          "name": "Render_WithEngine_DoesNotCrash",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 222
+        },
+        {
+          "name": "Render_AfterTileUpdate_DoesNotCrash",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 227
+        },
+        {
+          "name": "Render_AfterPlayerUpdate_DoesNotCrash",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 236
+        },
+        {
+          "name": "Render_AfterGhostUpdate_DoesNotCrash",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 244
+        },
+        {
+          "name": "Render_MultipleFrames_DoesNotCrash",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 251
+        },
+        {
+          "name": "ImplementsIEventListener",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 259
+        },
+        {
+          "name": "CanBeUsedAsIEventListener",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 264
+        },
+        {
+          "name": "CompleteGameSequence_DoesNotCrash",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 273
+        },
+        {
+          "name": "PowerUpSequence_DoesNotCrash",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 297
+        },
+        {
+          "name": "DeathSequence_DoesNotCrash",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 323
+        },
+        {
+          "name": "GameOverSequence_DoesNotCrash",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 338
+        },
+        {
+          "name": "VictorySequence_DoesNotCrash",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 351
+        },
+        {
+          "name": "RapidGhostUpdates_DoesNotCrash",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 361
+        },
+        {
+          "name": "GhostModeChanges_DoesNotCrash",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 372
+        },
+        {
+          "name": "NegativeScore_HandledCorrectly",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 390
+        },
+        {
+          "name": "VeryHighScore_HandledCorrectly",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 396
+        },
+        {
+          "name": "ZeroLives_HandledCorrectly",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 402
+        },
+        {
+          "name": "ManyLives_HandledCorrectly",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 408
+        },
+        {
+          "name": "OutOfBoundsPosition_DoesNotCrash",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 414
+        },
+        {
+          "name": "GhostAtOutOfBoundsPosition_DoesNotCrash",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 423
+        },
+        {
+          "name": "AllGameStateTransitions_Work",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 429
+        },
+        {
+          "name": "DirectToVictory_DoesNotCrash",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 443
+        },
+        {
+          "name": "DirectToGameOver_DoesNotCrash",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 448
+        },
+        {
+          "name": "RapidPlayerUpdates_DoesNotCrash",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 453
+        },
+        {
+          "name": "RapidTileUpdates_DoesNotCrash",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 464
+        },
+        {
+          "name": "RapidGameStateChanges_DoesNotCrash",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameScreenTest.cpp",
+          "line": 473
+        }
+      ]
+    },
+    {
+      "name": "DirectionTest",
+      "tests": 11,
+      "testsuite": [
+        {
+          "name": "GetDirectionDelta_Up",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 10
+        },
+        {
+          "name": "GetDirectionDelta_Down",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 16
+        },
+        {
+          "name": "GetDirectionDelta_Left",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 22
+        },
+        {
+          "name": "GetDirectionDelta_Right",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 28
+        },
+        {
+          "name": "GetDirectionDelta_None",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 34
+        },
+        {
+          "name": "GetOppositeDirection_Up",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 40
+        },
+        {
+          "name": "GetOppositeDirection_Down",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 44
+        },
+        {
+          "name": "GetOppositeDirection_Left",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 48
+        },
+        {
+          "name": "GetOppositeDirection_Right",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 52
+        },
+        {
+          "name": "GetOppositeDirection_None",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 56
+        },
+        {
+          "name": "GetOppositeDirection_IsSymmetric",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 60
+        }
+      ]
+    },
+    {
+      "name": "Vector2Test",
+      "tests": 22,
+      "testsuite": [
+        {
+          "name": "DefaultConstruction",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 74
+        },
+        {
+          "name": "ParameterizedConstruction",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 80
+        },
+        {
+          "name": "Equality_SameValues",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 86
+        },
+        {
+          "name": "Equality_DifferentValues",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 91
+        },
+        {
+          "name": "Inequality_DifferentValues",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 95
+        },
+        {
+          "name": "Inequality_SameValues",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 99
+        },
+        {
+          "name": "Addition",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 104
+        },
+        {
+          "name": "Addition_WithZero",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 110
+        },
+        {
+          "name": "Subtraction",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 116
+        },
+        {
+          "name": "Subtraction_WithZero",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 122
+        },
+        {
+          "name": "ScalarMultiplication",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 128
+        },
+        {
+          "name": "ScalarMultiplication_ByZero",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 134
+        },
+        {
+          "name": "ScalarMultiplication_ByNegative",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 140
+        },
+        {
+          "name": "DistanceSquared_SamePoint",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 146
+        },
+        {
+          "name": "DistanceSquared_DifferentPoints",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 150
+        },
+        {
+          "name": "DistanceSquared_ToOrigin",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 155
+        },
+        {
+          "name": "Distance_SamePoint",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 160
+        },
+        {
+          "name": "Distance_DifferentPoints",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 164
+        },
+        {
+          "name": "Distance_ToOrigin",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 169
+        },
+        {
+          "name": "Distance_IsSymmetric",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 174
+        },
+        {
+          "name": "NegativeCoordinates",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 178
+        },
+        {
+          "name": "MixedSignCoordinates",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 184
+        }
+      ]
+    },
+    {
+      "name": "TileUpdateTest",
+      "tests": 1,
+      "testsuite": [
+        {
+          "name": "Construction",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 191
+        }
+      ]
+    },
+    {
+      "name": "PlayerStateTest",
+      "tests": 2,
+      "testsuite": [
+        {
+          "name": "DefaultConstruction",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 201
+        },
+        {
+          "name": "CustomValues",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 211
+        }
+      ]
+    },
+    {
+      "name": "GhostStateTest",
+      "tests": 2,
+      "testsuite": [
+        {
+          "name": "DefaultConstruction",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 227
+        },
+        {
+          "name": "CustomValues",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 239
+        }
+      ]
+    },
+    {
+      "name": "EnumTest",
+      "tests": 4,
+      "testsuite": [
+        {
+          "name": "GhostTypeValues",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 265
+        },
+        {
+          "name": "GhostModeValues",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 271
+        },
+        {
+          "name": "GameStateValues",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 277
+        },
+        {
+          "name": "TileTypeValues",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\GameTypesTest.cpp",
+          "line": 283
+        }
+      ]
+    },
+    {
+      "name": "InputControllerTest",
+      "tests": 26,
+      "testsuite": [
+        {
+          "name": "UpArrowKey_CallsSetPlayerDirection",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\InputControllerTest.cpp",
+          "line": 40
+        },
+        {
+          "name": "DownArrowKey_CallsSetPlayerDirection",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\InputControllerTest.cpp",
+          "line": 49
+        },
+        {
+          "name": "LeftArrowKey_CallsSetPlayerDirection",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\InputControllerTest.cpp",
+          "line": 58
+        },
+        {
+          "name": "RightArrowKey_CallsSetPlayerDirection",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\InputControllerTest.cpp",
+          "line": 67
+        },
+        {
+          "name": "WKey_CallsSetPlayerDirection",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\InputControllerTest.cpp",
+          "line": 76
+        },
+        {
+          "name": "SKey_CallsSetPlayerDirection",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\InputControllerTest.cpp",
+          "line": 85
+        },
+        {
+          "name": "AKey_CallsSetPlayerDirection",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\InputControllerTest.cpp",
+          "line": 94
+        },
+        {
+          "name": "DKey_CallsSetPlayerDirection",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\InputControllerTest.cpp",
+          "line": 103
+        },
+        {
+          "name": "MultipleKeyPresses_CallSetPlayerDirectionEachTime",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\InputControllerTest.cpp",
+          "line": 112
+        },
+        {
+          "name": "KeyRelease_DoesNotCallSetPlayerDirection",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\InputControllerTest.cpp",
+          "line": 136
+        },
+        {
+          "name": "SpaceKey_DoesNotCallSetPlayerDirection",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\InputControllerTest.cpp",
+          "line": 145
+        },
+        {
+          "name": "EscapeKey_DoesNotCallSetPlayerDirection",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\InputControllerTest.cpp",
+          "line": 154
+        },
+        {
+          "name": "NumberKey_DoesNotCallSetPlayerDirection",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\InputControllerTest.cpp",
+          "line": 163
+        },
+        {
+          "name": "LetterKey_NotWASD_DoesNotCallSetPlayerDirection",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\InputControllerTest.cpp",
+          "line": 172
+        },
+        {
+          "name": "MouseButtonEvent_DoesNotCallSetPlayerDirection",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\InputControllerTest.cpp",
+          "line": 181
+        },
+        {
+          "name": "MouseMoveEvent_DoesNotCallSetPlayerDirection",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\InputControllerTest.cpp",
+          "line": 189
+        },
+        {
+          "name": "WindowClosedEvent_DoesNotCallSetPlayerDirection",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\InputControllerTest.cpp",
+          "line": 197
+        },
+        {
+          "name": "WindowResizedEvent_DoesNotCallSetPlayerDirection",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\InputControllerTest.cpp",
+          "line": 205
+        },
+        {
+          "name": "RapidKeyPresses_AllProcessed",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\InputControllerTest.cpp",
+          "line": 213
+        },
+        {
+          "name": "EngineReferenceKept_CallsCorrectEngine",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\InputControllerTest.cpp",
+          "line": 224
+        },
+        {
+          "name": "UpperCaseW_SameAsLowerCase",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\InputControllerTest.cpp",
+          "line": 241
+        },
+        {
+          "name": "UpKeys_MapToUpDirection",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\InputControllerTest.cpp",
+          "line": 250
+        },
+        {
+          "name": "DownKeys_MapToDownDirection",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\InputControllerTest.cpp",
+          "line": 264
+        },
+        {
+          "name": "LeftKeys_MapToLeftDirection",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\InputControllerTest.cpp",
+          "line": 278
+        },
+        {
+          "name": "RightKeys_MapToRightDirection",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\InputControllerTest.cpp",
+          "line": 292
+        },
+        {
+          "name": "AlternatingArrowAndWASD_BothWork",
+          "file": "C:\\Users\\Xmann\\Desktop\\Info_2025\\IS_proiecte\\Cosmic\\Tests\\Source\\InputControllerTest.cpp",
+          "line": 306
+        }
+      ]
+    }
+  ]
+}

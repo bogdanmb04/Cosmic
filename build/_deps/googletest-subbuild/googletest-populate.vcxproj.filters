@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\build\_deps\googletest-subbuild\CMakeFiles\f0fd9a13615e2cd817d32dfd79876814\googletest-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\build\_deps\googletest-subbuild\CMakeFiles\f0fd9a13615e2cd817d32dfd79876814\googletest-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\build\_deps\googletest-subbuild\CMakeFiles\f0fd9a13615e2cd817d32dfd79876814\googletest-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\build\_deps\googletest-subbuild\CMakeFiles\f0fd9a13615e2cd817d32dfd79876814\googletest-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\build\_deps\googletest-subbuild\CMakeFiles\f0fd9a13615e2cd817d32dfd79876814\googletest-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\build\_deps\googletest-subbuild\CMakeFiles\f0fd9a13615e2cd817d32dfd79876814\googletest-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\build\_deps\googletest-subbuild\CMakeFiles\f0fd9a13615e2cd817d32dfd79876814\googletest-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\build\_deps\googletest-subbuild\CMakeFiles\f0fd9a13615e2cd817d32dfd79876814\googletest-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\build\_deps\googletest-subbuild\CMakeFiles\ac4c8fca2c4510dbd73ec35ed4fc8837\googletest-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\build\_deps\googletest-subbuild\CMakeFiles\65b09b335ff56038e758d804a5ef6f66\googletest-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\build\_deps\googletest-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\build\_deps\googletest-subbuild\CMakeFiles\googletest-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{32214D07-B1ED-37F8-828D-EB12BAB46891}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

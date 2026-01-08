@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\Xmann\Desktop\Info_2025\IS_proiecte\Cosmic\build\CMakeFiles\2a92531f32fa97716f4609cec326b3fa\PACKAGE_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{6FE0A35C-7B4C-3639-9913-7D6048AF7388}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

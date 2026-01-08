@@ -9,7 +9,13 @@
 #include <iostream>
 #include <functional>
 
-namespace Pacman {
+namespace Pacman
+{
+
+    namespace
+    {
+        constexpr const char *kSoundtrackRelativePath = "/audio/pacman_theme.ogg";
+    }
 
     GameScreen::GameScreen() = default;
 
@@ -18,50 +24,78 @@ namespace Pacman {
      * @param assetPath The directory path where images are stored (e.g., "assets").
      * @return true if critical assets (Pacman, Map) loaded successfully, false otherwise.
      */
-    bool GameScreen::LoadAssets(const std::string& assetPath) {
+    bool GameScreen::LoadAssets(const std::string &assetPath)
+    {
         bool success = true;
 
         // Load Pac-Man texture (REQUIRED)
-        if (!pacmanTexture_.loadFromFile(assetPath + "/Pacman16.png")) {
+        if (!pacmanTexture_.loadFromFile(assetPath + "/Pacman16.png"))
+        {
             std::cerr << "Failed to load Pacman texture\n";
             success = false;
         }
-        else {
+        else
+        {
             std::cout << "✅ Pac-Man texture loaded successfully\n";
         }
 
         // Load Ghost texture
-        if (!ghostTexture_.loadFromFile(assetPath + "/Ghost16.png")) {
+        if (!ghostTexture_.loadFromFile(assetPath + "/Ghost16.png"))
+        {
             std::cerr << "Failed to load Ghost texture from: " << assetPath << "/Ghost16.png\n";
             std::cerr << "Using fallback colored ghost rendering\n";
         }
-        else {
+        else
+        {
             std::cout << "Ghost texture loaded successfully: "
-                << ghostTexture_.getSize().x << "x" << ghostTexture_.getSize().y << " pixels\n";
+                      << ghostTexture_.getSize().x << "x" << ghostTexture_.getSize().y << " pixels\n";
         }
 
         // Load Pac-Man death texture (optional, but not used)
-        if (!pacmanDeathTexture_.loadFromFile(assetPath + "/PacmanDeath16.png")) {
+        if (!pacmanDeathTexture_.loadFromFile(assetPath + "/PacmanDeath16.png"))
+        {
             std::cerr << "Warning: Failed to load PacmanDeath texture\n";
         }
 
         // 🗺️ Load MAP TILESET texture (the star of the show!)
-        if (!mapTexture_.loadFromFile(assetPath + "/Map16.png")) {
+        if (!mapTexture_.loadFromFile(assetPath + "/Map16.png"))
+        {
             std::cerr << "⚠️  Warning: Failed to load Map texture\n";
             std::cerr << "Will use fallback colored rendering\n";
             hasMapTexture_ = false;
         }
-        else {
+        else
+        {
             std::cout << "✅ Map tileset loaded: "
-                << mapTexture_.getSize().x << "x"
-                << mapTexture_.getSize().y << " pixels\n";
+                      << mapTexture_.getSize().x << "x"
+                      << mapTexture_.getSize().y << " pixels\n";
             hasMapTexture_ = true;
         }
 
         // Try to load HUD font (Tries Windows default, then Linux default)
         if (!hudFont_.loadFromFile("C:/Windows/Fonts/arial.ttf") &&
-            !hudFont_.loadFromFile("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf")) {
+            !hudFont_.loadFromFile("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"))
+        {
             std::cerr << "Warning: Failed to load HUD font\n";
+        }
+
+        const std::string soundtrackPath = assetPath + kSoundtrackRelativePath;
+        if (soundtrack_.openFromFile(soundtrackPath))
+        {
+            soundtrack_.setLoop(true);
+            soundtrack_.setVolume(soundtrackVolume_);
+            soundtrackLoaded_ = true;
+            std::cout << "🎵 Pac-Man soundtrack loaded: " << soundtrackPath << "\n";
+
+            if (gameState_ == GameState::Running)
+            {
+                soundtrack_.play();
+            }
+        }
+        else
+        {
+            std::cerr << "Warning: Failed to load soundtrack from " << soundtrackPath << "\n";
+            std::cerr << "Add a legally obtained Pac-Man theme file (OGG/WAV/FLAC) to assets/audio/." << "\n";
         }
 
         pacmanSprite_.setTexture(pacmanTexture_);
@@ -69,43 +103,84 @@ namespace Pacman {
         return success;
     }
 
-    void GameScreen::SetGameEngine(std::shared_ptr<IGameEngine> gameEngine) {
+    void GameScreen::SetGameEngine(std::shared_ptr<IGameEngine> gameEngine)
+    {
         gameEngine_ = std::move(gameEngine);
     }
 
     // --- IEventListener Implementation ---
 
-    void GameScreen::OnTileUpdated(const TileUpdate& update) {
+    void GameScreen::OnTileUpdated(const TileUpdate &update)
+    {
         updatedTiles_.push_back(update);
     }
 
-    void GameScreen::OnPlayerStateChanged(const PlayerState& state) {
+    void GameScreen::OnPlayerStateChanged(const PlayerState &state)
+    {
         playerState_ = state;
     }
 
-    void GameScreen::OnGameStateChanged(GameState state) {
+    void GameScreen::OnGameStateChanged(GameState state)
+    {
         gameState_ = state;
+
+        if (!soundtrackLoaded_)
+        {
+            return;
+        }
+
+        switch (state)
+        {
+        case GameState::Running:
+            if (soundtrack_.getStatus() != sf::Music::Playing)
+            {
+                soundtrack_.play();
+            }
+            break;
+
+        case GameState::Paused:
+            if (soundtrack_.getStatus() == sf::Music::Playing)
+            {
+                soundtrack_.pause();
+            }
+            break;
+
+        case GameState::Victory:
+        case GameState::GameOver:
+            if (soundtrack_.getStatus() != sf::Music::Stopped)
+            {
+                soundtrack_.stop();
+            }
+            break;
+        }
     }
 
-    void GameScreen::OnGhostsUpdated(const std::vector<GhostState>& ghosts) {
+    void GameScreen::OnGhostsUpdated(const std::vector<GhostState> &ghosts)
+    {
         ghostStates_ = ghosts;
     }
 
-    void GameScreen::SetPlayCallback(std::function<void()> cb) {
+    void GameScreen::SetPlayCallback(std::function<void()> cb)
+    {
         playCallback_ = std::move(cb);
     }
 
     /**
      * @brief Handles UI interactions (mouse clicks) during Game Over or Victory screens.
      */
-    void GameScreen::HandleEvent(const sf::Event& event, sf::RenderWindow& window) {
-        if (gameState_ != GameState::GameOver && gameState_ != GameState::Victory) return;
+    void GameScreen::HandleEvent(const sf::Event &event, sf::RenderWindow &window)
+    {
+        if (gameState_ != GameState::GameOver && gameState_ != GameState::Victory)
+            return;
 
-        if (event.type == sf::Event::MouseButtonPressed && event.mouseButton.button == sf::Mouse::Left) {
+        if (event.type == sf::Event::MouseButtonPressed && event.mouseButton.button == sf::Mouse::Left)
+        {
             sf::Vector2i pixelPos(event.mouseButton.x, event.mouseButton.y);
             sf::Vector2f worldPos = window.mapPixelToCoords(pixelPos);
-            if (playAgainButtonRect_.contains(worldPos)) {
-                if (playCallback_) playCallback_();
+            if (playAgainButtonRect_.contains(worldPos))
+            {
+                if (playCallback_)
+                    playCallback_();
             }
         }
     }
@@ -114,17 +189,20 @@ namespace Pacman {
      * @brief Updates sprite animation frames based on elapsed time.
      * @details Cycles Pacman frames (0-5) and Ghost frames (0-1).
      */
-    void GameScreen::UpdateAnimations() {
+    void GameScreen::UpdateAnimations()
+    {
         animationTimer_ += 0.016f; // ~60fps assumption
 
         // Pac-Man animation: 6 frames, smooth cycle
-        if (animationTimer_ > 0.08f) { // ~12.5 fps animation speed
+        if (animationTimer_ > 0.08f)
+        { // ~12.5 fps animation speed
             animationTimer_ = 0.0f;
             pacmanFrame_ = (pacmanFrame_ + 1) % 6; // 6 frames total
         }
 
         // Ghost animation
-        if (animationTimer_ > 0.15f) {
+        if (animationTimer_ > 0.15f)
+        {
             ghostFrame_ = (ghostFrame_ + 1) % GameConfig::GhostFrameCount;
         }
     }
@@ -145,8 +223,10 @@ namespace Pacman {
      * @param y Grid Y coordinate.
      * @return int Index of the sprite in the texture sheet (0-15).
      */
-    int GameScreen::CalculateWallSpriteIndex(int x, int y) const {
-        if (!gameEngine_) return 0;
+    int GameScreen::CalculateWallSpriteIndex(int x, int y) const
+    {
+        if (!gameEngine_)
+            return 0;
 
         Vector2 mapSize = gameEngine_->GetMapSize();
 
@@ -154,28 +234,34 @@ namespace Pacman {
         bool up = false, down = false, left = false, right = false;
 
         // Up neighbor
-        if (y > 0) {
-            up = (gameEngine_->GetTileAt({ x, y - 1 }) == TileType::Wall);
+        if (y > 0)
+        {
+            up = (gameEngine_->GetTileAt({x, y - 1}) == TileType::Wall);
         }
 
         // Down neighbor
-        if (y < mapSize.Y - 1) {
-            down = (gameEngine_->GetTileAt({ x, y + 1 }) == TileType::Wall);
+        if (y < mapSize.Y - 1)
+        {
+            down = (gameEngine_->GetTileAt({x, y + 1}) == TileType::Wall);
         }
 
         // Left neighbor (tunnel entrance handling)
-        if (x > 0) {
-            left = (gameEngine_->GetTileAt({ x - 1, y }) == TileType::Wall);
+        if (x > 0)
+        {
+            left = (gameEngine_->GetTileAt({x - 1, y}) == TileType::Wall);
         }
-        else {
+        else
+        {
             left = true; // Treat tunnel entrance as connected
         }
 
         // Right neighbor (tunnel entrance handling)
-        if (x < mapSize.X - 1) {
-            right = (gameEngine_->GetTileAt({ x + 1, y }) == TileType::Wall);
+        if (x < mapSize.X - 1)
+        {
+            right = (gameEngine_->GetTileAt({x + 1, y}) == TileType::Wall);
         }
-        else {
+        else
+        {
             right = true; // Treat tunnel entrance as connected
         }
 
@@ -195,74 +281,80 @@ namespace Pacman {
      * 1. **Sprite Mode**: Uses `Map16.png` with the auto-tiling algorithm.
      * 2. **Fallback Mode**: Uses simple colored rectangles if textures failed to load.
      */
-    void GameScreen::RenderMap(sf::RenderWindow& window) {
-        if (!gameEngine_) return;
+    void GameScreen::RenderMap(sf::RenderWindow &window)
+    {
+        if (!gameEngine_)
+            return;
 
         Vector2 mapSize = gameEngine_->GetMapSize();
 
-        if (hasMapTexture_) {
+        if (hasMapTexture_)
+        {
             // ═══════════════════════════════════════════════════════════
             // 🎨 SPRITE-BASED RENDERING (Map16.png loaded)
             // ═══════════════════════════════════════════════════════════
             sf::Sprite tileSprite;
             tileSprite.setTexture(mapTexture_);
 
-            for (int y = 0; y < mapSize.Y; ++y) {
-                for (int x = 0; x < mapSize.X; ++x) {
-                    TileType tile = gameEngine_->GetTileAt({ x, y });
+            for (int y = 0; y < mapSize.Y; ++y)
+            {
+                for (int x = 0; x < mapSize.X; ++x)
+                {
+                    TileType tile = gameEngine_->GetTileAt({x, y});
 
                     // Set sprite position
                     tileSprite.setPosition(
                         static_cast<float>(x * TILE_SIZE),
-                        static_cast<float>(y * TILE_SIZE)
-                    );
+                        static_cast<float>(y * TILE_SIZE));
 
-                    switch (tile) {
-                    case TileType::Wall: {
+                    switch (tile)
+                    {
+                    case TileType::Wall:
+                    {
                         // 🧱 AUTO-SELECT WALL SPRITE (0-15) based on neighbors
                         int spriteIndex = CalculateWallSpriteIndex(x, y);
                         tileSprite.setTextureRect(sf::IntRect(
-                            spriteIndex * TILE_SIZE,  // X: 0, 16, 32, ..., 240
-                            0,                        // Y: row 0 (wall row)
-                            TILE_SIZE,                // Width: 16px
-                            TILE_SIZE                 // Height: 16px
-                        ));
+                            spriteIndex * TILE_SIZE, // X: 0, 16, 32, ..., 240
+                            0,                       // Y: row 0 (wall row)
+                            TILE_SIZE,               // Width: 16px
+                            TILE_SIZE                // Height: 16px
+                            ));
                         window.draw(tileSprite);
                         break;
                     }
 
-                    case TileType::Pellet: {
+                    case TileType::Pellet:
+                    {
                         // 🔴 PELLET: row 1, column 0
                         tileSprite.setTextureRect(sf::IntRect(
-                            0,          // X: column 0
+                            0,         // X: column 0
                             TILE_SIZE, // Y: row 1
                             TILE_SIZE,
-                            TILE_SIZE
-                        ));
+                            TILE_SIZE));
                         window.draw(tileSprite);
                         break;
                     }
 
-                    case TileType::PowerPellet: {
+                    case TileType::PowerPellet:
+                    {
                         // ⚡ POWER PELLET: row 1, column 1
                         tileSprite.setTextureRect(sf::IntRect(
                             TILE_SIZE, // X: column 1
                             TILE_SIZE, // Y: row 1
                             TILE_SIZE,
-                            TILE_SIZE
-                        ));
+                            TILE_SIZE));
                         window.draw(tileSprite);
                         break;
                     }
 
-                    case TileType::GhostDoor: {
+                    case TileType::GhostDoor:
+                    {
                         // 🚪 GHOST DOOR: row 1, column 2
                         tileSprite.setTextureRect(sf::IntRect(
                             2 * TILE_SIZE, // X: column 2
-                            TILE_SIZE,      // Y: row 1
+                            TILE_SIZE,     // Y: row 1
                             TILE_SIZE,
-                            TILE_SIZE
-                        ));
+                            TILE_SIZE));
                         window.draw(tileSprite);
                         break;
                     }
@@ -274,62 +366,64 @@ namespace Pacman {
                 }
             }
         }
-        else {
+        else
+        {
             // ═══════════════════════════════════════════════════════════
             // 🎨 FALLBACK: COLORED RECTANGLE RENDERING
             // ═══════════════════════════════════════════════════════════
             // (Code omitted for brevity in comments, logic remains same)
-            sf::RectangleShape tileShape({
-                static_cast<float>(TILE_SIZE),
-                static_cast<float>(TILE_SIZE)
-                });
+            sf::RectangleShape tileShape({static_cast<float>(TILE_SIZE),
+                                          static_cast<float>(TILE_SIZE)});
             sf::CircleShape pelletShape;
 
-            for (int y = 0; y < mapSize.Y; ++y) {
-                for (int x = 0; x < mapSize.X; ++x) {
-                    TileType tile = gameEngine_->GetTileAt({ x, y });
+            for (int y = 0; y < mapSize.Y; ++y)
+            {
+                for (int x = 0; x < mapSize.X; ++x)
+                {
+                    TileType tile = gameEngine_->GetTileAt({x, y});
 
                     // Draw tile background
-                    if (tile == TileType::Wall) {
+                    if (tile == TileType::Wall)
+                    {
                         tileShape.setFillColor(sf::Color(33, 33, 222));
                     }
-                    else {
+                    else
+                    {
                         tileShape.setFillColor(sf::Color::Black);
                     }
 
                     tileShape.setPosition(
                         static_cast<float>(x * TILE_SIZE),
-                        static_cast<float>(y * TILE_SIZE)
-                    );
+                        static_cast<float>(y * TILE_SIZE));
                     window.draw(tileShape);
 
                     // Draw pellets
-                    if (tile == TileType::Pellet) {
+                    if (tile == TileType::Pellet)
+                    {
                         pelletShape.setRadius(2.0f);
                         pelletShape.setFillColor(sf::Color(255, 184, 174));
                         pelletShape.setOrigin(2.0f, 2.0f);
                         pelletShape.setPosition(
                             static_cast<float>(x * TILE_SIZE) + TILE_SIZE / 2.0f,
-                            static_cast<float>(y * TILE_SIZE) + TILE_SIZE / 2.0f
-                        );
+                            static_cast<float>(y * TILE_SIZE) + TILE_SIZE / 2.0f);
                         window.draw(pelletShape);
                     }
-                    else if (tile == TileType::PowerPellet) {
+                    else if (tile == TileType::PowerPellet)
+                    {
                         pelletShape.setRadius(5.0f);
                         pelletShape.setFillColor(sf::Color(255, 184, 174));
                         pelletShape.setOrigin(5.0f, 5.0f);
                         pelletShape.setPosition(
                             static_cast<float>(x * TILE_SIZE) + TILE_SIZE / 2.0f,
-                            static_cast<float>(y * TILE_SIZE) + TILE_SIZE / 2.0f
-                        );
+                            static_cast<float>(y * TILE_SIZE) + TILE_SIZE / 2.0f);
                         window.draw(pelletShape);
                     }
-                    else if (tile == TileType::GhostDoor) {
+                    else if (tile == TileType::GhostDoor)
+                    {
                         tileShape.setFillColor(sf::Color(255, 184, 222));
                         tileShape.setPosition(
                             static_cast<float>(x * TILE_SIZE),
-                            static_cast<float>(y * TILE_SIZE)
-                        );
+                            static_cast<float>(y * TILE_SIZE));
                         window.draw(tileShape);
                     }
                 }
@@ -337,33 +431,45 @@ namespace Pacman {
         }
     }
 
-    void GameScreen::RenderPlayer(sf::RenderWindow& window) {
-        if (!gameEngine_) return;
+    void GameScreen::RenderPlayer(sf::RenderWindow &window)
+    {
+        if (!gameEngine_)
+            return;
 
         // Map direction to sprite sheet row
         // Row 0: Right, Row 1: Up, Row 2: Left, Row 3: Down
         int row = 0;
-        switch (playerState_.CurrentDirection) {
-        case Direction::Right: row = 0; break;
-        case Direction::Up:    row = 1; break;
-        case Direction::Left:  row = 2; break;
-        case Direction::Down:  row = 3; break;
-        default: row = 0; break;
+        switch (playerState_.CurrentDirection)
+        {
+        case Direction::Right:
+            row = 0;
+            break;
+        case Direction::Up:
+            row = 1;
+            break;
+        case Direction::Left:
+            row = 2;
+            break;
+        case Direction::Down:
+            row = 3;
+            break;
+        default:
+            row = 0;
+            break;
         }
 
         // Use the 6-frame animation
         pacmanSprite_.setTexture(pacmanTexture_);
         pacmanSprite_.setTextureRect(sf::IntRect(
-            pacmanFrame_ * TILE_SIZE,  // X: which frame (0-5)
-            row * TILE_SIZE,            // Y: which direction (0-3)
-            TILE_SIZE,                  // Width: 16px
-            TILE_SIZE                   // Height: 16px
-        ));
+            pacmanFrame_ * TILE_SIZE, // X: which frame (0-5)
+            row * TILE_SIZE,          // Y: which direction (0-3)
+            TILE_SIZE,                // Width: 16px
+            TILE_SIZE                 // Height: 16px
+            ));
 
         pacmanSprite_.setPosition(
             static_cast<float>(playerState_.Position.X * TILE_SIZE),
-            static_cast<float>(playerState_.Position.Y * TILE_SIZE)
-        );
+            static_cast<float>(playerState_.Position.Y * TILE_SIZE));
 
         window.draw(pacmanSprite_);
     }
@@ -372,15 +478,18 @@ namespace Pacman {
      * @brief Renders the ghosts, handling colors and "Frightened" mode.
      * @details If textures fail, uses geometric shapes (Circles) as fallback.
      */
-    void GameScreen::RenderGhosts(sf::RenderWindow& window) {
+    void GameScreen::RenderGhosts(sf::RenderWindow &window)
+    {
         ghostSprites_.clear();
 
         // Use colored shapes rendering (fallback or simple style)
-        for (const auto& ghost : ghostStates_) {
+        for (const auto &ghost : ghostStates_)
+        {
             float posX = static_cast<float>(ghost.Position.X * TILE_SIZE);
             float posY = static_cast<float>(ghost.Position.Y * TILE_SIZE);
 
-            if (ghost.IsEaten) {
+            if (ghost.IsEaten)
+            {
                 // Draw only eyes when eaten
                 sf::CircleShape eyeWhite(3.5f);
                 eyeWhite.setFillColor(sf::Color::White);
@@ -400,19 +509,33 @@ namespace Pacman {
                 pupil.setPosition(posX + 12, posY + 6);
                 window.draw(pupil);
             }
-            else {
+            else
+            {
                 // Draw ghost body
                 sf::Color ghostColor;
-                if (ghost.IsFrightened) {
+                if (ghost.IsFrightened)
+                {
                     ghostColor = sf::Color(0, 0, 200); // Dark blue when frightened
                 }
-                else {
-                    switch (ghost.Type) {
-                    case GhostType::Red:    ghostColor = sf::Color(255, 0, 0); break;     // Red (Blinky)
-                    case GhostType::Pink:   ghostColor = sf::Color(255, 184, 222); break; // Pink (Pinky)
-                    case GhostType::Blue:   ghostColor = sf::Color(0, 255, 255); break;   // Cyan (Inky)
-                    case GhostType::Orange: ghostColor = sf::Color(255, 165, 0); break;   // Orange (Clyde)
-                    default: ghostColor = sf::Color::Red; break;
+                else
+                {
+                    switch (ghost.Type)
+                    {
+                    case GhostType::Red:
+                        ghostColor = sf::Color(255, 0, 0);
+                        break; // Red (Blinky)
+                    case GhostType::Pink:
+                        ghostColor = sf::Color(255, 184, 222);
+                        break; // Pink (Pinky)
+                    case GhostType::Blue:
+                        ghostColor = sf::Color(0, 255, 255);
+                        break; // Cyan (Inky)
+                    case GhostType::Orange:
+                        ghostColor = sf::Color(255, 165, 0);
+                        break; // Orange (Clyde)
+                    default:
+                        ghostColor = sf::Color::Red;
+                        break;
                     }
                 }
 
@@ -449,22 +572,24 @@ namespace Pacman {
         }
     }
 
-    void GameScreen::RenderHud(sf::RenderWindow& window) {
+    void GameScreen::RenderHud(sf::RenderWindow &window)
+    {
         // Skip if font didn't load
-        if (!hudFont_.getInfo().family.empty()) {
+        if (!hudFont_.getInfo().family.empty())
+        {
             sf::Text scoreText;
             scoreText.setFont(hudFont_);
             scoreText.setCharacterSize(20);
             scoreText.setFillColor(sf::Color::White);
             scoreText.setString(
                 "Score: " + std::to_string(playerState_.Score) +
-                "  Lives: " + std::to_string(playerState_.Lives)
-            );
+                "  Lives: " + std::to_string(playerState_.Lives));
             scoreText.setPosition(10.0f, 5.0f);
             window.draw(scoreText);
 
             // Game state overlays
-            if (gameState_ == GameState::Paused) {
+            if (gameState_ == GameState::Paused)
+            {
                 sf::Text pauseText;
                 pauseText.setFont(hudFont_);
                 pauseText.setCharacterSize(32);
@@ -475,11 +600,11 @@ namespace Pacman {
                 pauseText.setOrigin(bounds.width / 2.0f, bounds.height / 2.0f);
                 pauseText.setPosition(
                     static_cast<float>(window.getSize().x) / 2.0f,
-                    static_cast<float>(window.getSize().y) / 2.0f
-                );
+                    static_cast<float>(window.getSize().y) / 2.0f);
                 window.draw(pauseText);
             }
-            else if (gameState_ == GameState::GameOver) {
+            else if (gameState_ == GameState::GameOver)
+            {
                 // Game Over text rendering
                 sf::Text gameOverText;
                 gameOverText.setFont(hudFont_);
@@ -518,7 +643,8 @@ namespace Pacman {
 
                 playAgainButtonRect_ = sf::FloatRect(btnPos.x, btnPos.y, btnW, btnH);
             }
-            else if (gameState_ == GameState::Victory) {
+            else if (gameState_ == GameState::Victory)
+            {
                 // Victory rendering (similar to Game Over)
                 sf::Text victoryText;
                 victoryText.setFont(hudFont_);
@@ -558,7 +684,8 @@ namespace Pacman {
             }
 
             // Power-up indicator
-            if (playerState_.IsPoweredUp) {
+            if (playerState_.IsPoweredUp)
+            {
                 sf::Text powerText;
                 powerText.setFont(hudFont_);
                 powerText.setCharacterSize(18);
@@ -570,7 +697,8 @@ namespace Pacman {
         }
     }
 
-    void GameScreen::Render(sf::RenderWindow& window) {
+    void GameScreen::Render(sf::RenderWindow &window)
+    {
         UpdateAnimations();
 
         window.clear(sf::Color::Black);
