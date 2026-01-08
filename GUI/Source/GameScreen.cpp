@@ -15,6 +15,7 @@ namespace Pacman
     namespace
     {
         constexpr const char *kSoundtrackRelativePath = "/audio/pacman_theme.ogg";
+        constexpr const char *kGameOverSoundRelativePath = "/audio/game_over.wav";
     }
 
     GameScreen::GameScreen() = default;
@@ -98,6 +99,20 @@ namespace Pacman
             std::cerr << "Add a legally obtained Pac-Man theme file (OGG/WAV/FLAC) to assets/audio/." << "\n";
         }
 
+        const std::string gameOverSoundPath = assetPath + kGameOverSoundRelativePath;
+        if (gameOverBuffer_.loadFromFile(gameOverSoundPath))
+        {
+            gameOverSound_.setBuffer(gameOverBuffer_);
+            gameOverSound_.setVolume(gameOverVolume_);
+            gameOverSoundLoaded_ = true;
+            std::cout << "Game-over sound loaded: " << gameOverSoundPath << "\n";
+        }
+        else
+        {
+            std::cerr << "Warning: Failed to load game-over sound from " << gameOverSoundPath << "\n";
+            std::cerr << "Place a short WAV/OGG/FLAC clip at assets/audio/game_over.wav" << "\n";
+        }
+
         pacmanSprite_.setTexture(pacmanTexture_);
 
         return success;
@@ -136,6 +151,10 @@ namespace Pacman
             {
                 soundtrack_.play();
             }
+            if (gameOverSoundLoaded_ && gameOverSound_.getStatus() == sf::Sound::Playing)
+            {
+                gameOverSound_.stop();
+            }
             break;
 
         case GameState::Paused:
@@ -146,10 +165,21 @@ namespace Pacman
             break;
 
         case GameState::Victory:
+            if (soundtrack_.getStatus() != sf::Music::Stopped)
+            {
+                soundtrack_.stop();
+            }
+            break;
+
         case GameState::GameOver:
             if (soundtrack_.getStatus() != sf::Music::Stopped)
             {
                 soundtrack_.stop();
+            }
+            if (gameOverSoundLoaded_)
+            {
+                gameOverSound_.stop();
+                gameOverSound_.play();
             }
             break;
         }

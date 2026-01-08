@@ -30,6 +30,7 @@ Use this method for command-line development and for continuous integration pipe
 > **Note:** If you run CI on `ubuntu-latest` or develop on Debian/Ubuntu, install the packages below. For other distros or platforms, install equivalent packages or provide prebuilt binaries (e.g., `SFML`) via your package manager or a dependency manager.
 >
 > Install dependencies (example for Debian/Ubuntu CI runner or developer machine):
+
 ```bash
 sudo add-apt-repository universe
 sudo apt-get update
@@ -101,13 +102,17 @@ The game now looks for a background track at `assets/audio/pacman_theme.ogg`. Be
 
 At runtime the engine streams and loops this file. If the file is missing, the game logs a warning and continues silently.
 
+### Game over sting
+
+The Game Over screen now triggers a short one-shot effect located at `assets/audio/game_over.wav`. Supply your own clip (WAV/OGG/FLAC) and drop it in that path. If the file is absent the game logs a warning and skips the effect, but gameplay continues.
+
 ### Windows audio dependencies
 
 If you see `Failed to open the audio device` even though the soundtrack file is present, Windows cannot find OpenAL (the `openal32.dll` shipped with SFML). Re-run `cmake --build` so the post-build step copies SFML's `extlibs/bin/x64` (or `x86`) directory next to `PacmanGame.exe`, or copy `openal32.dll` manually from `build/_deps/sfml-src/extlibs/bin/<arch>/`. Without that DLL the SFML audio backend cannot initialize and the music stays muted.
 
 ## Diagrams Legend
+
 - **Orange** represent structures
 - **Blue** represent behaviors/classes
 - **Green** represent interfaces
 - **Magenta** represent enumerations
-

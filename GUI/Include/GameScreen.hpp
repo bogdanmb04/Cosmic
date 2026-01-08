@@ -93,6 +93,10 @@ namespace Pacman
         sf::Music soundtrack_;
         bool soundtrackLoaded_ = false;
         float soundtrackVolume_ = 35.0f;
+        sf::SoundBuffer gameOverBuffer_;
+        sf::Sound gameOverSound_;
+        bool gameOverSoundLoaded_ = false;
+        float gameOverVolume_ = 65.0f;
     };
 
 }
